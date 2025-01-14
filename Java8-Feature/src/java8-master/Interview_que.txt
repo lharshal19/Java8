@@ -1,0 +1,57 @@
+
+//Multithreading interview question
+
+1. What is multithreading? 
+2. How to create a thread? 
+3. Thread states in Java? 
+4. Runnable vs. Thread? 
+5. Purpose of `start()` in Thread? 
+6. What is synchronization? 
+7. How does `synchronized` work? 
+8. What is a deadlock? 
+9. Ways to achieve synchronization? 
+10. Synchronized method vs block? 
+11. How do threads communicate? 
+12. Purpose of `wait()`, `notify()`, `notifyAll()`? 
+13. What is a Blocking Queue? 
+14. What is a Condition? 
+15. Thread safety and its importance? 
+16. How to achieve thread safety? 
+17. What is an atomic operation? 
+18. Uses of `java.util.concurrent.atomic` classes? 
+19. Volatile vs Atomic classes? 
+20. What is ExecutorService? 
+21. How to create an ExecutorService? 
+22. `execute()` vs. `submit()`? 
+23. Graceful shutdown of ExecutorService? 
+24. `shutdown()` vs `shutdownNow()`? 
+25. What is Future and its use? 
+26. Cancel a task in ExecutorService? 
+27. ScheduledExecutorService usage? 
+28. Handle exceptions in ExecutorService? 
+29. ExecutorService lifecycle? 
+30. What is a thread pool and why? 
+31. Types of thread pools? 
+32. How to create a fixed thread pool? 
+33. How to create a cached thread pool? 
+34. What is a single-thread executor? 
+35. Scheduled thread pool? 
+36. Benefits of thread pools? 
+37. How are threads managed in pools? 
+38. Fixed vs cached thread pools? 
+39. ThreadPoolExecutor mechanism? 
+40. Core and max pool sizes in ThreadPoolExecutor? 
+41. Role of keep-alive time in ThreadPoolExecutor? 
+42. Blocking queue in ThreadPoolExecutor? 
+43. Types of blocking queues? 
+44. Handling parallel tasks? 
+45. Solve Producer-Consumer problem? 
+46. Singleton in multithreaded environments? 
+47. Handle thread exceptions? 
+48. What is a Daemon thread? 
+49. Create a Daemon thread? 
+50. Benefits of ConcurrentHashMap?
+
+
+
+
