@@ -400,6 +400,64 @@ public class DSAProgram {
 	//=============================
 	//Count number of binary strings without consecutive 1’s
 
+	//===========================
+	//Find the factorial of a number using recursion.
+	/*public static void main(String[] args) {
+		int number = 5; // Example input
+		System.out.println("Factorial of " + number + " is: " + factorial(number));
+	}
+	
+	public static int factorial(int n) {
+		if (n == 0 || n == 1) {
+			return 1; // Base case: 0! = 1! = 1
+		}
+		return n * factorial(n - 1); // Recursive case
+	}*/
+
+	//===========================
+	//Find the longest common subsequence of two strings.
+	/*public static void main(String[] args) {
+		String str1 = "ABCBDAB";
+		String str2 = "BDCAB";
+		int m = str1.length();
+		int n = str2.length();
+		int[][] dp = new int[m + 1][n + 1];
+		System.out.println("Length of LCS: " + dp[m][n]);
+		// Fill the dp table
+		for (int i = 1; i <= m; i++) {
+			for (int j = 1; j <= n; j++) {
+				if (str1.charAt(i - 1) == str2.charAt(j - 1)) {
+					dp[i][j] = dp[i - 1][j - 1] + 1;
+				} else {
+					dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
+				}
+			}
+		}
+	
+		// The LCS length is in dp[m][n]
+		System.out.println("Length of LCS: " + dp[m][n]);
+	}*/
+
+	//==============================
+	//Find the median of One sorted arrays
+	/*public static void main(String[] args) {
+		int[] nums = { 1, 2, 3, 4, 5 }; // Example array
+	
+		System.out.println("Median: " + findMedian(nums));
+	}
+	
+	public static double findMedian(int[] nums) {
+		int n = nums.length;
+		if (n % 2 == 1) {
+			return nums[n / 2]; // Odd number of elements
+		} else {
+			return (nums[n / 2 - 1] + nums[n / 2]) / 2.0; // Even number of elements
+		}
+	}*/
+
+	//=============================
+	
+	
 }
 
 //Check two strings Anagram or not
@@ -417,6 +475,11 @@ public class DSAProgram {
 //Replace spaces with %20
 //  find all lowercase characters in a string and convert them to uppercase
 // Count number of binary strings without consecutive 1’s
+//Find the factorial of a number using recursion.
+//Find the longest common subsequence of two strings.
+//Find the median of two sorted arrays
+//
+//
 //
 //
 //
@@ -426,9 +489,6 @@ Reverse a linked list.
 2. Find the middle element of a linked list.
 3. Implement a stack using arrays/linked list.
 4. Implement a queue using arrays/linked list.
-5. Find the factorial of a number using recursion.
-6. Implement binary search in an array.
-7. Find the largest/smallest element in an array.
 8. Implement merge sort.
 9. Implement quick sort.
 10. Detect a cycle in a linked list.
@@ -443,15 +503,9 @@ Reverse a linked list.
 19. Implement Dijkstra's algorithm for shortest path.
 20. Implement Prim's algorithm for minimum spanning tree.
 21. Implement Kruskal's algorithm for minimum spanning tree.
-22. Find the longest common subsequence of two strings.
 23. Find the longest increasing subsequence of an array.
-24. Implement the Knuth–Morris–Pratt (KMP) algorithm for string matching.
 25. Implement the Rabin-Karp algorithm for string matching.
-26. Check if a string is a palindrome.
-27. Check if two strings are anagrams of each other.
-28. Find the next greater element in an array.
-29. Find the kth smallest/largest element in an array.
-30. Find the median of two sorted arrays.
+30. .
 31. Implement a trie (prefix tree).
 32. Find all subsets of a set.
 33. Find all permutations of a string.
