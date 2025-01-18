@@ -5,32 +5,62 @@ import java.util.stream.Collectors;
 public class DSAProgram {
 
 	//Check two strings Anagram or not
-	/*	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 	
-			String str1 = "Bored";
-			String str2 = "Robed";
+		String str1 = "Bored";
+		String str2 = "Robed";
 	
-			str1 = str1.toLowerCase();
-			str2 = str2.toLowerCase();
+		str1 = str1.toLowerCase();
+		str2 = str2.toLowerCase();
 	
-			if (str1.length() == str2.length()) {
-				char[] str1charArray = str1.toCharArray();
-				char[] str2charArray = str2.toCharArray();
-				// sort the char array
-				Arrays.sort(str1charArray);
-				Arrays.sort(str2charArray);
-				// if the sorted char arrays are same or identical
-				// then the strings are anagram
-				boolean result = Arrays.equals(str1charArray, str2charArray);
-				if (result) {
-					System.out.println(str1 + " and " + str2 + " are anagrams of each other.");
-				} else {
-					System.out.println(str1 + " and " + str2 + " are not anagrams of each other.");
-				}
+		char[] str1charArray = str1.toCharArray();
+		char[] str2charArray = str2.toCharArray();
+		if (str1.length() == str2.length()) {
+			// sort the char array
+			Arrays.sort(str1charArray);
+			Arrays.sort(str2charArray);
+			// if the sorted char arrays are same or identical
+			// then the strings are anagram
+			boolean result = Arrays.equals(str1charArray, str2charArray);
+			if (result) {
+				System.out.println(str1 + " and " + str2 + " are anagrams of each other.");
 			} else {
 				System.out.println(str1 + " and " + str2 + " are not anagrams of each other.");
 			}
-		}*/
+		} else {
+			System.out.println(str1 + " and " + str2 + " are not anagrams of each other.");
+		}
+	
+		//Method 2
+	
+				for (char ch : str1.toCharArray()) {
+					int index = str2.indexOf(ch);
+					if (index != -1) {
+						str2 = str2.substring(0, index) + str2.substring(index + 1);
+					}
+				}
+				System.out.println("str1 : "+str1+ "  str2 : "+str2);
+				if (str2.isEmpty())
+					System.out.println("Anagram");
+		
+		//Method 3
+		Map<Character, Integer> map = new HashMap();
+		for (char ch : str1.toCharArray()) {
+			map.put(ch, map.getOrDefault(ch, 0) + 1);
+		}
+		System.out.println(map);
+		for (char ch : str2.toCharArray()) {
+			if (map.containsKey(ch)) {
+				map.put(ch, map.get(ch) - 1);
+				if (map.get(ch) == 0)
+					map.remove(ch);
+			}
+		}
+		System.out.println(map);
+		System.out.print(" map : ");
+		System.out.print(map.isEmpty() ? "Anagram" : "Not Anagram");
+	
+	}*/
 
 	//======================
 	// Binary Search
@@ -78,7 +108,7 @@ public class DSAProgram {
 
 	//==========================
 	// print all permutations of string in Java
-	/*	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 			String s = "cat";
 			printallPermutns(s, "");
 		}
@@ -163,14 +193,6 @@ public class DSAProgram {
 			int next = a + b;
 			a = b;
 			b = next;
-		}
-	
-		//----------------
-		
-		int n1 = 10; // Number of terms
-		System.out.print("Fibonacci Series: ");
-		for (int i = 0; i < n1; i++) {
-			System.out.print(fibonacci(i) + " ");
 		}
 	}
 	
@@ -337,6 +359,18 @@ public class DSAProgram {
 					}
 				}
 			}
+			
+			Optional<Character> firstNonRepeated = str.chars()
+	.mapToObj(ch -> (char) ch)
+	.collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()))
+	.entrySet()
+	.stream()
+	.filter(entry -> entry.getValue() == 1)
+	.map(Map.Entry::getKey)
+	.findFirst();
+	
+	System.out.println(firstNonRepeated.orElse(null));
+			
 		}*/
 
 	//=======================
@@ -349,7 +383,7 @@ public class DSAProgram {
 
 	//=======================
 	//find all lowercase characters in a string and convert them to uppercase
-	/*	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 			String input = "Hello World! 123 @abcDEF";
 	
 			//convert lower to upper case
@@ -415,28 +449,6 @@ public class DSAProgram {
 	}*/
 
 	//===========================
-	//Find the longest common subsequence of two strings.
-	/*public static void main(String[] args) {
-		String str1 = "ABCBDAB";
-		String str2 = "BDCAB";
-		int m = str1.length();
-		int n = str2.length();
-		int[][] dp = new int[m + 1][n + 1];
-		System.out.println("Length of LCS: " + dp[m][n]);
-		// Fill the dp table
-		for (int i = 1; i <= m; i++) {
-			for (int j = 1; j <= n; j++) {
-				if (str1.charAt(i - 1) == str2.charAt(j - 1)) {
-					dp[i][j] = dp[i - 1][j - 1] + 1;
-				} else {
-					dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
-				}
-			}
-		}
-	
-		// The LCS length is in dp[m][n]
-		System.out.println("Length of LCS: " + dp[m][n]);
-	}*/
 
 	//==============================
 	//Find the median of One sorted arrays
@@ -456,8 +468,72 @@ public class DSAProgram {
 	}*/
 
 	//=============================
+	/*Input: 
+	 * 	a[] = {1, 4, 7, 8, 10}
+			b[] = {2, 3, 9}
+		Output:
+			a[] = {1, 2, 3, 4, 7}
+			b[] = {8, 9, 10}*/
+	/*public static void main(String[] args) {
+		int[] a = { 1, 4, 7, 8, 10 };
+		int[] b = { 2, 3, 9 };
 	
+		mergeAndSplit(a, b);
 	
+		System.out.println("a[] = " + Arrays.toString(a));
+		System.out.println("b[] = " + Arrays.toString(b));
+	}
+	
+	public static void mergeAndSplit(int[] a, int[] b) {
+		int n = a.length;
+		int m = b.length;
+		int[] merged = new int[n + m];
+		System.out.println("1 : " + Arrays.toString(merged));
+		System.arraycopy(a, 0, merged, 0, n);
+		System.out.println("2 : " + Arrays.toString(merged));
+		System.arraycopy(b, 0, merged, n, m);
+		System.out.println("3 : " + Arrays.toString(merged));
+	
+		// Sort the merged array
+		Arrays.sort(merged);
+		System.out.println("4 : " + Arrays.toString(merged));
+	
+		// Split the sorted array back into a and b
+		for (int i = 0; i < n; i++) {
+			a[i] = merged[i];
+		}
+		for (int i = 0; i < m; i++) {
+			b[i] = merged[n + i];
+		}
+	}*/
+
+	//============================
+	// i/o : aabbbccc4  o/p : a2b3c4
+	/*public static void main(String[] args) {
+		String input = "aabbbcccc";
+		String compressed = compressString(input);
+		System.out.println("Input: " + input);
+		System.out.println("Output: " + compressed);
+	}
+	
+	public static String compressString(String str) {
+		StringBuilder result = new StringBuilder();
+		int count = 1;
+	
+		for (int i = 1; i < str.length(); i++) {
+			if (str.charAt(i) == str.charAt(i - 1)) {
+				count++;
+			} else {
+				result.append(str.charAt(i - 1)).append(count);
+				count = 1;
+			}
+		}
+		// Append the last character and its count
+		result.append(str.charAt(str.length() - 1)).append(count);
+	
+		return result.toString();
+	}*/
+
 }
 
 //Check two strings Anagram or not
@@ -476,10 +552,14 @@ public class DSAProgram {
 //  find all lowercase characters in a string and convert them to uppercase
 // Count number of binary strings without consecutive 1’s
 //Find the factorial of a number using recursion.
-//Find the longest common subsequence of two strings.
-//Find the median of two sorted arrays
-//
-//
+//Find the median of one sorted arrays
+/*Input: 
+ * 	a[] = {1, 4, 7, 8, 10}
+		b[] = {2, 3, 9}
+	Output:
+		a[] = {1, 2, 3, 4, 7}
+		b[] = {8, 9, 10}*/
+// i/o : aabbbccc4  o/p : a2b3c4
 //
 //
 //
@@ -500,20 +580,8 @@ Reverse a linked list.
 16. Implement depth-first search (DFS) on a graph.
 17. Implement breadth-first search (BFS) on a graph.
 18. Check if a graph is connected.
-19. Implement Dijkstra's algorithm for shortest path.
-20. Implement Prim's algorithm for minimum spanning tree.
-21. Implement Kruskal's algorithm for minimum spanning tree.
 23. Find the longest increasing subsequence of an array.
-25. Implement the Rabin-Karp algorithm for string matching.
 30. .
-31. Implement a trie (prefix tree).
-32. Find all subsets of a set.
-33. Find all permutations of a string.
-34. Implement the Josephus Problem.
 35. Implement an LRU (Least Recently Used) Cache.
 36. Find the longest palindrome substring in a string.
-37. Implement a priority queue.
-38. Implement a HashMap (dictionary).
-39. Count the number of inversions in an array.
-40. Find the shortest path in a maze.
 */
