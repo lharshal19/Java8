@@ -1,4 +1,76 @@
 
+
+// SpringBoot
+
+1. In how many ways we can return the data in springboot rest api.
+2. Which framework used to create web and restful applications in spring that can return JSON and XML file ?
+3. Which is more secure ? SOAP or REST ? Why ?
+4. What are different ways to configure a class as Spring Bean ?
+5. Explain the role of the Tomcat server in the Spring Boot Application
+6. Which classe responsible for handling incoming HTTP requests and returning an appropriate response ?
+7. Why do we need springBoot auto configuration ?
+8. About Metadata in Spring Framework?
+9. What are the limitations of Autowiring ?
+10. Can you inject null and empty string values in Spring? If yes, how ?
+
+PHASE 1 - Basics
+
+• Creating a spring boot project using spring initializr
+• Maven and gradle build tools
+• Annotations
+• Profiles and environment-specific configurations
+• @getmapping, @postmapping, @putmapping, @deletemapping
+• Handling path variables and request parameters
+• Setting up database connection (h2, mysql, postgresql)
+• Using jparepository and crudrepository
+• Introduction to spring boot devtools
+• Enabling hot reloading
+• Spring batch, scheduling and cron expressions
+
+
+PHASE 2 - Intermediate
+
+• Using @controlleradvice and @exceptionhandler
+• Custom error responses and exception classes
+• Global exception handling
+• Basic authentication
+• Configuring security for apis
+• Implementing jwt (json web tokens) for stateless authentication
+• Introduction to hateoas
+• Versioning rest apis (uri, parameter, headers)
+• Unit testing with junit and mockito
+• Writing integration tests with spring boot test
+• Testing restful services with mockmvc
+• Exploring actuator endpoints
+• Creating custom health indicators
+
+
+PHASE 3 - Advanced
+
+• Using @profile annotation
+• Configuring environment-specific beans
+• Switching profiles for different environments
+• Setting up a spring cloud project
+• Key components of spring cloud
+• Setting up eureka server
+• Registering microservices with eureka
+• Service discovery in action
+• Introduction to api gateway
+• Setting up spring cloud gateway
+• Configuring routes and filters
+• Setting up spring cloud config server
+• Managing configuration in a centralized repository
+• Configuring spring boot applications to use config server
+
+
+PHASE 4 - Microservices
+
+• Introduction to inter-service communication
+• Using rest template for synchronous communication
+• Using feign client for simplified service calls
+• Setting up resilience4j
+• Configuring circuit breakers, retry in microservices
+• Introduction to distributed tracing
 //Multithreading interview question
 
 1. What is multithreading? 
@@ -52,6 +124,102 @@
 49. Create a Daemon thread? 
 50. Benefits of ConcurrentHashMap?
 
+Recent deloitee interview questions 
+
+1. Communication between microservices
+2. What is encapsulation
+3. Differences between abstract class and interface
+4. What is exception handler
+5. If ur controller receives multiple requests at time by client how would you handle those
+6. What is circuit design pattern
+7. What are solid design principles
+8. What is default methods, can you override it
+9. What is singleton design pattern explain with example
+10. Guess the program output on static blocks
+11. Profiling in springboot
+12. Guess the program output on strings equals and == operator example
+13. Differences between put and patch
+14. Differences between final ,finally, finalize 
+15. differences between @requestparam and @path variable give example
+16. How db configured and integrated with springboot
+17. what is dispatcher servlet and service registry, how the Eureka server used as centralized node
+18. Executor framework
+19. lifecycle of thread
+20. can you run thread by using run method without start() method if not why 
+21. how to test mockito test cases and annotation used
+22. in jpa if ur using inbuilt queries like findbyid if no record found for that , what will be output ,any exception thrown?
+.23. explain the flow of layers ur using and explain how u created APIs from controller to repository.
+24. given list of integers and asked to sort the elements based on ascending order.
+25. Types of exceptions with examples.
+26. What is spring actuator how do you incorporated in ur project 
+
+Interview questions #21
+Organization - Publicis Sapient (1/4)
 
 
+Level - 1
+
+About project
+- Explain about your project and tech stack you are using
+- What are your roles and responsibilities in your team
+
+Core java
+- Create an immutable class (make sure you add a list as a parameter and it should be un-modifiable)
+- Difference between unmodifiable and immutability
+- What are intermediate and terminal operations in streams?
+- What/how is Reactive programming (flux and mono)
+- What design patterns have you used? Strategy / behavior / structural
+- HashMap implementation. How are collisions resolved?
+- Future and CompletableFuture
+- What is fail-fast vs fail-safe
+- Explain Liskov - Substitution principle
+- Explain open-close principle
+- Linked HashMap and linked HashSet in java
+- VM arguments
+- Difference between List.of() and Arrays.asList()
+
+Coding
+- Create a getMin method in binary search tree
+- What is the time complexity of finding the min element in a binary search tree
+
+Spring framework
+How to make two or more database calls at a time in spring boot?
+- What is a prototype in spring boot? How can you create multiple objects of the same instance in spring boot?
+- What do you know about spring security?
+
+Kafka
+- What is Kraft?
+- How do you scale up Kafka?
+- How do you make sure you don’t read duplicate messages in Kafka?
+- What is exactly once, at least once, only once in Kafka?
+- Idempotence is Kafka
+- What is offset in Kafka?
+
+Database
+- Get max salary records from employee table and sort them
+- What is indexing in a database?
+- What is a materialized view?
+- Explain CAP theorem
+
+Some generic questions
+- Have you ever used ER diagrams?
+- Have you ever used class diagrams or UML diagrams?
+- Have you ever worked on high level designs and low level designs?
+- Reactive programing
+- DDD - domain driven designing
+- Have you ever used docker? How do you configure dockerfile?
+- Have you ever used cache? How does cache work?
+- How to you configure JWT
+- Have you ever used OAuth?
+- What do you know about Jenkins? Ever configured Jenkins files?
+- Ever configured SONAR files?
+- Spring security
+- Which API gateway have you used (Zuul)
+- Circuit breaking
+- What is breaking the chain?
+- Azure credential manager
+- Data ingestion pipeline
+- Graph QL
+- What is CSRF (Cross Site Request Forgery)
+- Breaking chain
 

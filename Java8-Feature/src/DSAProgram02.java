@@ -91,16 +91,73 @@ public class DSAProgram02 {
 		Ramesh.start();
 		Suresh.start();
 	}*/
-	
+
 	//==========================
+	//T1 prints 1, T2 prints 2, T1 prints 3, T2 prints 4 and so on till 10
+	/*private final Object lock = new Object();
+	private boolean isT1Turn = true; // T1 starts first
 	
+	public void printOdd() {
+		for (int i = 1; i <= 10; i += 2) {
+			synchronized (lock) {
+				while (!isT1Turn) {
+					try {
+						lock.wait();
+					} catch (InterruptedException e) {
+						Thread.currentThread().interrupt();
+					}
+				}
+				System.out.println("T1: " + i);
+				isT1Turn = false;
+				lock.notify();
+			}
+		}
+	}
 	
+	public void printEven() {
+		for (int i = 2; i <= 10; i += 2) {
+			synchronized (lock) {
+				while (isT1Turn) {
+					try {
+						lock.wait();
+					} catch (InterruptedException e) {
+						Thread.currentThread().interrupt();
+					}
+				}
+				System.out.println("T2: " + i);
+				isT1Turn = true;
+				lock.notify();
+			}
+		}
+	}
 	
+	public static void main(String[] args) {
+		DSAProgram02 ap = new DSAProgram02();
+	
+		Thread t1 = new Thread(ap::printOdd);
+		Thread t2 = new Thread(ap::printEven);
+	
+		t1.start();
+		t2.start();
+	}*/
+
+	//=====================
+	/*	Write an SQL query to print names of all the employees whose salary greater than or equal to the employee with first name “Rita”.
+		Employee table — Column Names : Eid, Fname, Lname, Email . 
+		Salaries table — Column Names : Eid, Salary
+	
+		=> SELECT e.Fname, e.Lname FROM Employee e
+		JOIN Salaries s ON e.Eid = s.Eid	WHERE s.Salary >= (SELECT s2.Salary FROM Employee e2
+		    JOIN Salaries s2 ON e2.Eid = s2.Eid WHERE e2.Fname = 'Rita');
+		*/
+
 }
 
 //Create Immutable class
 //Deadlock
-//
-//
+//T1 prints 1, T2 prints 2, T1 prints 3, T2 prints 4 and so on till 10
+/*Write an SQL query to print names of all the employees whose salary greater than or equal to the employee with first name “Rita”.
+Employee table — Column Names : Eid, Fname, Lname, Email . 
+Salaries table — Column Names : Eid, Salary*/
 //
 //

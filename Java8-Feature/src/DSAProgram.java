@@ -1,6 +1,4 @@
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
+import java.util.HashMap;
 
 public class DSAProgram {
 
@@ -322,9 +320,9 @@ public class DSAProgram {
 	
 			case 2:
 				// Swap arr[mid] and arr[high]
-				int tempHigh = arr[mid];
-				arr[mid] = arr[high];
-				arr[high] = tempHigh;
+				int tempHigh = arr[high];
+				arr[high] = arr[mid];
+				arr[mid] = tempHigh;
 				high--;
 				break;
 			}
@@ -534,6 +532,143 @@ public class DSAProgram {
 		return result.toString();
 	}*/
 
+	//============================
+	//Duplicate Elements in an Array
+	/*public static void main(String[] args) {
+		System.out.println(findDuplicates(new int[]{1,2,2,4}));
+	}
+	public static List<Integer> findDuplicates(int[] nums) {
+	    List<Integer> result = new ArrayList<>();
+	    for (int i = 0; i < nums.length; i++) {
+	        int index = Math.abs(nums[i]) - 1;
+	        if (nums[index] < 0) {
+	            result.add(Math.abs(nums[i]));
+	        } else {
+	            nums[index] = -nums[index];
+	        }
+	    }
+	    return result;
+	}*/
+
+	//=============================
+	//print even odd number in arrays
+	/*public static void main(String[] args) {
+		// Input array
+		List<Integer> input = Arrays.asList(1, 2, 5, 4, 6, 3);
+	
+		// Separate even and odd numbers
+		List<Integer> evens = new ArrayList<>();
+		List<Integer> odds = new ArrayList<>();
+	
+		for (int num : input) {
+			if (num % 2 == 0) {
+				evens.add(num);
+			} else {
+				odds.add(num);
+			}
+		}
+		evens.addAll(odds);
+		System.out.println("Output: " + evens);
+	
+		//Method 2
+		List<Integer> collect1 = input.stream().filter(i -> i % 2 == 0).collect(Collectors.toList());
+		collect1.addAll(input.stream().filter(i -> i % 2 != 0).collect(Collectors.toList()));
+		System.out.println(collect1);
+	
+	}*/
+
+	//=========================
+	//To remove duplicates from a sorted array
+
+	/*public static int removeDuplicates(int[] nums) {
+		if (nums.length == 0)
+			return 0;
+	
+		int slow = 0;
+	
+		for (int fast = 1; fast < nums.length; fast++) {
+			if (nums[fast] != nums[slow]) {
+				slow++;
+				nums[slow] = nums[fast];
+			}
+		}
+	
+		return slow + 1; // Length of the unique portion
+	}
+	
+	public static void main(String[] args) {
+		int[] nums = { 1, 1, 2, 2, 3, 4, 4, 5 };
+		int length = removeDuplicates(nums);
+	
+		System.out.println("Array after removing duplicates:");
+		for (int i = 0; i < length; i++) {
+			System.out.print(nums[i] + " ");
+		}
+		// Output: 1 2 3 4 5
+	}*/
+
+	//=========================
+	// finds a pair of numbers in an array whose sum equals a given target
+	/*	public static void findPair(int[] nums, int target) {
+			// Create a HashMap to store numbers and their indices
+			HashMap<Integer, Integer> map = new HashMap<>();
+	
+			for (int i = 0; i < nums.length; i++) {
+				int complement = target - nums[i];
+	
+				// Check if the complement is already in the map
+				if (map.containsKey(complement)) {
+					System.out.println("Pair found: (" + nums[map.get(complement)] + ", " + nums[i] + ")");
+					return; // Exit after finding the first pair
+				}
+	
+				// Store the current number and its index in the map
+				map.put(nums[i], i);
+			}
+	
+			// If no pair is found
+			System.out.println("No pair with the given sum found.");
+		}
+	
+		public static void main(String[] args) {
+			int[] nums = { 2, 7, 11, 15 };
+			int target = 9;
+	
+			findPair(nums, target);
+			
+			int[] arr = {2, 7, 11, 15, 3, 6};
+	    	int target = 9;
+	    	HashSet<Integer> set = new HashSet<>();
+	
+	    	for (int num : arr) {
+	        	int complement = target - num;
+	        	if (set.contains(complement)) {
+	            	System.out.println("Pair: (" + complement + ", " + num + ")");
+	        	}
+	        	set.add(num);
+	    	}
+		}*/
+
+	//=================================
+	//	String : ABC, Combinations : ABC, BCA, CAB, CBA, BAC, ACB
+	/*public static void main(String[] args) {
+		String str = "ABC";
+		combination(str, "");
+	}
+	public static void combination(String str, String s2) {
+		if (str.isEmpty()) {
+			System.out.println(s2 + " ");
+			return;
+		}
+	
+		for (char ch : str.toCharArray()) {
+			int indexOf = str.indexOf(ch);
+			String s3 = str.substring(0, indexOf) + str.substring(indexOf + 1);
+			combination(s3, s2 + ch);
+		}
+	}*/
+	
+	
 }
 
 //Check two strings Anagram or not
@@ -560,9 +695,13 @@ public class DSAProgram {
 		a[] = {1, 2, 3, 4, 7}
 		b[] = {8, 9, 10}*/
 // i/o : aabbbccc4  o/p : a2b3c4
-//
-//
-//
+//Duplicate Elements in an Array
+/*input = {1,2,5,4,6,3}
+outout = {2,4,5,1,5,3}*/
+//print even odd number in arrays
+//To remove duplicates from a sorted array
+//finds a pair of numbers in an array whose sum equals a given target
+//	String : ABC, Combinations : ABC, BCA, CAB, CBA, BAC, ACB
 
 /*
 Reverse a linked list.
@@ -576,10 +715,6 @@ Reverse a linked list.
 12. Check if a binary tree is a binary search tree (BST).
 13. Print all leaf nodes of a binary tree.
 14. Reverse a binary tree.
-15. Find the height of a binary tree.
-16. Implement depth-first search (DFS) on a graph.
-17. Implement breadth-first search (BFS) on a graph.
-18. Check if a graph is connected.
 23. Find the longest increasing subsequence of an array.
 30. .
 35. Implement an LRU (Least Recently Used) Cache.
