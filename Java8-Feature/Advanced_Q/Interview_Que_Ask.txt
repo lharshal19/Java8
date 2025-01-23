@@ -1,0 +1,428 @@
+
+Interview questions #8
+Organization - Capgemini
+
+Level : 1
+
+About project
+- Explain about your project and tech stack you are using
+- What are your roles and responsibilities in your team
+
+Core java
+- Explain features of java 8
+- What are functional interfaces
+- What are streams?
+- What is a CompletableFuture?
+- What is collections framework?
+ - What all things have you used in the collection framework?
+- Difference between HashMap and Hashtable
+
+Coding
+- Fetch the second highest salary
+
+Spring framework
+- Why send data in batches to database instead of sending all in one go?
+- What is a rest API, what do you know about the REST framework?
+- What is the use of status codes in rest?
+- Why do we use different methods in rest APIs?
+- How will spring application understand the JSON request you send?
+- Why are you using JDBCTemplate over hibernate?
+- How do you achieve spring security?
+
+Microservices
+- What do you know about micro services?
+- How to do load balancing? What is eureka?
+- How do you scale your applications?
+- How do you deploy services?
+- What are the steps involved in deploying a service?
+
+Circuit Breaker
+- How to do circuit breaking? What framework do you use for it?
+- What is an open, half open and closed state?
+
+Spring security
+- What do you know about JWT tokens?
+
+Some generic questions
+- What are the critical and difficult defects you have fixed?
+- What technologies have you used?
+- Have you used docker and Kubernetes?
+
+
+Level : 2
+
+About project
+- Explain about your project and tech stack you are using
+- What are your roles and responsibilities in your team
+
+Core java
+- Difference between == and equals
+- What are the latest java feature in latest versions?
+- Difference between Collection and Collections
+- How HashMap works?
+- How do you synchronize a HashMap?
+- Why do we have concurrent HashMap when we can synchronize HashMap?
+- What is the use of streams in java?
+- What is a lambda expression?
+- What is a scope resolution operator?
+
+Coding
+- Write a program to print the count of each character in a string
+
+Spring framework
+- Difference between @Autowired and @Qualifier?
+- How do you handle exceptions in spring boot?
+- Have you worked on hibernate?
+
+Microservices
+- How to setup a microservice architecture?
+- How do you establish communication between two microservices?
+- Are these calls synchronous or asynchronous?
+- Explain the microservice design patterns you have worked on
+
+//====================================
+
+Recent deloitee interview questions 
+
+1. Communication between microservices
+2. What is encapsulation
+3. Differences between abstract class and interface
+4. What is exception handler
+5. If ur controller receives multiple requests at time by client how would you handle those
+6. What is circuit design pattern
+7. What are solid design principles
+8. What is default methods, can you override it
+9. What is singleton design pattern explain with example
+10. Guess the program output on static blocks
+11. Profiling in springboot
+12. Guess the program output on strings equals and == operator example
+13. Differences between put and patch
+14. Differences between final ,finally, finalize 
+15. differences between @requestparam and @path variable give example
+16. How db configured and integrated with springboot
+17. what is dispatcher servlet and service registry, how the Eureka server used as centralized node
+18. Executor framework
+19. lifecycle of thread
+20. can you run thread by using run method without start() method if not why 
+21. how to test mockito test cases and annotation used
+22. in jpa if ur using inbuilt queries like findbyid if no record found for that , what will be output ,any exception thrown?
+.23. explain the flow of layers ur using and explain how u created APIs from controller to repository.
+24. given list of integers and asked to sort the elements based on ascending order.
+25. Types of exceptions with examples.
+26. What is spring actuator how do you incorporated in ur project 
+
+Interview questions #21
+Organization - Publicis Sapient (1/4)
+
+
+Level - 1
+
+About project
+- Explain about your project and tech stack you are using
+- What are your roles and responsibilities in your team
+
+Core java
+- Create an immutable class (make sure you add a list as a parameter and it should be un-modifiable)
+- Difference between unmodifiable and immutability
+- What are intermediate and terminal operations in streams?
+- What/how is Reactive programming (flux and mono)
+- What design patterns have you used? Strategy / behavior / structural
+- HashMap implementation. How are collisions resolved?
+- Future and CompletableFuture
+- What is fail-fast vs fail-safe
+- Explain Liskov - Substitution principle
+- Explain open-close principle
+- Linked HashMap and linked HashSet in java
+- VM arguments
+- Difference between List.of() and Arrays.asList()
+
+Coding
+- Create a getMin method in binary search tree
+- What is the time complexity of finding the min element in a binary search tree
+
+Spring framework
+How to make two or more database calls at a time in spring boot?
+- What is a prototype in spring boot? How can you create multiple objects of the same instance in spring boot?
+- What do you know about spring security?
+
+Kafka
+- What is Kraft?
+- How do you scale up Kafka?
+- How do you make sure you don’t read duplicate messages in Kafka?
+- What is exactly once, at least once, only once in Kafka?
+- Idempotence is Kafka
+- What is offset in Kafka?
+
+Database
+- Get max salary records from employee table and sort them
+- What is indexing in a database?
+- What is a materialized view?
+- Explain CAP theorem
+
+Some generic questions
+- Have you ever used ER diagrams?
+- Have you ever used class diagrams or UML diagrams?
+- Have you ever worked on high level designs and low level designs?
+- Reactive programing
+- DDD - domain driven designing
+- Have you ever used docker? How do you configure dockerfile?
+- Have you ever used cache? How does cache work?
+- How to you configure JWT
+- Have you ever used OAuth?
+- What do you know about Jenkins? Ever configured Jenkins files?
+- Ever configured SONAR files?
+- Spring security
+- Which API gateway have you used (Zuul)
+- Circuit breaking
+- What is breaking the chain?
+- Azure credential manager
+- Data ingestion pipeline
+- Graph QL
+- What is CSRF (Cross Site Request Forgery)
+- Breaking chain
+
+
+=================================
+
+
+Interview Questions for SDET role in Zeta. 
+
+Exp Level 4 - 7 Years
+
+1. Given an unsorted array of integers, find the third largest number in the array. If the array has less than 3 distinct numbers 
+ return the largest number ? 
+ Example 
+ Input:
+ arr=[2,4,1,5,3,6]
+ Output:
+ 4
+ Explaination: 
+ The sorted array in descending order is[6,5,4,3,2,1]. The third largest number is 4.
+
+2. Given an array Of Strings, group the strinbgs that are anagrams of each other.
+ Example:
+ Input:
+ arr=["eat","tea","tan","ate","nat","bat"]
+ Output:
+ [["eat,"tea","ate"],["tan","nat"],["bat"]]
+ Explaination: The group of anagrams are ["eat,"tea","ate"],["tan","nat"] and ["bat"]
+
+3. Given an array of integers, find the largest number that does not have any duplicates in an array.
+ Example:
+ Input:
+ arr=[4,3,2,7,3,4,8]
+ Output:
+ 8
+ Explaination: The unique numbers are [2,7,8] and the largest among them is 8
+
+4. Java program to find second max element from an array ?
+
+5. How do you handle multiple windows and iframes. Explain via code ?
+
+6. How do you handle SSL certificates and security relates issues in Selenium ? 
+
+7. How do you handle exceptions and errors in Selenium ?
+
+8. What are the advantages and limitations of Selenium for test automation ?
+
+===================================================
+
+
+Interview questions #14
+Organization - Highradius
+
+Level : 1
+
+About project
+- Explain about your project and tech stack you are using
+- What are your roles and responsibilities in your team
+
+Core java
+- Explain BiPredicate
+- Strings
+- Inheritance
+- StackOverflow exception
+- Different exceptions
+- Null pointer in java and how to prevent it?
+- ArrayIndexOutOfBounds exception
+- Recursion
+- Memories in Java
+- How to iterate values in a map
+- It is valid to have classes and interfaces without any content in them
+- Exception hierarchy
+- Checked and unchecked exception
+- Examples of checked and unchecked exceptions
+- Final, finally and finalize
+- 'final' method
+- 'final' method reference
+- What is String constant pool
+- Mention few String class methods
+- Why is string immutable
+- Different ways of creating strings
+- Collection hierarchy
+- Difference between list and set
+- Structure of map
+- How values are stored based on hashing
+- Java 1.8 features
+- Different methods of object class
+- Different oops concepts
+- What is abstraction and encapsulation?
+- What is method overloading and method overriding?
+
+Data structures
+- Linked list
+
+Coding
+- Check whether a given year is leap year or not?
+- Inserting new node in between linked list
+- Binary search logic
+
+Design patterns
+- What are the different categories of design patterns?
+- Explain the design patterns you have used which use cases in you previous projects
+
+Spring framework
+- Spring MVC
+- Annotations of spring MVC
+- What do you know about app security?
+- How do you set up security in a spring app?
+- What do you know about SSO?
+
+Microservices
+- What is JWT?
+- What are the different parts of JWT token?
+
+Kafka
+- Have you used Kafka? Explain the business need where you have implemented it?
+
+System design
+- Can you design an Amazon E-commerce system(only a web app)?
+- Explain the tech stack that you’ll use for this
+
+Some generic questions
+- What are your current roles and responsibilities?
+- Which part do you prefer, dealing with people or working on the technical side of it?
+
+=======================================
+
+Interview questions #7 (1/2)
+Organization - EY
+
+Level : 1
+
+About project
+- Explain about your project and tech stack you are using
+- What are your roles and responsibilities in your team
+
+Spring framework
+- How do you make services communicate with each other?
+- What is @Async?
+- What is @Transactional?
+
+Microservices
+- Explain the architecture of your project
+- What does service discovery do when a service goes down?
+
+Circuit Breaker
+- What is circuit breaking? What are the different methods of achieving it?
+- What other frameworks can be used in place of Resilience4j?
+
+Database
+- How to add new column to a table
+- Delete duplicate records in a table
+- What is an index in SQL
+- What is an SQL trigger
+- What is an SQL stored procedure
+- Define a table structure for user
+
+Spring security
+- What do you know about spring security?
+- What are request matchers in spring security?
+- JWT and OAuth
+- How do you generate JWT token?
+- How to authenticate user?
+
+Some generic questions
+- What is scaling up and scaling down?
+- How did you implement AWS S3 for uploading and reading data?
+- What is containerization?
+
+
+Level : 2
+
+About project
+- Explain about your project and tech stack you are using
+- What are your roles and responsibilities in your team
+
+Core java
+- Deadlock synchronization program debugging
+
+Spring framework
+- What does @Component do?
+- What is the use of @Autowired?
+- Have you ever used JPA or hibernate?
+- How is pagination is implemented?
+- What do you send in the request body of a transaction?
+- Which status codes have you used?
+- Difference between put and post
+- Put or post, which one is idempotent?
+
+Microservices
+- What all microservice design patterns have you used?
+
+Circuit Breaker
+- What is circuit breaking? What are the different methods of achieving it?
+- What other frameworks can be used in place of Resilience4j?
+
+Spring security
+- How to set up spring security?
+
+Some generic questions
+- How do you handle event driven programming
+
+==================================
+
+Scenario Based Java Developer Interview Questions
+#java #scenario #interview #questions
+1. If you were asked to sort 1 million records by a custom order, how to approach it? What to consider when choosing a data structure?
+
+2. In one of your projects, you’ve been asked to optimize memory usage. Let’s say you have a list of records, but duplicates aren’t allowed. Would you prefer Set or List? Why?
+3. Say you’re building a text-processing tool where strings undergo multiple transformations like trimming, replacing, and concatenating. Which class would you choose between String, StringBuilder, or StringBuffer? Why?
+4. You need to write a program where multiple threads process records from a shared queue, but you must ensure no record is processed twice. What Java constructs or libraries would you use?
+
+5. Let’s say you have a utility class with methods like calculateTax() and formatDate().
+Ø Would you make these methods static? Why or why not?
+Ø What if one of these methods needs to maintain a global counter? How would you design it?
+
+6. Imagine you’re tasked with creating a search engine feature that processes millions of text entries to find keywords.
+Ø How to handle string manipulation to ensure efficiency?
+Ø Is it always a good idea to use StringBuilder over String? Why?
+
+7. You’re designing a system to track user sessions for a web application. Sessions are unique, need to be frequently accessed, and expire after a certain time.
+Ø Which collection would you use, and why?
+Ø How to handle concurrent access to this collection?
+
+8. You have a multi-threaded application that processes orders. Each thread must ensure it does not pick the same order twice.
+Ø How to design the solution to prevent duplicate processing?
+Ø Can volatile help here? Why or why not?
+
+9. Imagine your application is facing frequent OutOfMemoryError issues during peak loads.
+
+Ø How can you troubleshoot and optimize the JVM heap memory?
+Ø What is the difference between the heap and the stack in JVM memory management?
+Ø What is the purpose of the GC Root in Java?
+
+10. You’re working on a trading platform where orders need to be processed in the order they arrive. Duplicate orders should be ignored.
+
+Ø Which collection(s) would you use, and why?
+Ø How does a PriorityQueue differ from a LinkedList in terms of performance?
+
+11. You need to filter a list of employee objects to find all employees with a salary above 50,000.
+Ø How to achieve this using Java Streams?
+Ø What is the difference between map() and flatMap() in Streams?
+
+12. Can immutable classes still have mutable fields? Why or why not?
+
+13. Imagine you’re building an application with different user roles (ADMIN, USER, GUEST). How would you use Enums effectively here?
+14. Can Enums have constructors and methods? Provide an example.
+NOTE: For Interview preparation and mock interviews DM me.

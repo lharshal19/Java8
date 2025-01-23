@@ -1,0 +1,273 @@
+
+
+// SpringBoot
+
+1. In how many ways we can return the data in springboot rest api.
+2. Which framework used to create web and restful applications in spring that can return JSON and XML file ?
+3. Which is more secure ? SOAP or REST ? Why ?
+4. What are different ways to configure a class as Spring Bean ?
+5. Explain the role of the Tomcat server in the Spring Boot Application
+6. Which classe responsible for handling incoming HTTP requests and returning an appropriate response ?
+7. Why do we need springBoot auto configuration ?
+8. About Metadata in Spring Framework?
+9. What are the limitations of Autowiring ?
+10. Can you inject null and empty string values in Spring? If yes, how ?
+
+PHASE 1 - Basics
+
+• Creating a spring boot project using spring initializr
+• Maven and gradle build tools
+• Annotations
+• Profiles and environment-specific configurations
+• @getmapping, @postmapping, @putmapping, @deletemapping
+• Handling path variables and request parameters
+• Setting up database connection (h2, mysql, postgresql)
+• Using jparepository and crudrepository
+• Introduction to spring boot devtools
+• Enabling hot reloading
+• Spring batch, scheduling and cron expressions
+
+
+PHASE 2 - Intermediate
+
+• Using @controlleradvice and @exceptionhandler
+• Custom error responses and exception classes
+• Global exception handling
+• Basic authentication
+• Configuring security for apis
+• Implementing jwt (json web tokens) for stateless authentication
+• Introduction to hateoas
+• Versioning rest apis (uri, parameter, headers)
+• Unit testing with junit and mockito
+• Writing integration tests with spring boot test
+• Testing restful services with mockmvc
+• Exploring actuator endpoints
+• Creating custom health indicators
+
+
+PHASE 3 - Advanced
+
+• Using @profile annotation
+• Configuring environment-specific beans
+• Switching profiles for different environments
+• Setting up a spring cloud project
+• Key components of spring cloud
+• Setting up eureka server
+• Registering microservices with eureka
+• Service discovery in action
+• Introduction to api gateway
+• Setting up spring cloud gateway
+• Configuring routes and filters
+• Setting up spring cloud config server
+• Managing configuration in a centralized repository
+• Configuring spring boot applications to use config server
+
+
+PHASE 4 - Microservices
+
+• Introduction to inter-service communication
+• Using rest template for synchronous communication
+• Using feign client for simplified service calls
+• Setting up resilience4j
+• Configuring circuit breakers, retry in microservices
+• Introduction to distributed tracing
+//Multithreading interview question
+
+//==========================================
+
+ Top 5 Essential Spring Boot Interview Questions & Answers 
+
+Preparing for a Spring Boot interview? Here are five key questions and answers to help you ace your interview! 💻
+
+
+1. What is Spring Boot and why is it used?
+
+Spring Boot simplifies the development of Spring-based applications by providing production-ready defaults and reducing configuration. It allows faster development with minimal setup.
+
+
+2. What are the advantages of using Spring Boot?
+
+Auto-Configuration: Automatically configures your app based on the project’s dependencies.
+
+Embedded Servers: Supports embedded web servers like Tomcat, Jetty, and Undertow.
+
+Production-Ready: Includes features like health checks, metrics, and monitoring.
+
+Minimal Configuration: Reduces boilerplate code, allowing faster development.
+
+3. What is the use of @SpringBootApplication annotation?
+
+This annotation combines @Configuration, @EnableAutoConfiguration, and @ComponentScan, simplifying application setup and reducing the need for explicit configuration.
+
+
+4. What is Spring Boot Actuator?
+
+Spring Boot Actuator offers production-ready features like health checks, metrics, and monitoring, allowing you to track your app's performance and health.
+
+
+5. How can you create RESTful services in Spring Boot?
+
+Use the @RestController annotation and define endpoints with @GetMapping, @PostMapping, etc., to create REST APIs easily and effectively in Spring Boot.
+
+💡 Pro Tip: Mastering these core features of Spring Boot is essential for building scalable, robust applications with minimal configuration.
+
+============================================
+
+✅𝟒𝟎 𝐄𝐬𝐬𝐞𝐧𝐭𝐢𝐚𝐥 𝐒𝐩𝐫𝐢𝐧𝐠 𝐁𝐨𝐨𝐭 𝐀𝐧𝐧𝐨𝐭𝐚𝐭𝐢𝐨𝐧𝐬 𝐟𝐨𝐫 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫s
+
+Spring Boot annotations simplify Java application development, crucial for interview preparation.
+Here’s a curated list:
+1. @Required: Ensures a bean property must be set.
+2. @Autowired: Automatically injects dependencies.
+3. @Configuration: Declares @Bean methods in a class.
+4. @ComponentScan: Configures component scanning.
+5. @Bean: Produces a managed Spring bean.
+6. @Qualifier: Specifies bean injection options.
+7. @Lazy: Delays bean initialization.
+8. @Value: Injects a property value.
+9. @Component: Marks a Spring component.
+10. @Controller: Handles MVC views.
+11. @Service: Marks service layer components.
+12. @Repository: Marks DAOs with exception translation.
+13. @EnableAutoConfiguration: Enables auto-configuration.
+14. @SpringBootApplication: Configures Spring Boot app.
+15. @RequestMapping: Maps HTTP methods.
+16. @GetMapping: Handles HTTP GET requests.
+17. @PostMapping: Maps HTTP POST requests.
+18. @PutMapping: Maps HTTP PUT requests.
+19. @DeleteMapping: Maps HTTP DELETE requests.
+20. @PatchMapping: Maps HTTP PATCH requests.
+21. @RequestBody: Binds HTTP request body.
+22. @ResponseBody: Binds HTTP response body.
+23. @PathVariable: Extracts URI values.
+24. @RequestParam: Extracts query parameters.
+25. @RequestHeader: Extracts header values.
+26. @RestController: Combines @Controller and @ResponseBody.
+27. @RequestAttribute: Binds request attributes.
+28. @CookieValue: Binds HTTP cookie values.
+29. @CrossOrigin: Enables CORS.
+30. @Profile: Specifies bean profiles.
+31. @Scope: Defines bean scopes.
+32. @Conditional: Registers beans conditionally.
+33. @Primary: Sets primary autowired beans.
+34. @PropertySource: Adds PropertySource to Environment.
+35. @EnableAsync: Enables asynchronous methods.
+36. @EnableScheduling: Enables scheduled tasks.
+37. @EnableCaching: Enables caching.
+38. @RestControllerAdvice: Specializes @ControllerAdvice for REST.
+39. @JsonIgnoreProperties: Ignores JSON properties.
+40. @JsonProperty: Maps JSON properties to Java fields.
+
+Note: This list provides an overview, for a deeper understanding, it’s essential to read about each annotation in detail.
+==========================================
+
+
+Java Shorts: 🚀 Spring Boot Caching
+
+In today’s fast-paced development world, application performance is critical. One way to enhance performance is by leveraging Spring Boot Caching, which simplifies adding a caching layer to your application.
+
+Let me break down the key caching annotations Spring Boot provides:
+
+📌 @EnableCaching
+
+Activates caching for your Spring Boot application.
+
+
+📌 @Cacheable
+
+Caches the result of a method. If the method is called with the same parameters, the cached result is returned, saving processing time.
+
+
+@Cacheable(value = "books", key = "#id", unless = "#result == null")
+public Book getBookById(Long id) {
+ return bookRepository.findById(id);
+}
+
+📌 @CachePut
+
+Updates the cache with a new value whenever the annotated method is invoked.
+
+
+@CachePut(value = "books", key = "#book.id")
+public Book updateBook(Book book) {
+ return bookRepository.save(book);
+}
+
+📌 @CacheEvict
+
+Removes entries from the cache to keep data consistent.
+
+
+@CacheEvict(value = "books", key = "#id")
+public void deleteBookById(Long id) {
+ bookRepository.deleteById(id);
+}
+
+📌 @Caching
+
+Combines multiple cache operations for complex scenarios.
+
+
+@Caching(
+ put = { @CachePut(value = "books", key = "#book.id") },
+ evict = { @CacheEvict(value = "allBooks", allEntries = true) }
+)
+public Book saveBook(Book book) {
+ return bookRepository.save(book);
+}
+
+📌 @CacheConfig
+
+Reduces redundancy by defining common cache configurations at the class level.
+
+
+@CacheConfig(cacheNames = "books")
+public class BookService {
+ @Cacheable(key = "#id")
+ public Book getBookById(Long id) {
+ return bookRepository.findById(id);
+ }
+}
+
+💡 How to Get Started:
+
+1️⃣ Add the Spring Boot cache dependency:
+
+<dependency>
+ <groupId>org.springframework.boot</groupId>
+ <artifactId>spring-boot-starter-cache</artifactId>
+</dependency>
+
+2️⃣ Enable caching:
+
+@SpringBootApplication
+@EnableCaching
+public class Application {
+ public static void main(String[] args) {
+ SpringApplication.run(Application.class, args);
+ }
+}
+
+3️⃣ Configure your caching provider (e.g., EhCache, Caffeine, Redis).
+
+By leveraging these annotations, you can seamlessly integrate caching into your Spring Boot application and improve performance by reducing redundant computations or database hits.
+
+======================================
+
+𝐍𝐞𝐬𝐭𝐞𝐝 𝐂𝐥𝐚𝐬𝐬𝐞𝐬 𝐢𝐧 𝐉𝐚𝐯𝐚
+
+In Java, a nested class is a class defined within another class. There are 𝐟𝐨𝐮𝐫 types of nested classes:
+
+1) 𝐌𝐞𝐦𝐛𝐞𝐫 𝐈𝐧𝐧𝐞𝐫 𝐂𝐥𝐚𝐬𝐬: A member inner class is a class defined at the same level as other class members. To instantiate it, we must first instantiate the outer class. Member inner classes have access to all members of the outer class, including 𝐩𝐫𝐢𝐯𝐚𝐭𝐞 𝐦𝐞𝐦𝐛𝐞𝐫𝐬.
+
+2) 𝐋𝐨𝐜𝐚𝐥 𝐈𝐧𝐧𝐞𝐫 𝐂𝐥𝐚𝐬𝐬: A local inner class is a class defined within a method, similar to a local variable. Its scope is limited to the method, and it has access to all members of the enclosing class. However, it can only access 𝐟𝐢𝐧𝐚𝐥 or 𝐞𝐟𝐟𝐞𝐜𝐭𝐢𝐯𝐞𝐥𝐲 𝐟𝐢𝐧𝐚𝐥 local variables of the enclosing method.
+
+3) 𝐀𝐧𝐨𝐧𝐲𝐦𝐨𝐮𝐬 𝐈𝐧𝐧𝐞𝐫 𝐂𝐥𝐚𝐬𝐬: Anonymous inner classes are inner classes with no name and are declared and instantiated in a single expression. They can extend a class or implement an interface but are limited to one superclass or one interface. Note that 𝐥𝐚𝐦𝐛𝐝𝐚𝐬 introduced in Java 8 serve similar use cases for functional interfaces.
+
+4) 𝐒𝐭𝐚𝐭𝐢𝐜 𝐍𝐞𝐬𝐭𝐞𝐝 𝐂𝐥𝐚𝐬𝐬: Static nested classes are defined with the 𝐬𝐭𝐚𝐭𝐢𝐜 keyword at the same level as other class members. They can be instantiated without an object of the enclosing class and can only access static members of the outer class.
+
+======================================
+
+
+
+

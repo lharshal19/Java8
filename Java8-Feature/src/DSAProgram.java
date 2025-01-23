@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.HashSet;
 
 public class DSAProgram {
 
@@ -669,7 +667,7 @@ public class DSAProgram {
 			combination(s3, s2 + ch);
 		}
 	}*/
-	
+
 	//=============================
 	// Reverse each word in List
 	/*public static void main(String[] args) {
@@ -688,7 +686,7 @@ public class DSAProgram {
 		
 		
 	}*/
-	
+
 	//==============================
 	/*If controller receives multiple requests at time by client how would you handle those
 	1. Handle Concurrency at the Controller Level
@@ -704,10 +702,97 @@ public class DSAProgram {
 	4. Use a Message Queue for Heavy Workloads
 	5. Rate Limiting
 	*/
-	
+
 	//==============================
+	//sort base on date
+	/*	public static void main(String[] args) {
+	
+			List<String> fileName = Arrays.asList("iCAT_SAML_Attribute_handling_20241015",
+					"iCAT_SAML_Attribute_handling_20240915", "iCAT_SAML_Attribute_handling_20240815",
+					"iCAT_SAML_Attribute_handling_20241115");
+	
+			List<String> collect2 = fileName.stream().map(i -> i.substring(29, i.length())).collect(Collectors.toList());
+			System.out.println(collect2);
+	
+			List<String> collect = collect2.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+			System.out.println(collect);
+			fileName.sort(Comparator.comparing(s -> s.substring(s.lastIndexOf('_') + 1)));
+	
+			System.out.println(fileName);
+	
+		}*/
 
+	//===============================
+	//Count number of vowels in string
+	/*public static void main(String[] args) {
+		String str = "hello world";
+		Set<Character> vowels = Set.of('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U');
+		int count = 0;
+		for (char c : str.toCharArray()) {
+			if (vowels.contains(c)) {
+				count++;
+			}
+		}
+		//	        System.out.println(str.);
+	
+		//Method 2
+		long count2 = str.chars().mapToObj(c -> (char) c).filter(c -> "aeiouAEIOU".indexOf(c) != -1).count();
+		System.out.println(count2);
+	
+	}*/
 
+	//==============================
+	//Write a function to find the missing number in an array from 1 to n.
+	/*public static void main(String[] args) {
+		int[] arr = { 1, 2, 4, 5 }; // Missing 3
+		int n = 5;
+	
+		int total = n * (n + 1) / 2;
+		int sum = 0;
+		for (int num : arr) {
+			sum += num;
+		}
+	
+		System.out.println("missing element :-   " + (total - sum));
+	
+		//method 2 
+		HashSet<Integer> set = new HashSet<>();
+		for (int num : arr) {
+			set.add(num);
+		}
+		for (int i = 1; i <= 8; i++) {
+			if (!set.contains(i)) {
+				System.out.println("missing element :-   " + i);
+			}
+		}
+	}*/
+
+	//==================================
+	//Write a function to reverse a subarray from index l to r.
+
+	/*public static void main(String[] args) {
+		int[] arr = { 1, 2, 3, 4, 5, 6, 7 };
+		int l = 2, r = 5;
+	
+		reverseSubarray(arr, l, r);
+	
+		// Print the modified array
+		for (int num : arr) {
+			System.out.print(num + " ");
+		}
+	}
+	
+	public static void reverseSubarray(int[] arr, int l, int r) {
+		while (l < r) {
+			// Swap elements at l and r
+			int temp = arr[l];
+			arr[l] = arr[r];
+			arr[r] = temp;
+	
+			l++;
+			r--;
+		}
+	}*/
 
 }
 
@@ -744,10 +829,10 @@ outout = {2,4,5,1,5,3}*/
 //	String : ABC, Combinations : ABC, BCA, CAB, CBA, BAC, ACB
 // Reverse each word in List
 //If controller receives multiple requests at time by client how would you handle those
-//
-//
-//
-//
+////sort base on date
+//Count number of vowels in string
+//Write a function to find the missing number in an array from 1 to n.
+//Write a function to reverse a subarray from index l to r.
 //
 //
 //

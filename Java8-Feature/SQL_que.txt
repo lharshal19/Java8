@@ -1,0 +1,204 @@
+
+
+1. What is SQL, and what are its different types?
+2. Explain the difference between SQL and MySQL.
+3. What are the different types of joins in SQL? Provide examples.
+4. What is normalization, and how does it differ from denormalization?
+5. Explain the different types of normal forms.
+6. What is the difference between DELETE, TRUNCATE, and DROP commands?
+7. What are primary keys and foreign keys?
+8. How do INNER JOIN and OUTER JOIN differ?
+9.What is a subquery? Explain with an example.
+10. What are indexes in SQL, and why are they important?
+11.What are aggregate functions in SQL? Provide some examples.
+12. What is the difference between GROUP BY and HAVING clauses?
+13. What is the purpose of the WHERE clause?
+14. What are the different types of constraints in SQL?
+15. What is a stored procedure, and how does it differ from a function?
+16. What is a trigger in SQL? Provide an example.
+17. Explain ACID properties in the context of SQL.
+18. How do VARCHAR and CHAR differ?
+19. What are the different types of SQL data types?
+20. What is a self-join? Provide an example.
+21. What is a view in SQL, and how does it differ from a table?
+22. How does the EXISTS clause work?
+23. What is a Common Table Expression (CTE)?
+24. What is the purpose of INDEX in SQL?
+25. What are transactions in SQL, and how can you manage them?
+26. Explain the RANK() and DENSE_RANK() functions in SQL.
+27. How can you optimize SQL queries to improve performance?
+28. What is the difference between UNION and UNION ALL?
+29. How is the LIKE operator used in SQL?
+30. Explain the COALESCE function with an example.
+
+==============================
+
+SQL queries that are commonly asked during interviews:
+
+1. Retrieve the second-highest salary of employees:
+SELECT MAX(salary) AS second_highest_salary
+ FROM Employee 
+WHERE salary < (SELECT MAX(salary) FROM Employee);
+
+2. Get the total number of employees in each department:
+SELECT department, COUNT(employee_id) AS total_employees 
+FROM Employee 
+GROUP BY department;
+
+3. List customers who have not placed any orders:
+SELECT c.customer_id, c.customer_name 
+FROM Customers c 
+LEFT JOIN Orders o ON c.customer_id = o.customer_id 
+WHERE o.order_id IS NULL;
+
+4. Find the product with the highest revenue:
+SELECT product_id, SUM(quantity * price) AS total_revenue 
+FROM Sales 
+GROUP BY product_id 
+ORDER BY total_revenue DESC 
+LIMIT 1;
+
+
+5. Retrieve employees who earn more than the average salary:
+SELECT * 
+FROM Employee 
+WHERE salary > (SELECT AVG(salary) FROM Employee);
+
+6. Get the list of products sold in the last 7 days:
+SELECT DISTINCT product_id 
+FROM Sales 
+WHERE order_date >= DATEADD(DAY, -7, GETDATE());
+
+ 7. Find the number of orders placed each day:
+SELECT order_date, COUNT(order_id) AS total_orders 
+FROM Orders 
+GROUP BY order_date;
+
+8. Retrieve employees with the same salary:
+SELECT employee_id, salary 
+FROM Employee 
+GROUP BY salary 
+HAVING COUNT(employee_id) > 1;
+
+9. List the customers who have placed the most orders:
+SELECT customer_id, COUNT(order_id) AS total_orders 
+FROM Orders 
+GROUP BY customer_id 
+ORDER BY total_orders DESC 
+LIMIT 1;
+
+10. Get the total quantity of each product sold per month:
+SELECT product_id, MONTH(order_date) AS month, SUM(quantity) AS total_quantity 
+FROM Sales 
+GROUP BY product_id, MONTH(order_date);
+
+====================================
+
+
+🤯 SQL interview questions:
+
+1. Write a query to calculate the median salary of employees in a table.
+
+2. Identify products that were sold in all regions.
+
+3. Retrieve the name of the manager who supervises the most employees.
+
+4. Write a query to group employees by age ranges (e.g., 20–30, 31–40) and count the number of employees in each group.
+
+5. Display the cumulative percentage of total sales for each product.
+ 
+6. Write a query to retrieve the first order placed by each customer.
+
+7. Identify employees who have never received a performance review.
+
+8. Find the most common value (mode) in a specific column.
+
+9. Display all months where sales exceeded the average monthly sales.
+
+10. Write a query to identify the employee(s) whose salary is closest to the average salary of the company.
+
+Answers:
+
+Solution 1
+
+SELECT AVG(salary) AS median_salary 
+FROM ( 
+ SELECT salary 
+ FROM employees 
+ ORDER BY salary 
+ LIMIT 2 - (SELECT COUNT(*) FROM employees) % 2 
+ OFFSET (SELECT (COUNT(*) - 1) / 2 FROM employees) 
+) subquery; 
+
+Solution 2
+
+SELECT product_id 
+FROM sales 
+GROUP BY product_id 
+HAVING COUNT(DISTINCT region_id) = (SELECT COUNT(*) FROM regions); 
+
+Solution 3
+
+SELECT manager_id, COUNT(*) AS num_employees 
+FROM employees 
+GROUP BY manager_id 
+ORDER BY num_employees DESC 
+LIMIT 1; 
+
+Solution 4
+
+SELECT CASE 
+ WHEN age BETWEEN 20 AND 30 THEN '20-30' 
+ WHEN age BETWEEN 31 AND 40 THEN '31-40' 
+ WHEN age BETWEEN 41 AND 50 THEN '41-50' 
+ ELSE '50+' 
+ END AS age_range, 
+ COUNT(*) AS num_employees 
+FROM employees 
+GROUP BY age_range; 
+
+Solution 5
+
+SELECT product_id, 
+ SUM(sales) AS product_sales, 
+ SUM(SUM(sales)) OVER (ORDER BY SUM(sales) DESC) * 100.0 / SUM(SUM(sales)) OVER () AS cumulative_percentage 
+FROM sales_table 
+GROUP BY product_id; 
+
+Solution 6
+
+SELECT customer_id, MIN(order_date) AS first_order_date 
+FROM orders 
+GROUP BY customer_id; 
+
+Solution 7
+
+SELECT * 
+FROM employees 
+WHERE employee_id NOT IN (SELECT employee_id FROM performance_reviews); 
+
+Solution 8
+
+SELECT column_name, COUNT(*) AS frequency 
+FROM table_name 
+GROUP BY column_name 
+ORDER BY frequency DESC 
+LIMIT 1; 
+
+Solution 9
+
+SELECT month, SUM(sales) AS monthly_sales 
+FROM sales 
+GROUP BY month 
+HAVING monthly_sales > (SELECT AVG(SUM(sales)) FROM sales GROUP BY month); 
+
+Solution 10
+
+SELECT employee_id, salary 
+FROM employees 
+ORDER BY ABS(salary - (SELECT AVG(salary) FROM employees)) ASC 
+LIMIT 1; 
+
+======================
+
+
