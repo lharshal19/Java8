@@ -1,4 +1,6 @@
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class DSAProgram {
 
@@ -668,7 +670,45 @@ public class DSAProgram {
 		}
 	}*/
 	
+	//=============================
+	// Reverse each word in List
+	/*public static void main(String[] args) {
+		List<String> list = Arrays.asList("String", "randomvalue", "sdfs", "ouwer", "soius");
+		List<Integer> list1 = Arrays.asList(1,2,3,4);
+		String string = list.stream().map(i -> new StringBuffer(i).reverse().toString()).findFirst().get();
+		System.out.println(string);
+		
+		//Convertion of one type of arrays to other type
+		Integer[] array2 = list1.stream().toArray(Integer[]::new);
+		int[] array3 = Arrays.stream(array2).mapToInt(Integer::intValue).toArray();
+		double[] array4 = Arrays.stream(array2).mapToDouble(Integer::doubleValue).toArray();
+		
+		String[] array =  list1.toArray(new String[0]);
+		System.out.println(Arrays.toString(array));
+		
+		
+	}*/
 	
+	//==============================
+	/*If controller receives multiple requests at time by client how would you handle those
+	1. Handle Concurrency at the Controller Level
+		- By default Spring create a new thread for each request so the controller methods are inherently thread-safe if they don’t share mutable state.
+		- Ensure controller methods are stateless.
+		- Use local variables inside the method instead of shared variables.
+	2. Synchronize Access to Shared Resources
+		-use AtomicInteger for counters instead of manual synchronization:
+	3. Use Thread Pools
+		-Limit the number of concurrent requests to avoid overwhelming the system.
+		- create ThreadPoolTaskExecutor class ( Enable @EnableAsync)  and specify corepoolSize, maxPoopSize, QueueCapacity, ThreadNamePrefix, initialize
+		- Annotate your methods using @Async
+	4. Use a Message Queue for Heavy Workloads
+	5. Rate Limiting
+	*/
+	
+	//==============================
+
+
+
 }
 
 //Check two strings Anagram or not
@@ -702,21 +742,13 @@ outout = {2,4,5,1,5,3}*/
 //To remove duplicates from a sorted array
 //finds a pair of numbers in an array whose sum equals a given target
 //	String : ABC, Combinations : ABC, BCA, CAB, CBA, BAC, ACB
-
-/*
-Reverse a linked list.
-2. Find the middle element of a linked list.
-3. Implement a stack using arrays/linked list.
-4. Implement a queue using arrays/linked list.
-8. Implement merge sort.
-9. Implement quick sort.
-10. Detect a cycle in a linked list.
-11. Find the intersection point of two linked lists.
-12. Check if a binary tree is a binary search tree (BST).
-13. Print all leaf nodes of a binary tree.
-14. Reverse a binary tree.
-23. Find the longest increasing subsequence of an array.
-30. .
-35. Implement an LRU (Least Recently Used) Cache.
-36. Find the longest palindrome substring in a string.
-*/
+// Reverse each word in List
+//If controller receives multiple requests at time by client how would you handle those
+//
+//
+//
+//
+//
+//
+//
+//
