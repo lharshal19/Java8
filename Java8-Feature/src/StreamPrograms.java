@@ -1,3 +1,4 @@
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -56,6 +57,9 @@ public class StreamPrograms {
 				.collect(Collectors.toList());
 	
 		System.out.println(sortedByLength);
+		List<String> sortedByLength1 = strings.stream().sorted(Comparator.comparingInt(String::length)).collect(Collectors.toList());
+		System.out.println(sortedByLength1);
+		
 	}*/
 
 	//==================================
@@ -183,20 +187,7 @@ public class StreamPrograms {
 	    }*/
 
 	//============================
-	//Create a Map<Character, Integer> from a string with counts of vowels.
-	/*public static void main(String[] args) {
-		String input = "example string with vowels";
-	
-		Map<Character, Integer> vowelCountMap = input.chars()
-		    .mapToObj(ch -> (char) ch).peek(i->System.out.println(i+" : "+"aeiouAEIOU".indexOf(i)))
-		    .filter(ch -> "aeiouAEIOU".indexOf(ch) != -1)// Filter only vowels
-		    .collect(Collectors.groupingBy(Function.identity(), Collectors.collectingAndThen(Collectors.counting(), Long::intValue)));
-			//.collect(Collectors.groupingBy(Function.identity(),   Collectors.summingInt(v -> 1)));
-	
-		System.out.println(vowelCountMap);
-	}*/
 
-	//===========================
 	//Check if two lists are disjoint using streams.
 	/* public static void main(String[] args) {
 	       List<Integer> list1 = List.of(1, 2, 3, 4, 5);
@@ -248,7 +239,6 @@ public class StreamPrograms {
 //Find all prime numbers in a range using streams.
 //Check if a given list is sorted.
 //Find the intersection of two lists.
-//Create a Map<Character, Integer> from a string with counts of vowels.
 //Check if two lists are disjoint using streams.
 //Implement a pipeline to process a list of integers: square, filter evens, and sum.
 //Collecting Data to Map with Multiple Values

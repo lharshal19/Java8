@@ -1,4 +1,10 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class DSAProgram {
 
@@ -296,7 +302,7 @@ public class DSAProgram {
 	//=================================
 	//To sort an array containing only 0s, 1s, and 2s
 	/*public static void main(String[] args) {
-		int[] arr = { 0, 1, 2, 0, 1, 2, 1, 0 };
+		int[] arr = { 2,2,0, 1, 2, 0, 1, 2, 1, 0 };
 		System.out.println("Original Array: " + Arrays.toString(arr));
 	
 		int low = 0; // Position for 0
@@ -324,6 +330,7 @@ public class DSAProgram {
 				arr[high] = arr[mid];
 				arr[mid] = tempHigh;
 				high--;
+	//				mid++;
 				break;
 			}
 		}
@@ -535,19 +542,58 @@ public class DSAProgram {
 	//============================
 	//Duplicate Elements in an Array
 	/*public static void main(String[] args) {
-		System.out.println(findDuplicates(new int[]{1,2,2,4}));
+		System.out.println(findDuplicates(new int[] { 1, 2, 2, 4 }));
+		int[] arr = { 4, 3, 2, 7, 8, 2, 3, 1 };
+		Arrays.sort(arr); // Sort the array
+		System.out.println("-----------");
+		//method 2 - O(nlogn)
+		for (int i = 1; i < arr.length; i++) {
+			if (arr[i] == arr[i - 1]) {
+				System.out.println(arr[i]);
+			}
+		}
+	
+		//method 3 - O(n)
+		List<Integer> duplicates = Arrays.stream(arr).boxed()
+				.collect(Collectors.groupingBy(e -> e, Collectors.counting())).entrySet().stream()
+				.filter(entry -> entry.getValue() > 1).map(Map.Entry::getKey).collect(Collectors.toList());
+	
+		System.out.println("Duplicate elements: " + duplicates);
+	
+		System.out.println("-----------");
+		// method 4 - O(n)
+		HashMap<Integer, Integer> countMap = new HashMap<>();
+		System.out.println("Duplicate elements:");
+		for (int num : arr) {
+			countMap.put(num, countMap.getOrDefault(num, 0) + 1);
+		}
+		for (int key : countMap.keySet()) {
+			if (countMap.get(key) > 1) {
+				System.out.println(key);
+			}
+		}
+	
+		//method 5 - O(n)
+		HashSet<Integer> seen = new HashSet<>();
+		System.out.println("Duplicate elements:");
+		for (int num : arr) {
+			if (!seen.add(num)) { // add() returns false if the element is already in the set
+				System.out.println(num);
+			}
+		}
 	}
+	
 	public static List<Integer> findDuplicates(int[] nums) {
-	    List<Integer> result = new ArrayList<>();
-	    for (int i = 0; i < nums.length; i++) {
-	        int index = Math.abs(nums[i]) - 1;
-	        if (nums[index] < 0) {
-	            result.add(Math.abs(nums[i]));
-	        } else {
-	            nums[index] = -nums[index];
-	        }
-	    }
-	    return result;
+		List<Integer> result = new ArrayList<>();
+		for (int i = 0; i < nums.length; i++) {
+			int index = Math.abs(nums[i]) - 1;
+			if (nums[index] < 0) {
+				result.add(Math.abs(nums[i]));
+			} else {
+				nums[index] = -nums[index];
+			}
+		}
+		return result;
 	}*/
 
 	//=============================
@@ -704,20 +750,20 @@ public class DSAProgram {
 	*/
 
 	//==============================
-	//sort base on date
+	//Sort base on date
 	/*	public static void main(String[] args) {
 	
-			List<String> fileName = Arrays.asList("iCAT_SAML_Attribute_handling_20241015",
-					"iCAT_SAML_Attribute_handling_20240915", "iCAT_SAML_Attribute_handling_20240815",
-					"iCAT_SAML_Attribute_handling_20241115");
+			List<String> fileName = Arrays.asList("iCAT_SAML1_Attribute_handling_20241015",
+					"iCAT_SAML4_Attribute_handling_20240915", "iCAT_SAML3_Attribute_handling_20240815",
+					"iCAT_SAML2_Attribute_handling_20241115");
 	
-			List<String> collect2 = fileName.stream().map(i -> i.substring(29, i.length())).collect(Collectors.toList());
-			System.out.println(collect2);
-	
-			List<String> collect = collect2.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
-			System.out.println(collect);
 			fileName.sort(Comparator.comparing(s -> s.substring(s.lastIndexOf('_') + 1)));
+			System.out.println(fileName);
 	
+			//method 2
+			fileName.sort((s1, s2) -> {
+				return s2.split("_")[1].compareTo(s1.split("_")[1]);
+			});
 			System.out.println(fileName);
 	
 		}*/
@@ -738,7 +784,20 @@ public class DSAProgram {
 		//Method 2
 		long count2 = str.chars().mapToObj(c -> (char) c).filter(c -> "aeiouAEIOU".indexOf(c) != -1).count();
 		System.out.println(count2);
+		long count3 = str.chars().mapToObj(c -> Character.valueOf((char)c)).filter(c -> "aeiouAEIOU".indexOf(c) != -1).count();
+		System.out.println(count3);
 	
+		//-------------------------
+	
+		String input = "example string with vowels";
+	
+		Map<Character, Integer> vowelCountMap = input.chars()
+		    .mapToObj(ch -> (char) ch).peek(i->System.out.println(i+" : "+"aeiouAEIOU".indexOf(i)))
+		    .filter(ch -> "aeiouAEIOU".indexOf(ch) != -1)// Filter only vowels
+		    .collect(Collectors.groupingBy(Function.identity(), Collectors.collectingAndThen(Collectors.counting(), Long::intValue)));
+			//.collect(Collectors.groupingBy(Function.identity(),   Collectors.summingInt(v -> 1)));
+	
+		System.out.println(vowelCountMap);
 	}*/
 
 	//==============================
