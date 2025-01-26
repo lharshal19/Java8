@@ -1,4 +1,4 @@
-
+SQL 
 
 1. What is SQL, and what are its different types?
 2. Explain the difference between SQL and MySQL.
