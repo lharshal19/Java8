@@ -1,5 +1,503 @@
 
 
+
+DB Locking: 
+- Db Locking, help us to make sure that no other transaction update the lokced rows.
+
+Shared Lock(s) -> If Transaction locked data item in shared mode then allowed to read only.
+Exclusive Lock(x) -> If Transaction locked data item in exclusive mode then allowed to read and write both.
+
+Lock Type |  Another Shared Lock  |  Another Exclusive Lock
+Have Shared Lock | Yes  | No
+Have Exclusive Lock  | No  | No
+
+
+Isolation Level present?
+
+Isolations Level | DirtyRead possible |  Non-Repeatable Read Possible | Phantom Read possible
+Read Uncommitted |  Yes  | Yes  | Yes
+Read committed   |  No  |  Yes  |  Yes
+Repeatable Read  | No  | No  | Yes
+Serializable           | No  | No  | No
+
+Dirty Read:
+If Transaction A is reading the data which is written by Transaction B and not yet even committed.
+If Transaction B does the rollback, then whatever data read by Transaction A is know dirty read.  
+
+Non-Repeatable Read:
+If suppose Transaction A, reads the same row several times and there is chance that it reads diferent value.
+
+Phantom Read :
+If suppose Transaction A, executes same query several times and there is a chance that the rows returned are diiferent.
+
+
+ISOLATION LEVEL     |    Locking Strategy
+Read Uncommitted	|   Read : No Lock acquired
+									Write : No Lock acquired
+Read committed     | Read : Shared Lock acquired and Release 
+
+
+Irrecoverable schedule  : with dirty read problem transaction t2 is irrecoverable.
+recoverable schedule :
+Cascading schedule : It is same as dirty read
+Cascadeless schedule : let Transaction t1 complete by writing data and committing data then only  allows t2 to read.
+
+Conflict equivalent schedule:
+
+
+
+1. What is a stored procedure?
+Answer: A stored procedure is a precompiled set of SQL statements stored in the database. 
+It can be executed as a single unit to perform operations like querying data, inserting records, updating data, or deleting rows. 
+Stored procedures help improve performance, reusability, and security.
+
+2. What are the advantages of using stored procedures?
+Answer:
+Performance: Precompiled and optimized SQL code.
+Reusability: Can be reused across different programs and users.
+Security: Access to data can be controlled through permissions.
+Reduced Network Traffic: Logic is executed on the server, minimizing the amount of data sent between the server and client.
+Maintainability: Easier to update logic in one place.
+
+3. What are the differences between a stored procedure and a function?
+Answer:
+Stored procedures can return multiple values, while functions return a single value or a table.
+Procedures can perform actions like inserting or updating data, whereas functions are mainly used for computations.
+Functions can be used in SQL statements, but stored procedures cannot.
+
+4. How do you create a stored procedure in SQL?
+Answer:
+CREATE PROCEDURE ProcedureName
+AS
+BEGIN
+    -- SQL Statements
+END;
+
+5. How do you execute a stored procedure?
+Answer:
+EXEC ProcedureName;
+Or
+EXECUTE ProcedureName;
+
+Intermediate Questions
+6. What are input and output parameters in stored procedures?
+Answer:
+Input Parameters: Allow the caller to pass data into the procedure.
+Output Parameters: Allow the procedure to return data to the caller.
+Example:
+CREATE PROCEDURE GetEmployeeDetails
+    @EmployeeID INT, -- Input Parameter
+    @EmployeeName NVARCHAR(50) OUTPUT -- Output Parameter
+AS
+BEGIN
+    SELECT @EmployeeName = Name FROM Employees WHERE ID = @EmployeeID;
+END;
+
+7. How do you handle errors in stored procedures?
+Answer: Use TRY...CATCH blocks. Example:
+CREATE PROCEDURE UpdateEmployeeSalary
+    @EmployeeID INT,
+    @NewSalary DECIMAL(10, 2)
+AS
+BEGIN
+    BEGIN TRY
+        UPDATE Employees SET Salary = @NewSalary WHERE ID = @EmployeeID;
+    END TRY
+    BEGIN CATCH
+        SELECT ERROR_MESSAGE() AS ErrorMessage;
+    END CATCH
+END;
+
+8. Can a stored procedure call another stored procedure?
+Answer: Yes, a stored procedure can call another stored procedure. Example:
+CREATE PROCEDURE OuterProcedure
+AS
+BEGIN
+    EXEC InnerProcedure;
+END;
+
+9. What is the difference between temporary and permanent stored procedures?
+Answer:
+Permanent Stored Procedures: Stored in the database and remain until explicitly dropped.
+Temporary Stored Procedures: Created in the tempdb database and exist only for the duration of the connection or session. They are prefixed with #.
+
+10. What is a nested stored procedure?
+Answer: A stored procedure that is called within another stored procedure.
+
+Advanced Questions
+11. How can you debug a stored procedure?
+Answer:
+Use PRINT statements to display intermediate values.
+Use SQL Server Management Studio's (SSMS) debugging tools to step through code.
+
+12. How do you optimize stored procedures?
+Answer:
+Avoid using SELECT *, specify column names.
+Use proper indexing.
+Avoid cursors when possible.
+Use table variables or temporary tables efficiently.
+Keep transaction scope as small as possible.
+
+13. What are dynamic SQL statements in stored procedures?
+Answer: Dynamic SQL allows you to construct and execute SQL statements at runtime. Example:
+CREATE PROCEDURE DynamicSQLExample
+    @TableName NVARCHAR(50)
+AS
+BEGIN
+    DECLARE @SQL NVARCHAR(MAX);
+    SET @SQL = 'SELECT * FROM ' + @TableName;
+    EXEC sp_executesql @SQL;
+END;
+
+14. How do you handle transactions in stored procedures?
+Answer: Use BEGIN TRANSACTION, COMMIT TRANSACTION, and ROLLBACK TRANSACTION.
+Example:
+CREATE PROCEDURE TransactionExample
+AS
+BEGIN
+    BEGIN TRANSACTION;
+    BEGIN TRY
+        UPDATE Account SET Balance = Balance - 100 WHERE AccountID = 1;
+        UPDATE Account SET Balance = Balance + 100 WHERE AccountID = 2;
+        COMMIT TRANSACTION;
+    END TRY
+    BEGIN CATCH
+        ROLLBACK TRANSACTION;
+        SELECT ERROR_MESSAGE() AS ErrorMessage;
+    END CATCH;
+END;
+
+15. How can you schedule stored procedures to run automatically?
+Answer: Use SQL Server Agent to create a job that executes the stored procedure at scheduled intervals.
+
+=====================
+Normalization :-
+It is the process of organizing data to reduce redundancy and dependency by divinding a database into smaller tables and linking them using relationships.
+The goals are to minimize data duplication and ensure data integrity.
+
+First Normal Form(1NF) : Ensure that the table hax no repeating groups and that each column contains atomic values.
+Second Normal Form(2NF ): Achived by eliminating partial dependency , where non-prime atributes are fully dependent on the primary key.
+Third NOrmal Form(3NF) : Eliminates transitive dependency, meaning non-key columns are only dependent on the primary key.
+Fourth Normal Form(4NF) : Removes multi-valued dependencies.
+Fifth Normal Form(5NF) : Removes JOine dependency and ensures that all information is logically stored.
+
+=====================
+Index :- 
+An Index is a database object that improves the speed of data retrieval operations on a table.
+It is created on one or more columns of a table and helps the database engine to find rows more quickly without scanning the entire table.
+However, Indexes can slow down INSERT,UPDATE AND DELETE operations because the index also needs to be updated.
+
+
+Order file |  primary index  |  clustered index 
+unorder file | secondary index | secondary index
+						|    	key                   |   Non Key	
+
+
+Types of Indexes:
+Single-Column Index: An index created on a single column of a table.
+Multi-Column Index (Composite Index): An index created on multiple columns of a table.
+Unique Index: Ensures that the values in the indexed columns are unique (commonly used on primary key and unique constraints).
+Full-Text Index: Used to speed up text searches (commonly used in searching large text-based fields).
+Clustered Index: The table data is stored in the order of the index, so there is only one clustered index per table.
+Non-clustered Index: The index is stored separately from the table data, and it contains pointers to the data rows.
+
+How Indexing Works:
+
+An index is created on one or more columns of a table. It contains pointers to the rows of the table where the data resides.
+
+For example, when searching for a specific value in a column, instead of scanning each row, the index can be used to directly locate the rows containing that value.
+
+B-Tree Index: Most commonly used index type, typically used in relational databases. It organizes data in a balanced tree structure, which allows for efficient searching, insertion, and deletion.
+
+Index Creation Example:
+CREATE INDEX idx_employee_name
+ON employees (last_name);
+This will create an index on the last_name column of the employees table.
+
+Index Usage in Queries:
+
+Search Optimization: Indexes speed up queries that involve WHERE clauses, ORDER BY, JOIN conditions, etc.
+Example:
+SELECT * FROM employees WHERE last_name = 'Smith';
+If there is an index on last_name, the database engine can quickly locate the rows where last_name = 'Smith', instead of scanning all rows in the table.
+Advantages of Indexing:
+Improved Query Performance:
+
+Faster Data Retrieval: Indexes allow the database engine to find data faster by reducing the number of rows to scan.
+Optimized Sorting: Queries involving sorting (ORDER BY) are faster with indexes.
+Improved JOIN Operations: JOIN queries can benefit from indexes on the columns being joined.
+Efficient Data Retrieval in Large Tables:
+
+In large tables with millions of rows, searching and querying data without an index would be slow. Indexes allow for fast access even in large datasets.
+Disadvantages of Indexing:
+Increased Storage Space:
+
+Indexes consume extra disk space, as they are separate data structures stored alongside the table data.
+In some cases, multiple indexes can lead to significant space overhead.
+Slower Data Modification Operations:
+
+INSERT, UPDATE, and DELETE operations may be slower because the index also needs to be updated when data changes. For example, when a row is inserted or updated, the database must also adjust the index to reflect the new values.
+Maintenance Overhead:
+
+As the data in a table grows or changes, the indexes must be periodically maintained (rebuilt or reorganized) to ensure they remain efficient.
+When to Use Indexing:
+Use indexing on columns frequently used in WHERE clauses, JOIN conditions, and ORDER BY clauses.
+Create indexes on primary keys and foreign keys to speed up relational operations.
+Avoid over-indexing as it can lead to increased storage and slower data modification operations.
+
+Example of Creating an Index:
+Single Column Index:
+CREATE INDEX idx_email ON users (email);
+
+Composite Index (Multiple Columns):
+CREATE INDEX idx_name_dob ON employees (last_name, first_name, date_of_birth);
+
+Unique Index (Ensures no duplicates):
+CREATE UNIQUE INDEX idx_unique_employee_id ON employees (employee_id);
+
+Full-Text Index:
+CREATE FULLTEXT INDEX idx_fulltext_description ON products (description);
+
+Conclusion:
+Indexing is a critical feature for optimizing the performance of database queries, especially on large datasets. By using indexes effectively, databases can deliver faster query responses and efficient data retrieval. However, it's essential to balance indexing with the overhead it creates on storage and modification operations.
+
+=====================
+To call Produre from Spring Boot Application :-
+
+1. Using @Procedure Annotation in Spring Data JPA
+Spring Data JPA provides the @Procedure annotation to call stored procedures.
+
+Steps:
+a. Create the Stored Procedure: 
+CREATE PROCEDURE GetEmployeeById (IN emp_id INT, OUT emp_name VARCHAR(255))
+BEGIN
+    SELECT name INTO emp_name FROM employees WHERE id = emp_id;
+END;
+
+b.Define the Repository: Create a JPA repository interface and use the @Procedure annotation:
+public interface EmployeeRepository extends JpaRepository<Employee, Long> {
+    @Procedure(procedureName = "GetEmployeeById")
+    String getEmployeeNameById(@Param("emp_id") Integer id);
+}
+
+c.Call the Procedure in Service:
+@Service
+public class EmployeeService {
+    @Autowired
+    private EmployeeRepository repository;
+
+    public String getEmployeeName(Integer id) {
+        return repository.getEmployeeNameById(id);
+    }
+}
+
+2. Using EntityManager
+The EntityManager can execute stored procedures using native queries.
+
+Steps:
+a.Create the Stored Procedure (as shown above).
+b.Use EntityManager to Call Procedure:
+@Service
+public class EmployeeService {
+    @PersistenceContext
+    private EntityManager entityManager;
+
+    public String getEmployeeName(Integer id) {
+        StoredProcedureQuery query = entityManager.createStoredProcedureQuery("GetEmployeeById");
+        query.registerStoredProcedureParameter("emp_id", Integer.class, ParameterMode.IN);
+        query.registerStoredProcedureParameter("emp_name", String.class, ParameterMode.OUT);
+
+        query.setParameter("emp_id", id);
+        query.execute();
+
+        return (String) query.getOutputParameterValue("emp_name");
+    }
+}
+
+3. Using JdbcTemplate
+The JdbcTemplate class provides a straightforward way to call stored procedures.
+
+Steps:
+Create the Stored Procedure (as shown above).
+Call the Procedure Using JdbcTemplate:
+java
+Copy code
+@Service
+public class EmployeeService {
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
+
+    public String getEmployeeName(Integer id) {
+        return jdbcTemplate.execute(
+            (Connection con) -> {
+                CallableStatement cs = con.prepareCall("{CALL GetEmployeeById(?, ?)}");
+                cs.setInt(1, id);
+                cs.registerOutParameter(2, Types.VARCHAR);
+                cs.execute();
+                return cs.getString(2);
+            }
+        );
+    }
+}
+4. Using SimpleJdbcCall
+SimpleJdbcCall is another utility in Spring that simplifies calling stored procedures.
+
+Steps:
+Define the Procedure (as shown above).
+Call Procedure with SimpleJdbcCall:
+java
+Copy code
+@Service
+public class EmployeeService {
+    private final SimpleJdbcCall simpleJdbcCall;
+
+    @Autowired
+    public EmployeeService(DataSource dataSource) {
+        this.simpleJdbcCall = new SimpleJdbcCall(dataSource)
+            .withProcedureName("GetEmployeeById")
+            .declareParameters(
+                new SqlParameter("emp_id", Types.INTEGER),
+                new SqlOutParameter("emp_name", Types.VARCHAR)
+            );
+    }
+
+    public String getEmployeeName(Integer id) {
+        Map<String, Object> params = new HashMap<>();
+        params.put("emp_id", id);
+
+        Map<String, Object> result = simpleJdbcCall.execute(params);
+        return (String) result.get("emp_name");
+    }
+}
+Which Method to Choose?
+Use @Procedure in Spring Data JPA if you’re already using JPA and want simplicity.
+Use EntityManager for flexibility in managing native queries and complex stored procedures.
+Use JdbcTemplate or SimpleJdbcCall for lightweight database interaction or when JPA is not required.
+
+
+
+
+==========================
+Cursor :-
+
+A cursor is a database object used to retrieve, manipulate, and iterate through rows returned by a query one row at a time.
+It provides control over the traversal of the result set, making it particularly useful for row-by-row processing.
+
+Key Features of a Cursor
+Row-by-Row Processing: Allows you to process query results one row at a time.
+Control: Provides precise control over how the query results are accessed and manipulated.
+Support for Complex Logic: Useful when operations on each row are dependent on conditions or computations.
+
+Types of Cursors
+Implicit Cursor:
+Automatically created by the database when a DML operation or a query is executed.
+The user has no direct control over it.
+Example: In PL/SQL, SELECT INTO uses an implicit cursor.
+
+Explicit Cursor:
+Defined and controlled explicitly by the user.
+Provides more control over query results.
+Requires declaring, opening, fetching rows, and closing.
+
+Cursor Types by Accessibility:
+Forward-only Cursor: Moves sequentially through rows.
+Scrollable Cursor: Allows movement to any row in the result set.
+Dynamic Cursor: Reflects changes in the underlying data while it is open.
+Static Cursor: Takes a snapshot of the data and does not reflect changes.
+
+Cursor Life Cycle
+Declare: Define the cursor and associate it with a query.
+DECLARE cursor_name CURSOR FOR SELECT column1, column2 FROM table_name;
+
+Open: Allocate resources and execute the query.
+OPEN cursor_name;
+
+Fetch: Retrieve a row from the result set.
+FETCH cursor_name INTO variable1, variable2;
+
+Close: Deallocate resources after processing.
+CLOSE cursor_name;
+
+Example: Using an Explicit Cursor (PL/SQL)
+Cursor Declaration and Usage:
+DECLARE
+    CURSOR emp_cursor IS
+        SELECT employee_id, first_name FROM employees;
+    emp_id employees.employee_id%TYPE;
+    emp_name employees.first_name%TYPE;
+BEGIN
+    OPEN emp_cursor; -- Open the cursor
+    LOOP
+        FETCH emp_cursor INTO emp_id, emp_name; -- Fetch each row
+        EXIT WHEN emp_cursor%NOTFOUND; -- Exit loop when no more rows
+        DBMS_OUTPUT.PUT_LINE('ID: ' || emp_id || ', Name: ' || emp_name);
+    END LOOP;
+    CLOSE emp_cursor; -- Close the cursor
+END;
+
+Advantages of Cursors
+Allows row-by-row processing, useful for operations that can't be performed in bulk.
+Provides greater flexibility for complex logic.
+Suitable for dynamic result sets.
+Disadvantages of Cursors
+Performance overhead: Processing rows one by one can be slower than set-based operations.
+Resource-intensive: Requires memory and other database resources while open.
+Complexity: Adds additional code and maintenance overhead.
+Alternatives to Cursors
+Use set-based operations (SQL joins, updates, or deletes) whenever possible for better performance.
+Use temporary tables or common table expressions (CTEs) for intermediate data manipulation.
+For complex logic, consider stored procedures or application-level processing.
+=================
+What is a trigger?
+A. A trigger is a special type of stored procedure in a database that automatically
+executes or fires in response to certain events on a table or view. Triggers are used
+to enforce rules, automate tasks, and maintain data integrity. They can be set to run
+before or after specific events such as INSERT, UPDATE, or DELETE operations.
+
+================
+View : 
+ - virtual table
+ - read only or updatable rows 
+
+
+
+//===============================
+
+ Tricky SQL Interview Questions to Test Your Skills 🔍
+
+If you are preparing for an SQL interview or just want to sharpen your query-writing abilities, these tricky and common questions can help you take your skills to the next level:
+ 1. Find the second-highest salary in a table without using LIMIT or TOP.
+ 2. Write a SQL query to find all employees who earn more than their managers.
+ 3. Find the duplicate rows in a table without using GROUP BY.
+ 4. Write a SQL query to find the top 10% of earners in a table.
+ 5. Find the cumulative sum of a column in a table.
+ 6. Write a SQL query to find all employees who have never taken a leave.
+ 7. Find the difference between the current row and the next row in a table.
+ 8. Write a SQL query to find all departments with more than one employee.
+ 9. Find the maximum value of a column for each group without using GROUP BY.
+ 10. Write a SQL query to find all employees who have taken more than 3 leaves in a month.
+
+💡 These questions are designed to assess your SQL proficiency, including your ability to write efficient queries, think critically, and solve complex problems.
+
+Here are the answers:
+ 1. SELECT MAX(salary) FROM table WHERE salary NOT IN (SELECT MAX(salary) FROM table)
+ 2. SELECT e1.* FROM employees e1 JOIN employees e2 ON e1.manager_id = e2.id WHERE e1.salary > e2.salary
+ 3. SELECT * FROM table WHERE rowid IN (SELECT rowid FROM table GROUP BY column HAVING COUNT(*) > 1)
+ 4. SELECT * FROM table WHERE salary > (SELECT PERCENTILE_CONT(0.9) WITHIN GROUP (ORDER BY salary) FROM table)
+ 5. SELECT column, SUM(column) OVER (ORDER BY rowid) FROM table
+ 6. SELECT * FROM employees WHERE id NOT IN (SELECT employee_id FROM leaves)
+ 7. SELECT *, column - LEAD(column) OVER (ORDER BY rowid) FROM table
+ 8. SELECT department FROM employees GROUP BY department HAVING COUNT(*) > 1
+ 9. SELECT MAX(column) FROM table WHERE column NOT IN (SELECT MAX(column) FROM table GROUP BY group_column)
+ 10. SELECT * FROM employees WHERE id IN (SELECT employee_id FROM leaves GROUP BY employee_id HAVING COUNT(*) > 3)
+
+🧠 Key Takeaways:
+ • SQL is more than just querying; it’s about problem-solving and optimizing for efficiency.
+ • These questions challenge you to think beyond the basics and employ advanced SQL concepts like window functions, subqueries, and percentiles.
+
+=================================
+
+
 1. What is SQL, and what are its different types?
 2. Explain the difference between SQL and MySQL.
 3. What are the different types of joins in SQL? Provide examples.
@@ -31,9 +529,29 @@
 29. How is the LIKE operator used in SQL?
 30. Explain the COALESCE function with an example.
 
+
 ==============================
 
+Find nth highest salary 
+-> select id,salary from employe e1 where N-1 = ( select count(distinct salary) from employee e2 where e2.salary > e1.salary)
+
+-> select max(salary) from employe e1 where salary < ( select max(salary) from employee e2 where e2.salary > e1.salary)
+
+create table employee
+alter table employee add address varchar(10);  --> added column
+alter table employee drop column address;  --> drop column
+alter table employee modify id varchar(30); --> modify length 
+alter table employee rename column id to roll_no;  --> rename column name
+alter table employee rename to emp11;  --> rename table name
+alter table employeee add primary key ( roll_no) --> add primary key
+
+ 
+select dept,Max(salary) from employee group by dept;
+
+==========================
+
 SQL queries that are commonly asked during interviews:
+
 
 1. Retrieve the second-highest salary of employees:
 SELECT MAX(salary) AS second_highest_salary
@@ -98,23 +616,14 @@ GROUP BY product_id, MONTH(order_date);
 🤯 SQL interview questions:
 
 1. Write a query to calculate the median salary of employees in a table.
-
 2. Identify products that were sold in all regions.
-
 3. Retrieve the name of the manager who supervises the most employees.
-
 4. Write a query to group employees by age ranges (e.g., 20–30, 31–40) and count the number of employees in each group.
-
 5. Display the cumulative percentage of total sales for each product.
- 
 6. Write a query to retrieve the first order placed by each customer.
-
 7. Identify employees who have never received a performance review.
-
 8. Find the most common value (mode) in a specific column.
-
 9. Display all months where sales exceeded the average monthly sales.
-
 10. Write a query to identify the employee(s) whose salary is closest to the average salary of the company.
 
 Answers:

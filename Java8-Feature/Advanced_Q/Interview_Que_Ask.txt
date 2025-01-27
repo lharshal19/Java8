@@ -2,6 +2,7 @@
 Interview questions #8
 Organization - Capgemini
 
+
 Level : 1
 
 About project
@@ -425,4 +426,111 @@ Scenario Based Java Developer Interview Questions
 
 13. Imagine you’re building an application with different user roles (ADMIN, USER, GUEST). How would you use Enums effectively here?
 14. Can Enums have constructors and methods? Provide an example.
-NOTE: For Interview preparation and mock interviews DM me.
+
+==================================================
+
+
+#interviews
+Most frequently asked interview questions for 5+ years experience. For SSE and tech lead for Java+springboot+ Microservice+ kafka+ spring security+ system design + behavioural+ L1 + L2...
+sum of 40+ interviews....
+
+1. Explain your recent project.(Functional and technical design)
+2. Introduce yourself.
+3. Stream API program and functional interface.
+4. Collection basics and Programs. Which collection used for multithreading.
+ Hashtable & Hashmap
+5. Spring security+ Okta+ JWT
+6. Important annotation of Spring
+7. AWS services used and are significant in your recent project.
+8. Basic oops concepts with examples of interfaces and polymorshim
+9. RestAPI and communication with other microservice. Signature, security, and exception handling
+10. SOLID principle and base Java classes
+11. Thread and threadpool
+12. KAFKA. - basic to advance
+13. Design patterns ( Singleton and Factory)
+14. How to read and write large data- best practices. How to read from multiple databases 
+15. How to read and write large files and heavy http calls
+16. AOP
+17. Hibernate basics 
+18. JUNIT & CICD basics
+19. How will you design a good Microservice. OR how heavy traffic and data will be managed..
+20 . Role of ActiveMQ and Elastic Search
+21. What AWS services you have used.
+22. Where you want to see yourself in N number of years.
+23. How you will handle pressure and conflicts in your team.
+24. JVM internal working 
+25. Thread and Threadpool 
+26. Java8 and Java11 new features 
+27. How you will solve memory leak and low performing query 
+28. How you will maintain data integrity and data availability and consistency 
+29. How you will identify and solve production bugs 
+30. Why you left your last company and what are your future plans.
+31. Basics of MySQL and DB design best practices 
+32. Maven, Pom, Tomcat and other circular dependencies 
+33. Https and TLS (How to prevent security attacks)
+34. Pagination, filters and Actuators 
+35. Agile and team performance.
+
+=====================================
+
+
+1. Can you briefly introduce yourself?
+2. What are three OOPS concepts used in your framework? Please explain in detail.
+3. What is the difference between ArrayList and LinkedList?
+4. How do POST and PUT methods differ in API testing?
+5. Write a program to count and print the number of 'A's in a given string.
+6. What is a Stale Element Exception? Why does it occur, and how do you handle it?
+7. Explain 401 and 500 error codes.
+8. What is an Element Not Found Exception? Why does it occur, and how do you handle it?
+9. Write a program to find the factorial of a number.
+10. Write a program to reverse a number.
+11. What is the difference between List and Set in Java?
+12. Write a program to count duplicate characters in a string.
+13. Which CI/CD pipeline tools have you used? Can you explain your experience with them?
+14. What domain experience do you have in your career so far?
+15. How many team members have you led in your projects?
+16. Can you explain Polymorphism, along with examples of Method Overloading and Method Overriding?
+17. Do you have any questions for us?
+
+=============================
+
+🚀 Interview Experience – Java Developer (L1 and L2 Questions)
+
+These might come in handy for anyone preparing for Java developer roles!
+
+L1 Interview Questions
+
+* Introduction (as usual)
+* Explain the internal working of HashMap in Java.
+* What are wrapper classes? What are their advantages?
+* How does indexing work in MongoDB?
+* Difference between @RestController and @Controller in Spring.
+* What are REST services?
+* Inner join vs Left join in SQL.
+* Compare ArrayList and LinkedList in Java.
+* What is a Functional Interface? (Default functional interfaces in Java)
+* Explain idempotent vs non-idempotent operations in REST.
+* How to implement a Singleton class in Java?
+* Difference between an interface and an abstract class.
+* Code to get the frequency of each string from a list of strings.
+* Types of Stream operations in Java (Terminal vs Intermediate operations).
+* How to create an Immutable class in Java?
+* Difference between WHERE and HAVING clauses in SQL.
+* Can we use default and static methods inside a functional interface?
+
+L2 Interview Questions
+
+* Introduction (as usual)
+* What is the CAP theorem?
+* Which two principles of the CAP theorem does MongoDB prioritize?
+* How to create a custom HashMap class with get and put method implementations?
+* Detailed explanation of the working of HashMap.
+* Write a signature for an API to handle login functionality for an application.
+* How to decide between using an RDBMS or a NoSQL database?
+* Explain isolation in the context of ACID properties.
+
+==============================
+
+
+
+

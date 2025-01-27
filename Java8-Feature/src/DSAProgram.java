@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -229,6 +230,12 @@ public class DSAProgram {
 		int secodMax = Arrays.stream(array).boxed().distinct().sorted(Comparator.reverseOrder()).skip(1).findFirst()
 				.orElseThrow(() -> new IllegalArgumentException("No second largest element found."));
 		System.out.println("maximum : " + secodMax);
+		
+		//-------------------------
+		
+		//  select salary from employees order by salary desc limit 1 offset 1;
+		 
+		
 	}*/
 
 	//=========================
@@ -853,6 +860,34 @@ public class DSAProgram {
 		}
 	}*/
 
+	//=======================================
+	//Given an array Of Strings, group the strinbgs that are anagrams of each other.
+
+	/*	public static void main(String[] args) {
+			String[] strs = { "eat", "tea", "tan", "ate", "nat", "bat" };
+			Map<String, List<String>> anagramMap = new HashMap<>();
+			for (String str : strs) {
+				// Sort the string to generate the key
+				char[] charArray = str.toCharArray();
+				Arrays.sort(charArray);
+				String sortedKey = new String(charArray);
+	
+				// Add the string to the corresponding group
+				anagramMap.computeIfAbsent(sortedKey, k -> new ArrayList<>()).add(str);
+			}
+			System.out.println(anagramMap.values());
+	
+			//method 2
+			Collection<List<String>> values = Arrays.stream(strs).collect(Collectors.groupingBy(str -> {
+				char[] charArray = str.toCharArray();
+				Arrays.sort(charArray);
+				return new String(charArray); // Use sorted string as key
+			})).values();
+			
+			System.out.println(values);
+	
+		}*/
+
 }
 
 //Check two strings Anagram or not
@@ -892,7 +927,7 @@ outout = {2,4,5,1,5,3}*/
 //Count number of vowels in string
 //Write a function to find the missing number in an array from 1 to n.
 //Write a function to reverse a subarray from index l to r.
-//
+//Given an array Of Strings, group the strinbgs that are anagrams of each other.
 //
 //
 //

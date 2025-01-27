@@ -1,0 +1,33 @@
+
+ 3+ yoe AWS DevOps Engineer
+
+1. what tools do you use on a daily basis from the Linux perspective?
+2. What are inodes in Linux?
+3. any experience with, RAID configurations?
+4. Any experience with Docker?
+5. network connectivity that you can utilize in an authorized environment for, you know, communication between, different containers?
+6. Have you, created your own images for containers?What application was it?
+7. what were the security considerations that you have, taken?
+8. what's the difference between a stateful set and Daemon sets?
+9. where or why you used Statefull set. How does it help? 
+10. While creating a manifest file Mhmm. What are the 4 major, you know, points or things that you have to add in that manifest file.
+11. how was the Jenkins environment that you're using? What considerations have you done while you're doing that?
+12. What is, the default home directory for Jenkins for a master and for a slave?
+13. Were you using the root user to run the agent part of Jenkins in the slave servers?
+14. Have you worked on setting up, like, additional storage for your worker nodes in Kubernetes?
+15. What have you done on the, Prometheus Grafana part?
+16. How Kuber how Prometheus and Grafana or, like, how the logs or the monitoring would have been done in a Kubernetes cluster and how things were set up
+17. what does it require that so that Prometheus gets this details?
+18. Coming to, the Terraform, what was your role on that?
+19. What modules have you worked on?
+20. why was it required to create a custom module
+21. What is git squash?
+22. What is Gitstash? why is it used?
+23. What are the different types of, disks that is available in, AWS?
+24. How would you, like, ascertain, instance type when you have to deploy 1? What parameters would you, you know, take into consideration?
+25. What tools have you used to backup?
+26. Have you used s3?What was the purpose for? and classes?
+27. what other AWS services have you used?
+28. Have you used load balancing based on route 53?
+
+=============================================

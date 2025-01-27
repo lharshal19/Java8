@@ -1,7 +1,7 @@
-import java.util.Comparator;
-import java.util.List;
+import java.util.Arrays;
+import java.util.Map;
+import java.util.TreeMap;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class StreamPrograms {
 
@@ -228,6 +228,65 @@ public class StreamPrograms {
 	
 	}*/
 
+	//====================
+
+	/*public static void main(String[] args) {
+	
+		List<Employee> employees = Arrays.asList(new Employee("HR", 50000), new Employee("HR", 60000),
+				new Employee("IT", 70000), new Employee("IT", 80000), new Employee("Finance", 75000));
+	
+		// Stream API to group by department and find the max salary in each department
+		Map<String, Optional<Employee>> maxSalariesByDept = employees.stream().collect(Collectors
+				.groupingBy(Employee::getName, Collectors.maxBy(Comparator.comparingDouble(Employee::getAge))));
+		System.out.println(maxSalariesByDept);
+		maxSalariesByDept.values().forEach(System.out::println);
+		maxSalariesByDept.keySet().forEach(System.out::println);
+		maxSalariesByDept.entrySet().stream().forEach(i -> System.out.println(i.getKey() + "-- " + i.getValue())); // forEach(System.out::println);;
+	
+		System.out.println("--------------");
+		Map<String, Double> collect = employees.stream().collect(Collectors
+				.groupingBy(Employee::getName, Collectors.averagingDouble(Employee::getAge)));
+		System.out.println(collect);
+	}*/
+
+	//=======================
+	//find the largest number in an array of integers that does not have any duplicates
+	/*public static void main(String[] args) {
+		int[] nums = { 4, 5, 10, 10 };
+		Map<Integer, Long> frequencyMap = Arrays.stream(nums).boxed()
+				.collect(Collectors.groupingBy(num -> num, Collectors.counting()));
+	
+		// Find the maximum number with frequency 1
+		Integer orElse = frequencyMap.entrySet().stream().filter(entry -> entry.getValue() == 1).map(Map.Entry::getKey)
+				.max(Integer::compareTo).orElse(-1);
+		System.out.println(orElse);
+		System.out.println("------------");
+		//method 2
+		TreeMap<Integer, Integer> treeMap = new TreeMap<>();
+		for (int num : nums) {
+			treeMap.put(num, treeMap.getOrDefault(num, 0) + 1);
+		}
+	
+		// Traverse TreeMap in descending order
+		for (int num : treeMap.descendingKeySet()) {
+			if (treeMap.get(num) == 1) {
+				System.out.println(num);
+				break;
+			}
+		}
+		System.out.println("------------");
+	
+		// Find the largest number with frequency 1
+		int largestUnique =0;
+		for (int num : nums) {
+			if (frequencyMap.get(num) == 1 && num > largestUnique) {
+				largestUnique = num;
+			}
+		}
+	
+		System.out.println(largestUnique ==0 ? -1 : largestUnique);
+	
+	}*/
 }
 
 //Sort a list of strings by length
@@ -242,6 +301,6 @@ public class StreamPrograms {
 //Check if two lists are disjoint using streams.
 //Implement a pipeline to process a list of integers: square, filter evens, and sum.
 //Collecting Data to Map with Multiple Values
-//
+//find the largest number in an array of integers that does not have any duplicates
 //
 //
