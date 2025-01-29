@@ -1,9 +1,7 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Date;
-import java.util.List;
+import java.util.Map.Entry;
+import java.util.Objects;
 
-public class DSAProgram02 {
+public class DSAProgram02<K, V> {
 
 	// Create Immutable class
 	/*public static void main(String[] args) {
@@ -151,6 +149,114 @@ public class DSAProgram02 {
 		    JOIN Salaries s2 ON e2.Eid = s2.Eid WHERE e2.Fname = 'Rita');
 		*/
 
+	//==========================================
+
+	// Default initial capacity and load factor
+	/*private static final int INITIAL_CAPACITY = 16;
+	private static final float LOAD_FACTOR = 0.75f;
+	// Entry array (buckets) and size tracker
+	private Entry<K, V>[] buckets;
+	private int size = 0;
+	
+	// Constructor
+	public DSAProgram02() {
+		buckets = new Entry[INITIAL_CAPACITY];
+	}
+	
+	// Node structure for HashMap (key-value pair)
+	static class Entry<K, V> {
+		K key;
+		V value;
+		Entry<K, V> next; // Linked list for collision resolution
+	
+		Entry(K key, V value) {
+			this.key = key;
+			this.value = value;
+		}
+	}
+	
+	// Put method
+	public void put(K key, V value) {
+		int index = getBucketIndex(key);
+		Entry<K, V> head = buckets[index];
+	
+		// Check if the key already exists in the linked list
+		while (head != null) {
+			if (Objects.equals(head.key, key)) {
+				head.value = value; // Update value for the key
+				return;
+			}
+			head = head.next;
+		}
+	
+		// Key not found, insert a new entry at the head of the bucket
+		Entry<K, V> newEntry = new Entry<>(key, value);
+		newEntry.next = buckets[index];
+		buckets[index] = newEntry;
+		size++;
+	
+		// Check and resize if the load factor is exceeded
+		if ((float) size / buckets.length > LOAD_FACTOR) {
+			resize();
+		}
+	}
+	
+	// Get method
+	public V get(K key) {
+		int index = getBucketIndex(key);
+		Entry<K, V> head = buckets[index];
+	
+		// Traverse the linked list in the bucket
+		while (head != null) {
+			if (Objects.equals(head.key, key)) {
+				return head.value;
+			}
+			head = head.next;
+		}
+		return null; // Key not found
+	}
+	// Hash function to compute bucket index
+	private int getBucketIndex(K key) {
+		return (key == null) ? 0 : Math.abs(key.hashCode()) % buckets.length;
+	}
+	// Resize the HashMap when load factor is exceeded
+	private void resize() {
+		Entry<K, V>[] oldBuckets = buckets;
+		buckets = new Entry[oldBuckets.length * 2]; // Double the capacity
+		size = 0;
+	
+		// Rehash all the entries into the new bucket array
+		for (Entry<K, V> head : oldBuckets) {
+			while (head != null) {
+				put(head.key, head.value);
+				head = head.next;
+			}
+		}
+	}
+	
+	// Get the size of the HashMap
+	public int size() {
+		return size;
+	}
+	
+	// Main method for testing
+	public static void main(String[] args) {
+		DSAProgram02<String, Integer> map = new DSAProgram02<String, Integer>();
+		map.put("one", 1);
+		map.put("two", 2);
+		map.put("three", 3);
+	
+		System.out.println("Value for 'one': " + map.get("one")); // Output: 1
+		System.out.println("Value for 'two': " + map.get("two")); // Output: 2
+		System.out.println("Value for 'three': " + map.get("three")); // Output: 3
+	
+		map.put("one", 10); // Update value for key 'one'
+		System.out.println("Updated value for 'one': " + map.get("one")); // Output: 10
+	
+		System.out.println("Size: " + map.size()); // Output: 3
+	}*/
+	
+	//============================================
 }
 
 //Create Immutable class
@@ -159,5 +265,10 @@ public class DSAProgram02 {
 /*Write an SQL query to print names of all the employees whose salary greater than or equal to the employee with first name “Rita”.
 Employee table — Column Names : Eid, Fname, Lname, Email . 
 Salaries table — Column Names : Eid, Salary*/
+//How to create a custom HashMap class with get and put method implementations?
+//
+//
+//
+//
 //
 //

@@ -553,6 +553,7 @@ public class DSAProgram {
 		int[] arr = { 4, 3, 2, 7, 8, 2, 3, 1 };
 		Arrays.sort(arr); // Sort the array
 		System.out.println("-----------");
+		
 		//method 2 - O(nlogn)
 		for (int i = 1; i < arr.length; i++) {
 			if (arr[i] == arr[i - 1]) {
