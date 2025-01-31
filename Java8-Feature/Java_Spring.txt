@@ -52,7 +52,7 @@ names.stream().forEach(System.out::println);
  • Parallel Processing: With .parallelStream(), you can easily process data in parallel.
  
  ==================================
-
+ inject a Prototype-scoped bean into a Singleton-scoped bean in Spring
 1. How to use Lambda expressions and Stream API in Java? 
 Can you write a simple example where you filter a list of numbers and find the sum of even numbers using Java Streams?
 2. What is the difference between synchronized and volatile in Java? Can you give an example of when each would be used?
@@ -796,5 +796,15 @@ All features in a single post. #share #like #follow
 
 =======================
 
-
+1️⃣ What is the difference between Java 8’s Optional and traditional null checks?
+2️⃣ Explain the purpose of functional interfaces in Java.
+3️⃣ What is the difference between Stream.forEach() and Collection.forEach()?
+4️⃣ How does the CompletableFuture class improve asynchronous programming?
+5️⃣ What are default and static methods in interfaces?
+6️⃣ How does the var keyword work in Java 10?
+7️⃣ What are records in Java, and how do they simplify data classes?
+8️⃣ What is the sealed keyword in Java, and how does it enhance inheritance?
+9️⃣ How does the Pattern Matching feature improve instanceof checks?
+🔟 What are the improvements in garbage collection in Java 11+?
+👉 Stay tuned for Day 6: JVM & Performance Optimization!
 

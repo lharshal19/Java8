@@ -301,35 +301,35 @@ public class StreamPrograms {
 	}*/
 
 	//===========================================
-	public static void main(String[] args) {
-
+	/*public static void main(String[] args) {
+	
 		Map<String, Employee> map = new HashMap<String, Employee>();
 		map.put("a1", new Employee(101, "Ramesh", 10000));
 		map.put("b1", new Employee(102, "Ramesh", 20000));
 		map.put("c1", new Employee(103, "Rajesh", 30000));
-
+	
 		//used filter and map
 		List<Double> collect = map.entrySet().stream().filter(i -> i.getValue().getName().equalsIgnoreCase("Ramesh"))
 				.map(i -> i.getValue().getSalary()).collect(Collectors.toList());
 		System.out.println(collect);
-
+	
 		List<Double> collect3 = map.entrySet().stream().filter(i -> i.getValue().getName().equalsIgnoreCase("Ramesh"))
 				.mapToDouble(i -> i.getValue().getSalary()).boxed().collect(Collectors.toList());
 		System.out.println(collect3);
-
+	
 		List<Double> collect2 = map.values().stream().filter(i -> i.getName().equalsIgnoreCase("Ramesh"))
 				.map(Employee::getSalary).collect(Collectors.toList());
 		System.out.println(collect2);
-
+	
 		List<Integer> collect4 = map.entrySet().stream().filter(i -> i.getValue().getName().equalsIgnoreCase("Ramesh"))
 				.mapToInt(i -> (int) i.getValue().getSalary()).boxed().collect(Collectors.toList());
 		System.out.println(collect4);
-
+	
 		//create unmodifiable list - Convert the List to an Immutable List
 		List<Double> salaries = map.entrySet().stream().filter(i -> i.getValue().getName().equalsIgnoreCase("Ramesh"))
 				.map(i -> i.getValue().getSalary())
 				.collect(Collectors.collectingAndThen(Collectors.toList(), Collections::unmodifiableList));
-
+	
 		List<Float> collect5 = map.entrySet().stream().filter(i -> i.getValue().getName().equalsIgnoreCase("Ramesh"))
 				.map(i -> i.getValue().getSalary())
 				.collect(Collectors.mapping(Double::floatValue, Collectors.toList()));
@@ -342,7 +342,7 @@ public class StreamPrograms {
 			}
 		}
 		System.out.println(list);
-
+	
 		//used foreach method
 		List<Double> list1 = new ArrayList<Double>();
 		map.forEach((key, value) -> {
@@ -351,45 +351,49 @@ public class StreamPrograms {
 			}
 		});
 		System.out.println(list1);
+		
+		
 	}
-
-}
-
-class Employee {
+	
+	}
+	
+	class Employee {
 	int id;
 	String name;
 	double salary;
-
+	
 	public int getId() {
 		return id;
 	}
-
+	
 	public void setId(int id) {
 		this.id = id;
 	}
-
+	
 	public String getName() {
 		return name;
 	}
-
+	
 	public void setName(String name) {
 		this.name = name;
 	}
-
+	
 	public double getSalary() {
 		return salary;
 	}
-
+	
 	public void setSalary(double salary) {
 		this.salary = salary;
 	}
-
+	
 	public Employee(int id, String name, double salary) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.salary = salary;
-	}
+	}*/
+	
+	
 }
 //Sort a list of strings by length
 //Partition a list of integers into even and odd numbers.

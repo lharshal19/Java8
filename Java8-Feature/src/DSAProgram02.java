@@ -92,7 +92,7 @@ public class DSAProgram02<K, V> {
 
 	//==========================
 	//T1 prints 1, T2 prints 2, T1 prints 3, T2 prints 4 and so on till 10
-	/*private final Object lock = new Object();
+	private final Object lock = new Object();
 	private boolean isT1Turn = true; // T1 starts first
 	
 	public void printOdd() {
@@ -137,7 +137,7 @@ public class DSAProgram02<K, V> {
 	
 		t1.start();
 		t2.start();
-	}*/
+	}
 
 	//=====================
 	/*	Write an SQL query to print names of all the employees whose salary greater than or equal to the employee with first name “Rita”.
@@ -255,7 +255,7 @@ public class DSAProgram02<K, V> {
 	
 		System.out.println("Size: " + map.size()); // Output: 3
 	}*/
-	
+
 	//============================================
 }
 

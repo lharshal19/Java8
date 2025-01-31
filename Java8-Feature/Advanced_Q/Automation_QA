@@ -93,3 +93,103 @@ TestNG:
 6) Why do we need BeforeSuite & AfterSuite annotations?
 
 =============================
+
+💡 Commonly Asked Questions: 
+1. Explain the Selenium architecture and its components. 
+2. How do you handle dynamic elements using XPath or CSS selectors? 
+3. What is your approach to building a custom automation framework? 
+4. Explain explicit vs. implicit waits with examples. 
+5. How do you perform data-driven testing using Java and TestNG? 
+6. How do you integrate test execution reports with tools like ExtentReports or Allure? 
+7. Explain the process for automating REST APIs using Postman or RestAssured. 
+8. What are Page Object Model (POM) and Page Factory? When would you use them? 
+9. How do you manage test data for automation, including using Excel or databases? 
+10. Describe a challenging automation testing scenario you handled and how you resolved it. 
+11. How do you implement parallel testing using Selenium Grid or TestNG? 
+12. What is the difference between Assertions and Verifications in Selenium? 
+13. How do you automate file uploads or downloads in Selenium? 
+14. Explain the role of Maven or Gradle in automation testing projects. 
+15. How do you use Git for version control in automation scripts? 
+16. What is the difference between Functional Testing and Non-Functional Testing? 
+17. What are Fluent Waits, and how do they differ from explicit waits? 
+18. How do you handle browser compatibility testing? 
+19. Describe how you handle pop-ups, alerts, and frames in Selenium. 
+20. What are the best practices for writing reliable and maintainable automation scripts?
+
+==============================
+
+#ManualTestingQuestions:
+
+1. Have you worked in Agile methodology? Explain it.
+2. Explain the points you consider while writing a good test case.
+3. What is the Bug Life Cycle?
+4. Difference between Test Scenario vs Test Case.
+5. Difference between Functional vs Non-Functional Testing.
+6. Difference between Smoke and Sanity Testing.
+7. What is STLC in software testing?
+8. Difference between Alpha and Beta Testing.
+9. How many tests have you automated in a single sprint?
+10. How do you decide which test cases to automate?
+11. Which test cases would you not automate?
+12. Is 100% automation possible?
+13. Important things to consider when logging a bug.
+14. Where do you write your test cases? In Excel or some other tool?
+
+#AutomationTesting Interview Questions:
+
+1. Difference between implicit and explicit waits.
+2. Asked to share screen and write XPath for a given element.
+3. Use of Actions class and Select class.
+4. Explain your roles and responsibilities.
+5. Exceptions faced while working with Selenium (Give 5 examples).
+6. OOPS concepts (Inheritance, Abstraction, Polymorphism, etc.).
+7. Difference between findElement() vs findElements().
+8. How to handle alerts in Selenium?
+9. Write Selenium code to take a screenshot.
+10. What is priority in TestNG?
+11. Reports used in your framework.
+12. Difference between Scenario vs Scenario Outline in Cucumber BDD.
+13. Explain the framework you are working on.
+14. What are tags in Cucumber?
+15. How do you manage test data in your framework?
+16. Abstract class vs Interface.
+17. Write Java code to reverse a string and perform array manipulation.
+18. Questions from HashMap, HashSet.
+19. Difference between Array and ArrayList.
+20. What is Collection in Java?
+21. Why is String immutable in Java?
+22. Difference between Collection and Collections.
+23. Difference between StringBuffer and StringBuilder.
+24. API status codes difference (400, 401, 201, 200, etc.).
+25. Difference between PUT vs PATCH request.
+26. Basic GitHub commands (git add, git commit, git diff).
+
+===========================================
+
+
+Synechron Interview Questions for hashtag#QA role (6+ yr exp):
+1. Explain about your framework?
+2. Have you used POM in your framework?
+3. What is Page Factory?
+4. Suppose you have 7 pages in your application then to achieve POM what u will do?
+5. Have you used interface in your framework other then selenium interfaces?
+6. What are all the selenium interfaces?
+7. Synchronization in selenium? syntax for implicit wait
+8. How u will handle popup window ?other then get window handle
+9. What is Listeners?
+10. How u will handle alert?
+11. How to get system date and time?
+12. How to connect to database?
+13. Exceptions in selenium?
+14. Suppose u have class and abstract class in class there is a user defined constructor and main method which one will get execute first?
+15. Primitives and Non Primitives datatypes in java? String is primitive or non primitive
+16. What is Hashmap ? Can we store objects in hash map and how to retrieve them?
+17. What is Jenkins?
+18. What is the use of Pom.xml?
+19. What is the use of testng.xml?
+20. Annotations used in page object model
+
+
+=======================================
+
+

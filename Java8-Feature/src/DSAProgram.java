@@ -889,6 +889,34 @@ public class DSAProgram {
 	
 		}*/
 
+	//================================================
+	//Array consists of integers and special characters, sum only integers
+	/*public static void main(String[] args) {
+		String[] array = { "5", "2", "9", "a", "1", "6", "#", "3" };
+		int sum = sumIntegers(array);
+		System.out.println("Sum of integers in the array: " + sum);
+	
+	}
+	
+	private static int sumIntegers(String[] array) {
+		int sum = 0;
+		for (String str : array) {
+			try {
+				int num = Integer.parseInt(str);
+				sum += num;
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+		}
+		return sum;
+	}*/
+
+	
+	//=====================================
+	
+	
+	
+	
 }
 
 //Check two strings Anagram or not
@@ -929,6 +957,12 @@ outout = {2,4,5,1,5,3}*/
 //Write a function to find the missing number in an array from 1 to n.
 //Write a function to reverse a subarray from index l to r.
 //Given an array Of Strings, group the strinbgs that are anagrams of each other.
+//Find the longest palindromic substring.
+//Count vowels and consonants in a string.
+//Write a program to check if an array is a palindrome
+//Array consists of integers and special characters, sum only integers
+//
+//
 //
 //
 //
