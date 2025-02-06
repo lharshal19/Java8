@@ -1,5 +1,87 @@
 
+Difference between Spring Framework and Spring Boot
 
+Spring Framework 
+-> Allows to develop apps using 3 types of Configs i.e. xml driven configs, Annotations driven cofigs, 100% code driven configs
+-> Programmer explicitly created IOC Container except in Spring MVC application
+-> Does not give embedded server. So to run application we need to arrange web server explicitly.
+-> Does not give any in-memory databases
+-> We need to add dependencies (jar files) manually using gradle/maven
+-> Bit lightweight as compared of Spring Boot because of No AutoConfiguratin support
+
+Spring Boot
+-> Supports only one type of confgs that is through annotations and giving inputs for autoConfigutaration for application.properties file
+-> Programmer does not create IoC Container , rather he gets it by calling SpringApplication.run()
+-> Gives Tomcat, Jetty and etc servers as Embedded servers
+->Gives in-memory databases like h2
+-> Bit heavy weight due to AutoConfiguration support which created Objects which might not even needed
+-> Spring boot gives starters which provide main jars, dependent jars and related jars as well.
+
+======================================
+
+🚀 Java Interview Prep: Hibernate Essentials
+Hibernate is a powerful ORM framework in Java that simplifies database operations, reduces boilerplate code, and boosts performance.
+
+📌 1. What is Hibernate & Why Use It?
+Hibernate maps Java objects to database tables, letting you interact without SQL.
+✅ Reduces repetitive JDBC code
+✅ Supports caching for faster performance
+✅ Works across databases
+
+📌 2. How is Hibernate Different from JDBC?
+JDBC requires SQL queries and manual database handling.
+Hibernate automates mapping and caching for better performance.
+
+📌 3. Key Hibernate Components
+✔ SessionFactory – Manages connections
+✔ Session – Executes queries
+✔ Transaction – Ensures commit/rollback
+
+📌 4. What is HQL?
+HQL works on Java objects instead of database tables.
+🔹 SQL Example: SELECT * FROM employees;
+🔹 HQL Example: FROM Employee
+
+📌 5. What is Caching in Hibernate?
+Caching improves query performance.
+⚡ First-Level Cache – Default, session-specific.
+⚡ Second-Level Cache – Configurable, shared across sessions.
+
+📌 6. Lazy vs. Eager Loading
+👉 Lazy Loading – Fetches data only when accessed.
+👉 Eager Loading – Fetches all data immediately.
+💡 Example:
+@OneToMany(fetch = FetchType.LAZY)
+@OneToMany(fetch = FetchType.EAGER)
+
+📌 7. How Does Hibernate Handle Transactions?
+Hibernate ensures ACID transactions for consistency.
+✅ Example:
+Session session = sessionFactory.openSession();
+Transaction tx = session.beginTransaction();
+session.save(employee);
+tx.commit();
+session.close();
+
+📌 8. Common Hibernate Annotations
+@Entity – Marks a class as a database entity
+@Table – Maps a class to a table
+@Id – Specifies the primary key
+
+📌 9. Hibernate Relationships
+✔ @OneToOne – One-to-one
+✔ @OneToMany – One-to-many
+✔ @ManyToMany – Many-to-many
+
+📌 10. Hibernate Integration with Spring Boot
+💡 Add following to application.properties:
+spring.datasource.url=jdbc:mysql://localhost:3306/db
+spring.datasource.username=root
+spring.datasource.password=root
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+
+=================================
 Java 8 Streams: Transform, Filter, and Reduce Your Way to Cleaner Code!
 Streams enable functional-style programming in Java, allowing us to write cleaner, more readable, and more efficient code. 
 
@@ -280,6 +362,57 @@ Use the @RestController annotation and define endpoints with @GetMapping, @PostM
 
 ==========================================
 
+Java Developer Interview Questions for Experienced
+hashtag#realtime hashtag#java hashtag#scenario hashtag#interview hashtag#questions
+1.     You need to prevent API abuse by implementing a rate limiter in Spring Boot.
+·       How would you implement it?
+·       Which algorithms would you use? (Token Bucket vs. Leaky Bucket)
+·        How can Redis help in rate limiting?
+2.     Your system expects 1M+ requests per second during peak load.
+·       How do you scale your system?
+·       What caching mechanisms would you implement?
+·       How do you handle sudden traffic spikes?
+
+3.     Users are uploading large files (1GB+), and the service is slowing down.
+
+·       What’s the best way to handle file uploads efficiently?
+·       Would you use S3, MinIO, or another storage solution?
+·       How to implement a resumable upload?
+
+4.     Identify and fix the memory leak in the following code:
+class MemoryLeakExample {
+ private static List<String> cache = new ArrayList<>();
+
+ public void addData() {
+ for (int i = 0; i < 1000000; i++) {
+ cache.add("Data-" + i);
+ }
+ }
+}
+·       What is wrong with this code?
+·       How do you fix the memory leak?
+
+5.     The following code is not thread-safe. Why?
+
+class Counter {
+ private int count = 0;
+
+ public void increment() {
+ count++;
+ }
+}
+·       What’s wrong with this implementation?
+·       How would you make it thread-safe?
+
+6.     Your REST API is slow. Fix this code:
+
+@GetMapping("/users")
+public List<User> getAllUsers() {
+ return userRepository.findAll();
+}
+·       Why is this method slow for large datasets?
+·       How can you optimize it using pagination?
+==========================
 🚀 Spring Boot Caching
 
 In today’s fast-paced development world, application performance is critical. 
@@ -808,3 +941,247 @@ All features in a single post. #share #like #follow
 🔟 What are the improvements in garbage collection in Java 11+?
 👉 Stay tuned for Day 6: JVM & Performance Optimization!
 
+
+====================================
+
+𝐈𝐦𝐩𝐨𝐫𝐭𝐚𝐧𝐭 𝐂𝐨𝐧𝐜𝐞𝐩𝐭𝐬: 𝐉𝐚𝐯𝐚, 𝐒𝐩𝐫𝐢𝐧𝐠 𝐁𝐨𝐨𝐭 , 𝐋𝐋𝐃 & 𝐇𝐋𝐃 
+
+🔹 𝘑𝘢𝘷𝘢 - 𝘊𝘰𝘳𝘦 𝘵𝘰 𝘈𝘥𝘷𝘢𝘯𝘤𝘦𝘥 𝘊𝘰𝘯𝘤𝘦𝘱𝘵𝘴
+
+𝐉𝐚𝐯𝐚 𝐅𝐮𝐧𝐝𝐚𝐦𝐞𝐧𝐭𝐚𝐥𝐬
+✅ 4 Pillars of OOP
+✅ Procedural vs OOPs Programming
+✅ JDK vs JRE vs JVM
+✅ Classes & Objects
+✅ Variables & Data Types
+✅ String Pool & Immutability
+✅ Access Specifiers
+✅ Type Casting
+✅ Method Overloading vs Overriding
+✅ Pass by Value vs Pass by Reference
+✅ Garbage Collection
+✅ Constructors & Destructors
+✅ Operators & Expressions
+✅ Control Flow Statements
+
+𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐉𝐚𝐯𝐚 
+✅ Multithreading & Concurrency
+✅ Exception Handling
+✅ Generic Programming
+✅ Java Collections Framework
+✅ Functional Interfaces & Lambda Expressions
+✅ Stream APIs
+
+🔹 𝘚𝘱𝘳𝘪𝘯𝘨 𝘉𝘰𝘰𝘵 - 𝘉𝘢𝘴𝘪𝘤𝘴 𝘵𝘰 𝘈𝘥𝘷𝘢𝘯𝘤𝘦𝘥
+
+✅ Spring Boot Fundamentals
+✅ REST APIs & Microservices Spring Data ✅ JPA & Hibernate
+✅ Spring Security & JWT
+✅nCircuit Breaker (Resilience4J, Hystrix)
+✅ Spring Cloud for Microservices
+✅ Kafka Integration
+✅ Docker & Kubernetes with Spring Boot
+
+🔹 𝘓𝘰𝘸-𝘓𝘦𝘷𝘦𝘭 𝘋𝘦𝘴𝘪𝘨𝘯 (𝘓𝘓𝘋) 
+
+𝐃𝐞𝐬𝐢𝐠𝐧 𝐏𝐫𝐢𝐧𝐜𝐢𝐩𝐥𝐞𝐬 & 𝐏𝐚𝐭𝐭𝐞𝐫𝐧𝐬
+✅ SOLID Principles 
+✅ Strategy Design Pattern
+✅ Observer Pattern
+✅ Decorator Pattern
+✅ Factory Pattern
+✅ Abstract Factory Pattern
+✅ Proxy Design Pattern
+✅ Null Object Pattern
+✅ Adapter Design Pattern
+✅ Builder Design Pattern
+✅ Facade Design Pattern
+✅ Bridge Design Pattern
+✅ Flyweight Design Pattern
+✅ Command Design Pattern
+✅ Iterator Design Pattern
+✅ Mediator Design Pattern
+✅ Visitor Design Pattern
+✅ Memento Design Pattern
+✅ MVC Design Pattern
+✅ Chain of Responsibility Pattern
+
+𝐑𝐞𝐚𝐥-𝐖𝐨𝐫𝐥𝐝 𝐋𝐋𝐃 𝐒𝐲𝐬𝐭𝐞𝐦 𝐃𝐞𝐬𝐢𝐠𝐧𝐬
+Parking Lot
+Snake and Ladder
+Elevator System
+Car Rental System
+Logging System
+Tic-Tac-Toe
+BookMyShow
+Vending Machine
+ATM Machine
+Chess Game
+File System
+Splitwise (+ Simplification Algorithm)
+Cricbuzz
+Zepto
+Apply Coupon Code System
+Payment Gateway System
+Object Pool Design Pattern
+
+🔹 𝘏𝘪𝘨𝘩-𝘓𝘦𝘷𝘦𝘭 𝘋𝘦𝘴𝘪𝘨𝘯 (𝘏𝘓𝘋)
+
+𝐂𝐨𝐫𝐞 𝐒𝐲𝐬𝐭𝐞𝐦 𝐃𝐞𝐬𝐢𝐠𝐧 𝐂𝐨𝐧𝐜𝐞𝐩𝐭𝐬
+✅ Network Protocols
+✅ CAP Theorem 
+✅ Microservices Design Patterns
+✅ Scaling from 0 to Millions of Users
+✅ Consistent Hashing 
+✅ Back-of-the-Envelope Estimation
+
+𝐑𝐞𝐚𝐥-𝐖𝐨𝐫𝐥𝐝 𝐇𝐋𝐃 𝐒𝐲𝐬𝐭𝐞𝐦 𝐃𝐞𝐬𝐢𝐠𝐧𝐬
+Design URL Shortening System
+WhatsApp System Design
+Zoom Video Calling System
+Kafka (Messaging Queue) System Design
+Rate Limiter
+Idempotent POST API
+High Availability System
+Key-Value Store (Database Design)
+
+𝐃𝐢𝐬𝐭𝐫𝐢𝐛𝐮𝐭𝐞𝐝 𝐒𝐲𝐬𝐭𝐞𝐦𝐬 & 𝐒𝐞𝐜𝐮𝐫𝐢𝐭𝐲
+✅ Proxy vs Reverse Proxy
+✅ Load Balancers & Algorithms
+✅ Distributed Caching
+✅ Distributed Transactions
+✅ Database Indexing
+✅ Distributed Concurrency Control
+✅ Distributed Locking
+✅ OAuth 2.0
+✅ Symmetric vs Asymmetric Encryption
+✅ JWT 
+✅ API Gateway
+✅ Microservices Architecture
+✅ Service Mesh
+✅ DNS
+
+
+===================================
+
+Mostly asked API interview questions:
+Q1.What is the role of headers in API testing?
+Answer: Headers in API testing play an important role in providing additional information that is not included in the request body. Headers are important in controlling the behavior of the server in handling the request, providing authentication information, or providing metadata about the request or response.
+
+Q2.What is the purpose of the request and response headers in API testing?
+Ans: The request headers are used to specify a content type, caching, authentication, sending pdf files, etc. The response header can provide information about the Content Details, Authentication Status, Rate Limiting(Notify the client about API usage limits Example: X-RateLimit-Remaining: 100.), server, caching, etc.
+
+Q3.How do you prioritize API test cases for regression testing?
+Ans: 1. Select test cases with frequent defects.
+2. Select test cases with critical functionalities.
+3. Select test cases with frequent code changes.
+4 . Cover end-to-end test flows.
+5 . Select a risk-based testing approach.
+6. Test Endpoints With High Traffic (ex: Search, user profile fetching, or real-time notification APIs.
+7 . Validate Integration Points.(Focus on APIs with multiple dependencies or integrations with external services, as these have a higher chance of failing due to external changes.
+
+====================================
+
+1) Java program to remove duplicates characters from given String. 
+2) Program Remove the second highest element from the HashMap. 
+3) Java program to Generate prime numbers between 1 & given 4
+number 
+4) How to find the missing values from a sorted array. 
+5) Java program to input name, middle name and surname of a 
+person and print only the initials. 
+5) Program to Print all Treemap elements? 
+6) What is a singleton Design Pattern? How do you implement that in your framework? 
+7) Write the Top 5 test cases for Booking Coupons. 
+8) What is serialization and deserialization? 
+9) What is the Difference between status codes 401 and 402? 1
+10) Difference between selenium 3 and selenium 4? 
+11) What is delegate in Java and where do you use Delegate in your Framework? 
+12) How many maximum thread-pool can you open in the TestNG? 
+13) What are the Major challenges that come into the picture when you do parallel testing using TestNG and Grid? 
+14) How do you integrate your automation framework with the Jenkins pipeline? 
+15) What will happen if we remove the main method from the java program? 
+16) What is the component of your current Project? 
+17) How do you pass parameters in TestNG? 
+18) Write the logic of retrying the failed test case with a minimum 3 numbers of time in Automation Testing. Which Interface do you use for it? 
+19) What is the OOPs concept in java? 
+20) What is encapsulation? 
+21) What is Polymorphism? 
+22) Difference Between Classes and Objects? 
+23) What is collection in Java? 
+24) What is out in System.out.println? 
+25) In How many ways can we create an object? 
+26) Why is Java not 100% Object-oriented?
+27) Can we make a constructor as Static? 
+28) How to convert a JSON object to a java object using Jackson? 
+29) What is the difference between Abstraction Class and Interfaces? 
+30) Difference between String, StringBuilder, and Stringbuffer? 
+31) What are other immutable classes in Java apart from String? 
+32) Difference between TreeMap and HashMap? 
+33) How do you set priorities for test automation, which test needs to be automated first? 
+34) How do you set test case priorities for your team? 
+35) What are the functional things you need to test on e-commerce sites? 
+
+=====================================
+
+
+ JPA & Hibernate Interview Questions for SDE1 💡
+
+
+🔹 What is JPA? How is it different from Hibernate?
+🔹 What is an entity in JPA?
+🔹 @Entity Vs @Table
+🔹 Explain the difference between @Id and @GeneratedValue.
+🔹 Eager fetching Vs Lazy fetching.
+🔹 Types of Relationships or mappings.
+🔹 @JoinColumn
+🔹 How does Hibernate manage caching?
+🔹 Save() Vs Persist()
+🔹 What is the N+1 select problem in Hibernate? How do you prevent it?
+🔹 How do you implement Auditing in JPA?
+🔹 @Transactional Annotation
+🔹 Merge() Vs Update()
+🔹 Explain Entity Lifecycle.
+🔹 Explain JOIN FETCH Vs JOIN
+🔹 get() Vs Load()
+🔹 CascadeType (Persist, Remove, Merge, Refresh, Detach, All)
+🔹 Is it mandatory to define a Primary Key when making an entity? If not, what happens to the table in your database?
+🔹 What is database indexing? Types of indexing? Which data structures are underlined?
+🔹 Primary Key Vs Candidate Key Vs Foreign Key.
+🔹 If you apply indexing on all columns, what will happen? What will be the effect on Insert, Update, Delete operations?
+🔹 SessionFactory Vs EntityManagerFactory
+🔹 How many ways are there to write Hibernate Queries?
+
+
+=====================================
+
+1.Reverse a String.
+2.Check if a String is Palindrome.
+3.Find Factorial of a Number (Recursion & Iteration).
+4.Check if a Number is Prime.
+5.Print Fibonacci Series (Recursion & Iteration).
+6.Swap Two Numbers Without Using a Third Variable.
+7.Find GCD & LCM of Two Numbers.
+#Array & #String_Programs
+9.Find the Largest and Smallest Number in an Array.
+10.Find the Second Largest Element in an Array.
+11.Remove Duplicates from an Array.
+#Reverse_an_Array
+12.Check if Two Strings are Anagrams
+13.Count the Occurrences of Each Character in a String
+14.Find the First Non-Repeating Character in a String
+#Sorting , #Searching_Algorithms
+15.Bubble Sort, Selection Sort, Insertion Sort, Quick Sort, Merge Sort
+16.Binary Search & Linear Search
+17.Linked List & Data Structure Programs
+#Reverse_a_Linked_List
+18.Detect a Loop in a Linked List.
+19.Find Middle Element of a Linked List.
+20.Implement Stack & Queue Using an Array or Linked List.
+ 
+21. Design a Singleton Class in Java.
+22.Demonstrate Method Overloading & Overriding.
+23.Create a Thread Using Runnable & Thread Class.
+24.Implement Producer-Consumer Problem Using Threads.
+25.Find the Number of Occurrences of a Word in a File.
+
+=================================

@@ -192,4 +192,80 @@ Synechron Interview Questions for hashtag#QA role (6+ yr exp):
 
 =======================================
 
+ #HCLTech #AutomationTester Interview Questions ❓ 
+
+#Round1:
+
+1. Describe your experience with various automation testing tools.
+2. How do you approach designing a robust automation framework from scratch? What are the key components you consider?
+3. Can you explain the difference between data-driven testing and keyword-driven testing? Provide examples of when you might use each approach.
+4. What strategies do you employ for handling dynamic elements or elements with changing attributes in automation scripts?
+5. Have you worked with Continuous Integration/Continuous Deployment (CI/CD) pipelines in your automation projects? If yes, describe your role and contributions to the process.
+6. Describe a particularly challenging automation problem you encountered in your previous projects. How did you solve it?
+7. How do you handle testing of web services or APIs in your automation projects?
+8.Have you integrated your automation tests with any test management or bug tracking tools? If yes, how did you approach it, and what benefits did you provide?
+9. Can you discuss a scenario where you had to perform cross-browser testing in your automation projects? How did you ensure compatibility across different browsers?
+10. How do you handle test data management and data-driven testing in your automation projects?
+
+---
+
+#Round2:
+
+1. Explain your experience in designing and implementing automation frameworks. What design patterns have you utilized and why?
+2. Describe your experience with Test-Driven Development (TDD) and Behavior-Driven Development (BDD). How do these methodologies influence your automation testing practices?
+3. Have you implemented any strategies for parallel test execution in your automation frameworks? How do you ensure optimal resource utilization and testing efficiency?
+4. Can you discuss your experience with integrating automation tests into the CI/CD pipeline? How do you ensure fast feedback loops and reliable test results within a continuous delivery environment?
+5. How do you handle testing of microservices architecture in your automation projects? What challenges have you encountered, and how did you address them?
+6. Describe your approach to handling non-functional testing aspects such as security, performance, and accessibility testing within your automation frameworks.
+7. Have you implemented any techniques for automating the testing of mobile applications beyond traditional UI automation?
+8. How do you ensure comprehensive test coverage in your automation suites, especially in scenarios involving complex logic?
+
+
+=======================================
+
+
+#Capgemini QA Automation interview questions!?
+
+1. Write a program to find duplicate elements in a string array.
+2. How would you introduce yourself briefly and effectively?
+3. Explain the framework you have worked with in your automation testing process.
+4. How do you handle closing the second window of a browser in automation testing?
+5. Differentiate between XPath and CSS selectors.
+6. What is the syntax for a LinkText XPath locator?
+7. What changes or setups do you perform before starting execution in your framework?
+8. How do you handle change requests in your application? Describe the steps you follow.
+9. How often do you trigger regression test scripts? How do you manage them in your repository?
+10. What challenges have you encountered in automation testing, and how did you overcome them?
+11. Explain the differences between GET and POST methods in API testing.
+12. What are the essential components of the GET and POST methods?
+13. Discuss HTTP status codes like 401 and 503.
+14. How do you validate the response code in API testing?
+15. What format do you use for assertions in your tests?
+16. Explain the difference between 200 and 201 HTTP status codes.
+17. Provide the syntax for query parameters in API requests.
+
+
+======================================
+
+#Capgemini QA Automation interview questions!? ❓ 
+
+1. Write a program to find duplicate elements in a string array.
+2. How would you introduce yourself briefly and effectively?
+3. Explain the framework you have worked with in your automation testing process.
+4. How do you handle closing the second window of a browser in automation testing?
+5. Differentiate between XPath and CSS selectors.
+6. What is the syntax for a LinkText XPath locator?
+7. What changes or setups do you perform before starting execution in your framework?
+8. How do you handle change requests in your application? Describe the steps you follow.
+9. How often do you trigger regression test scripts? How do you manage them in your repository?
+10. What challenges have you encountered in automation testing, and how did you overcome them?
+11. Explain the differences between GET and POST methods in API testing.
+12. hat are the essential components of the GET and POST methods?
+13. Discuss HTTP status codes like 401 and 503.
+14. How do you validate the response code in API testing?
+15. What format do you use for assertions in your tests?
+16. Explain the difference between 200 and 201 HTTP status codes.
+17. Provide the syntax for query parameters in API requests.
+
+===============================================
 

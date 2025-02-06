@@ -45,6 +45,39 @@ Cascadeless schedule : let Transaction t1 complete by writing data and committin
 Conflict equivalent schedule:
 
 
+===========================================
+
+Blinkit and Zepto asked these SQL questions in their interview.
+
+1/ Write a query to calculate the 7-day moving average for sales data.
+2/ Given a table with employee in and out times, calculate the total hours worked per employee per day.
+3/ Find the top N highest-grossing products per category.
+4/ Write a query to identify the first and last transaction for each customer within a specific time range.
+5/ Implement a SQL query to rank products by their sales within each region and break ties using additional criteria.
+6/ Write a query to retrieve the second highest salary from an employee table without using LIMIT or OFFSET.
+7/ Identify the percentage contribution of each product to the total revenue, grouped by category.
+8/ Write a query to find gaps in sequential data, such as missing invoice numbers.
+9/ Given a sales table, identify the month-over-month growth percentage for each product.
+10/ Write a query to find customers who have made purchases in every quarter of the year.
+11/ Calculate the cumulative sales for each product over time and compare it with the average sales.
+12/ Write a query to retrieve all customers who made more purchases this month compared to the previous month.
+13/ Identify products that have never been sold along with their categories.
+14/ Find the top 3 customers who contributed the most to revenue in the last year.
+15/ Write a query to compare the sales of the same product across two different time periods.
+16/ Identify the longest streak of consecutive days a customer has made a purchase.
+17/ Calculate the rolling retention rate for an app based on daily user activity.
+18/ Find duplicate rows in a table and group them by their count.
+19/ Write a query to delete duplicate rows but keep the row with the earliest timestamp.
+20/ Calculate the median salary for employees grouped by department.
+21/ Identify the products that have been sold for 3 consecutive months but not for the 4th month.
+22/ Write a query to segment customers into cohorts based on their first purchase date and calculate retention rates for each cohort.
+23/ Implement a query to calculate the total time spent by each user on the platform, excluding overlapping time intervals.
+24/ Create a query to find all the products that were never purchased together in the same transaction.
+25/ Write a query to generate a time-series report for sales data, filling in missing dates with zero sales.
+
+
+
+=================================================
 
 1. What is a stored procedure?
 Answer: A stored procedure is a precompiled set of SQL statements stored in the database. 
@@ -709,5 +742,26 @@ ORDER BY ABS(salary - (SELECT AVG(salary) FROM employees)) ASC
 LIMIT 1; 
 
 ======================
+ITC Client SQL Interview Questions
+=======================
+1. What is the difference between a Stored Procedure (SP) and a Function in SQL?
 
+2. Given the Student Table:
+id name mark1 mark2 mark3 mark4
+1 abc NULL 20 40 50
+2 xyz 50 NULL 35 40
+3 siva 50 40 NULL 10
+Write a query to calculate the total marks for each student.
+Compute the sum of all student marks.
+Assign a rank to each student based on their total marks.
+3. What is an Indexed View in SQL?
+4. What is the difference between Local Variables (LV) and Global Variables (GV) in SQL?
+5. Understanding Indexes:
+ What is the difference between Unique and Non-Unique indexes?
+ What types of indexes can be created on Unique and Non-Unique columns?
+6. What are Triggers in SQL? Can we create Triggers? Provide an example.
+7. Can a Function support DML operations (INSERT, UPDATE, DELETE) in SQL?
+8. Can Table-Valued Functions support DML operations?
+
+======================================
 

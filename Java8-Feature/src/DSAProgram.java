@@ -911,12 +911,116 @@ public class DSAProgram {
 		return sum;
 	}*/
 
-	
 	//=====================================
+	//Find the longest palindromic substring.
+	/*public static void main(String[] args) {
+		String s = "babad";
+		System.out.println(longestPalindrome(s)); // Output: "bab" or "aba"
+		
+		System.out.println(longestPalindrome2(s));
+	}
 	
+	public static String longestPalindrome(String s) {
+		int n = s.length();
+		String longest = "";
 	
+		for (int i = 0; i < n; i++) {
+			for (int j = i; j < n; j++) {
+				if (isPalindrome(s, i, j)) {
+					String sub = s.substring(i, j + 1);
+					if (sub.length() > longest.length()) {
+						longest = sub;
+					}
+				}
+			}
+		}
+		return longest;
+	}
 	
+	private static boolean isPalindrome(String s, int left, int right) {
+		while (left < right) {
+			if (s.charAt(left) != s.charAt(right)) {
+				return false;
+			}
+			left++;
+			right--;
+		}
+		return true;
+	}
 	
+	//Method 2
+	public static String longestPalindrome2(String s) {
+		if (s == null || s.length() < 1)
+			return "";
+		int start = 0, end = 0;
+	
+		for (int i = 0; i < s.length(); i++) {
+			int len1 = expandFromCenter2(s, i, i); // Odd length palindrome
+			int len2 = expandFromCenter2(s, i, i + 1); // Even length palindrome
+			int len = Math.max(len1, len2);
+	
+			if (len > end - start) {
+				start = i - (len - 1) / 2;
+				end = i + len / 2;
+			}
+		}
+		return s.substring(start, end + 1);
+	}
+	
+	private static int expandFromCenter2(String s, int left, int right) {
+		while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
+			left--;
+			right++;
+		}
+		return right - left - 1;
+	}*/
+
+	//=====================================
+	//Count vowels and consonants in a string.
+	/*public static void main(String[] args) {
+		String str = "Hello World";
+		countVowelsAndConsonants(str);
+		countVowelsAndConsonants2(str);
+		countVowelsAndConsonants3(str);
+	
+	}
+	
+	public static void countVowelsAndConsonants(String str) {
+		str = str.toLowerCase(); // Convert to lowercase to handle case insensitivity
+		int vowels = 0, consonants = 0;
+	
+		for (char ch : str.toCharArray()) {
+			if (Character.isLetter(ch)) { // Check if it's a letter
+				if ("aeiou".indexOf(ch) != -1) {
+					vowels++;
+				} else {
+					consonants++;
+				}
+			}
+		}
+	
+		System.out.println("Vowels: " + vowels);
+		System.out.println("Consonants: " + consonants);
+	}
+	
+	public static void countVowelsAndConsonants2(String str) {
+		str = str.toLowerCase();
+		int vowels = str.replaceAll("[^aeiou]", "").length();
+		int consonants = str.replaceAll("[^a-z]", "").replaceAll("[aeiou]", "").length();
+	
+		System.out.println("Vowels: " + vowels);
+		System.out.println("Consonants: " + consonants);
+	}
+	
+	public static void countVowelsAndConsonants3(String str) {
+		str = str.toLowerCase();
+		long vowels = str.chars().filter(c -> "aeiou".indexOf(c) != -1).count();
+		long consonants = str.chars().filter(c -> Character.isLetter(c) && "aeiou".indexOf(c) == -1).count();
+	
+		System.out.println("Vowels: " + vowels);
+		System.out.println("Consonants: " + consonants);
+	}*/
+
 }
 
 //Check two strings Anagram or not
@@ -957,10 +1061,10 @@ outout = {2,4,5,1,5,3}*/
 //Write a function to find the missing number in an array from 1 to n.
 //Write a function to reverse a subarray from index l to r.
 //Given an array Of Strings, group the strinbgs that are anagrams of each other.
+//Array consists of integers and special characters, sum only integers
 //Find the longest palindromic substring.
 //Count vowels and consonants in a string.
-//Write a program to check if an array is a palindrome
-//Array consists of integers and special characters, sum only integers
+//
 //
 //
 //
