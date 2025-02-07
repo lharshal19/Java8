@@ -761,7 +761,287 @@ Whether you're preparing for your next big interview or brushing up on key conce
  ==============================
  
  
+➤ System Design Key Concepts: 
+
+1. Scalability: https://lnkd.in/gpge_z76
+2. Latency vs Throughput: https://lnkd.in/g_amhAtN
+3. CAP: https://lnkd.in/g3hmVamx
+4. ACID Transactions: https://lnkd.in/gMe2JqaF
+5. Rate Limiting: https://lnkd.in/gWsTDR3m
+6. API Design: https://lnkd.in/ghYzrr8q
+7. Strong vs Eventual Consistency: https://lnkd.in/gJ-uXQXZ
+8. Distributed Tracing: https://lnkd.in/d6r5RdXG
+9. Synchronous vs. asynchronous communications: https://lnkd.in/gC3F2nvr
+10. Batch Processing vs Stream Processing: https://lnkd.in/g4_MzM4s
+11. Fault Tolerance: https://lnkd.in/dVJ6n3wA
+
+➤ System Design Building Blocks:
+
+1. Database: https://lnkd.in/gti8gjpz
+2. Horizontal vs Vertical Scaling: https://lnkd.in/gAH2e9du
+3. Caching: https://lnkd.in/gC9piQbJ
+4. Distributed Caching: https://lnkd.in/g7WKydNg
+5. Load Balancing: https://lnkd.in/gQaa8sXK
+6. SQL vs NoSQL: https://lnkd.in/g3WC_yxn
+7. Database Scaling: https://lnkd.in/gAXpSyWQ
+8. Data Replication: https://lnkd.in/gVAJxTpS
+9. Data Redundancy: https://lnkd.in/gNN7TF7n
+10. Database Sharding: https://lnkd.in/gMqqc6x9
+11. Database Index's: https://lnkd.in/gCeshYVt
+12. Proxy Server: https://lnkd.in/gi8KnKS6
+13. WebSocket: https://lnkd.in/g76Gv2KQ
+14. API Gateway: https://lnkd.in/gnsJGJaM
+15. Message Queues: https://lnkd.in/gTzY6uk8
+
+➤ System Design Architectural Patterns:
+
+1. Event-Driven Architecture: https://lnkd.in/dp8CPvey 
+2. Client-Server Architecture: https://lnkd.in/dAARQYzq
+3. Serverless Architecture: https://lnkd.in/gQNAXKkb
+4. Microservices Architecture: https://lnkd.in/gFXUrz_T
+
+➤ Machine Coding Round and Low Level Design Problems:
+
+1. Design Parking Lot: https://lnkd.in/dQaAuFd2
+2. Design Splitwise: https://lnkd.in/dF5fBnex
+3. Design Chess Validator: https://lnkd.in/dfAQHvN4
+4. Design Distributed Queue | Kafka: https://lnkd.in/dQ6_B4_M
+5. Design Tic-Tac-Toe: https://lnkd.in/dFDApUBt
+
+➤ System Design and Architecture (HLD):
+
+1. Design Unique ID Generator Service
+2. Design bit.ly
+3. Design Whatsapp
+4. Design Instagram/Twitter News Feed
+5. Design Search Autocomplete
+6. Design Zomato Search
  
+ ===============================
+ 
+For Backend developers:
+
+LLD Topics:
+------------
+Youtube Playlist: https://lnkd.in/dJkgzKxf
+Udemy course: https://lnkd.in/gtBEC7eM 
+1. Solid Principles, 🔥
+2. Strategy Design Pattern,
+3. Design Notify Me, Observer pattern,
+4. Decorator Pattern,
+5. Factory Pattern,
+6. Abstract Factory Pattern,
+7. LLD of Parking Lot,🔥
+8. LLD of Snake and Ladder, 🔥
+9. LLD of Elevator System, 🔥
+10. LLD of Car Rental System, 🔥
+11. LLD of Logging System, Chain of Responsibility,
+12. Design Tic-Tac-Toe,
+13. Proxy Design Pattern,
+14. LLD of BookMyShow, 🔥
+15. Null object Pattern,
+16. Design Vending Machine,🔥
+17. LLD of ATM,🔥
+18. Design Chess Game,🔥
+19. Design File System,
+20. Adapter Design Pattern,
+21. LLD Of Splitwise, 🔥
+22. Splitwise Simplification Algorithm
+23. Builder Design Pattern
+24. LLD of Cricbuzz🔥
+25. Facade Design Pattern
+26. Bridge Design Pattern
+27. LLD of Zepto
+28. Flyweight Design Pattern
+29. Command Design pattern 
+30. Iterative Design Pattern 
+31. Mediator Design Pattern 
+32. Visitor Design Pattern
+33. Memento Design Pattern
+34. MVC Design Pattern
+35. LLD of Apply Coupon code system
+36. LLD of Payment Gateway System
+37. Object Pool Design Pattern
+
+HLD Topics:
+--------------
+Youtube Playlist: https://lnkd.in/d8eDwYVA
+Udemy course: https://lnkd.in/gZwTudYq
+1. Network Protocols
+2. Cap Theorem 💥
+3. Microservices Design Pattern
+4. Scale from 0 to Millions Users💥
+5. Consistent Hashing💥
+6. Design URL Shortening💥
+7. Back of the Envelope Estimation
+8. Design Key Value Store
+9. SQL vs NoSQL💥
+10. WhatsApp System Design💥
+11. Design Rate Limiter
+12. Zoom Video Calling App System Design
+13. Design Idempotent POST API
+14. Design High Availability System
+15. Design Kafka (Messaging Queue) 💥
+16. Proxy vs Reverse Proxy
+17. Load Balancer and its algo
+18. Distributed Caching
+19. Distributed Transaction
+20. Database Indexing💥
+21. Distributed Concurrency Control💥
+22. Distributed Locking
+23. OAuth 2.0 💥
+24. Symmetric and Asymmetric Encryption 
+25. JWT Explained 
+26. API Gateway 💥
+27. Microservices Architecture 
+28. Services Mesh
+29. DNS💥
+
+Java Topics:
+------------
+Youtube Playlist: https://lnkd.in/dUNA6vsU
+Udemy course: https://lnkd.in/gkq4nRe9
+- Fundamentals: 4 pillars
+- Procedural vs OOPs
+- JDK vs JRE vs JVM
+- Classes
+- Variables
+- String Pool
+- String Immutability
+- Access Specifiers
+- Type Casting
+- Overloading and Overriding
+- Pass by value vs pass by reference
+- Garbage Collector
+- Understand Constructor
+- Operators
+- Control Flow Statements
+- Multithreading
+- Exception Handling
+- Generic Programming
+- Collections
+- Functional Interface
+- Lambda Expression
+- Stream APIs
+
+SpringBoot Basics to Advanced:
+--------------------------------
+Youtube playlist: https://lnkd.in/gz2A5ih2
+
+========================
+
+Core Java - OOP, Data Types, Exception Handling, Collections
+📖 https://lnkd.in/gvaTEKw5
+
+
+Advanced Java - Multithreading, Java 8+ Features, Design Patterns
+📖 https://lnkd.in/gtyZQ-C5
+
+
+Frameworks & Libraries - Spring, Hibernate, Kafka, Testing (JUnit, Mockito)
+📖 https://lnkd.in/gdsfUhVY
+
+
+Database & SQL - JDBC, SQL Basics, ORM vs JDBC
+📖 https://lnkd.in/gFK4t3SE
+
+
+System Design - Microservices, Caching, Scalability
+📖 https://lnkd.in/gRQVWSQU
+
+
+Interview Prep - Common Questions, Coding Challenges, Mock Interviews
+📖 https://lnkd.in/g_3V5_wu
+
+=========================
+
+Never skip to solve these DSA QUESTIONS
+
+𝗔𝗿𝗿𝗮𝘆𝘀
+1. Two Sum 
+ - https://lnkd.in/dWDJFCrk
+2. Best Time to Buy and Sell Stock
+ - https://lnkd.in/dbfXdHcc
+3. Maximum Subarray
+ - https://lnkd.in/dA3e79e7
+4. Container with Most Water
+ - https://lnkd.in/derBVWA2
+5. Rotate Array
+ - https://lnkd.in/d3iAd_ye
+
+𝗦𝘁𝗿𝗶𝗻𝗴𝘀
+1. Reverse String
+ - https://lnkd.in/dSYxrHkt
+2. Valid Palindrome
+ - https://lnkd.in/dNTpQFit
+3. Longest Substring Without Repeating Characters
+ - https://lnkd.in/dMYzuAY4
+4. Group Anagrams
+ - https://lnkd.in/dZAMtWYM
+5. Longest Palindromic Substring
+ - https://lnkd.in/dnk7bi7m
+
+𝗟𝗶𝗻𝗸𝗲𝗱 𝗟𝗶𝘀𝘁
+1. Reverse Linked List
+ - https://lnkd.in/drbzn2b6
+2. Merge Two Sorted Lists
+ - https://lnkd.in/d7dPE39P
+3. Remove Nth Node From End of List
+ - https://lnkd.in/dhwSrxbu
+4. Linked List Cycle
+ - https://lnkd.in/dvymdefx
+5. Intersection of Two Linked Lists
+ - https://lnkd.in/dfJKZ2dZ
+
+𝗧𝗿𝗲𝗲𝘀
+1. Maximum Depth of Binary Tree
+ - https://lnkd.in/dCMEXszH
+2. Validate Binary Search Tree
+ - https://lnkd.in/dZVA-vNR
+3. Symmetric Tree
+ - https://lnkd.in/ddx6A8Zw
+4. Binary Tree Level Order Traversal
+ - https://lnkd.in/diR5nX4U
+5. Lowest Common Ancestor of a Binary Tree
+ - https://lnkd.in/dFkJwkaV
+
+𝗚𝗿𝗮𝗽𝗵𝘀
+1. Number of Islands
+ - https://lnkd.in/drj5P3bf
+2. Course Schedule
+ - https://lnkd.in/duvfs54r
+3. Word Ladder
+ - https://lnkd.in/dmTspiu3
+4. Clone Graph
+ - https://lnkd.in/dXYJsBMY
+5. Network Delay Time
+ - https://lnkd.in/d3WVx_JP
+
+𝗦𝗲𝗮𝗿𝗰𝗵𝗶𝗻𝗴 & 𝗦𝗼𝗿𝘁𝗶𝗻𝗴 
+1. Merge Sort
+ - https://lnkd.in/d5TVqNCE
+2. Quick Sort
+ - https://lnkd.in/d5TVqNCE
+3. Binary Search
+ - https://lnkd.in/dQNu5M-V
+4. Search in Rotated Sorted Array
+ - https://lnkd.in/dWMGpD5e
+5. First Bad Version
+ - https://lnkd.in/dBpRdqwt
+
+𝗗𝘆𝗻𝗮𝗺𝗶𝗰 𝗣𝗿𝗼𝗴𝗿𝗮𝗺𝗺𝗶𝗻𝗴 
+1. Fibonacci Number
+ - https://lnkd.in/dJqY369E
+2. Climbing Stairs
+ - https://lnkd.in/dK8UxFsq
+3. Longest Increasing Subsequence
+ - https://lnkd.in/dSkJXnDp
+4. Maximum Subarray Sum
+ - https://lnkd.in/dA3e79e7
+5. Coin Change
+ - https://lnkd.in/d-ByK5Fx
+
+==========================================
 
 
 

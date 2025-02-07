@@ -269,3 +269,156 @@ Synechron Interview Questions for hashtag#QA role (6+ yr exp):
 
 ===============================================
 
+Frequently asked #Selenium with #Java interview questions(2-5 yrs exp)
+============
+
+1.What is Selenium? Explain the different components of Selenium.
+2.What is Selenium WebDriver, and how does it differ from Selenium RC?
+3.How do you launch a browser in Selenium WebDriver?
+4.How do you handle browser alerts in Selenium WebDriver?
+5. How do you handle multiple windows in Selenium?
+6. What is the difference between findElement() and findElements() in Selenium?
+7.How do you capture screenshots in Selenium WebDriver?
+8.How do you handle dropdowns in Selenium?
+9.How do you handle dynamic web elements in Selenium?
+10.How do you handle frames in Selenium WebDriver?
+11.What are the different locators available in Selenium WebDriver?
+12.Explain the difference between XPath and CSS selectors. Which one is faster?
+13.How do you perform drag and drop in Selenium WebDriver?
+14.How can you perform mouse hover actions in Selenium?
+15.Explain the concept of implicit wait and explicit wait in Selenium.
+16.What are the different types of waits available in Selenium WebDriver?
+17.What is fluent wait in Selenium, and how is it different from explicit wait?
+18.How can you switch between different browser tabs using Selenium WebDriver?
+19.How do you interact with web elements like buttons, text boxes, etc., in Selenium?
+20.How can you handle JavaScript alerts using Selenium WebDriver?
+
+TestNG
+============
+1.How do you integrate Selenium with TestNG?
+2.Explain the annotation hierarchy in TestNG.
+3.What is the difference between @BeforeMethod and @BeforeClass in TestNG?
+4.How do you execute test cases parallelly in TestNG?
+5.How can you prioritize test cases in TestNG?
+6.What is the purpose of @DataProvider in TestNG?
+7.How do you run failed test cases in TestNG?
+8.How do you generate TestNG reports?
+9.What is SoftAssert and HardAssert in TestNG?
+10.How do you group test cases in TestNG?
+
+=======================================
+
+#InterviewQuestions #Java #Selenium #SDET #AutomationTesting #CrackCodingRound #Testing #QA #SeniorSDET #APITesting #UITesting #Part2
+
+Round 1 (L1): Focuses on technical skills, involving coding problems to assess foundational knowledge and problem-solving abilities.
+Round 2 (L2): Explores advanced technical concepts and domain-specific challenges.
+Round 3 (L3): Managerial interview to evaluate communication skills, teamwork, and handling real-world scenarios.
+Round 4 (L4): HR interview for cultural fit, salary discussions, and formalities.
+
+API Testing Questions:
+1. What is the difference between PUT and PATCH?
+2. What is the difference between authorization and authentication?
+3. Explain the various HTTP status codes across series 1xx, 2xx, 3xx, 4xx, and 5xx.
+4. Given a JSON payload, retrieve specific nodes based on provided conditions.
+5. What are serialization and deserialization? Write code to create a POJO for handling them.
+6. Explain the API framework you’ve worked on (e.g., Cucumber BDD, TestNG). Include details about reporting, data-driven testing, etc.
+Code and automate a given API.
+7. If given any API for testing, what aspects will you focus on?
+
+========================================
+
+
+1.What is the difference between an abstract class and an interface in Java? 
+2.Explain the concept of method overloading and method overriding with examples. 
+3.What are the key differences between a static method and an instance method? 
+4.What is the difference between '==' and '.equals()' when comparing objects? 
+5.Explain the concept of the Java memory model, stack vs. heap. Exception Handling 
+6.What is the purpose of the throw and throws keywords in Java? 
+7.Can you explain how the exception hierarchy works in Java? 
+8.How does the Java finally block work, and when is it executed? Multithreading & Concurrency 
+9.Explain the significance of the volatile keyword in Java. 
+10.How does a thread pool work in Java? Why should you use it? 
+11.What is the difference between wait(), notify(), and notifyAll() in Java? Collections Framework 
+12.How do you prevent a ConcurrentModificationException in Java collections? 13.What is the difference between Iterator and ListIterator? 
+14.Explain the difference between LinkedHashMap and HashMap in Java. JVM Internals 
+15.What is the Java ClassLoader, and how does it work? 
+16.Can you explain the concept of Just-In-Time (JIT) compilation in Java? 
+17.How does garbage collection work in Java, and what are the types of GC?
+
+
+========================================
+
+#Deloitte - Interview Questions for QA Automation Profile
+
+✅ Technical 1
+1. Common question( Intro+ project + framework architecture)
+2. Data selection in Calendar, Excel iteration then send values to text box.
+3. What are Idempotent methods? How is it relevant in RESTful web
+services domain?
+4. Based on what factors, you can decide which type of web services you
+need to use — SOAP or REST?
+5. What is Payload in terms of RESTful web services?
+6. importance of API documentation in API automation testing?
+7. Have you integrated automation testing into CI/CD pipelines before?
+8. Explain PSVM, SYSOUT?
+9. Jenkins and GIT
+10. Basic selenium question and sql?
+
+✅ Technical 2
+
+1. Common question(Intro)
+2. Java(Collection Questions only)
+3. Java Programming (Sort array in reverse order)
+4. How do you handle maintenance and updates of automated test scripts?
+5. Does finally {} block always run?
+6. Automate one page (Login-Add to cart Assert-logout-Reporting).
+
+✅ Managerial Round
+
+1. In manual testing, it takes 10 minutes, whereas in automation, it takes
+10 minutes to check a functionality, so what would be your preference? and
+Why?
+2. how comfortable are you with programming languages other than Java
+Selenium?
+3. How do we identify what can be automated?
+4. Can you discuss a challenging automation project you’ve worked on and
+how you overcame obstacles?
+5. How do you stay updated with the latest trends and best practices in
+automation testing?
+6. Normal discussion about previous work? What you like the most?
+
+=============================================
+
+#Automation Testing Interview Questions:
+
+1. Difference between implicit and explicit waits.
+2. Asked to share the screen and write XPath for a given element.
+3. Use of Actions class and Select class.
+4. Explain your roles and responsibilities.
+5. Exceptions faced while working with Selenium (Give 5 examples).
+6. OOPS concepts (Inheritance, Abstraction, Polymorphism, etc.).
+7. Difference between findElement() vs findElements().
+8. How to handle alerts in Selenium?
+9. Write Selenium code to take a screenshot.
+10. What is the priority in TestNG?
+11. Reports used in your framework.
+12. Difference between Scenario vs Scenario Outline in Cucumber BDD.
+13. Explain the framework you are working on.
+14. What are tags in Cucumber?
+15. How do you manage test data in your framework?
+16. Abstract class vs Interface.
+17. Write Java code to reverse a string and perform array manipulation.
+18. Questions from HashMap, HashSet.
+19. Difference between Array and ArrayList.
+20. What is a Collection in Java?
+21. Why is String immutable in Java?
+22. Difference between Collection and Collections.
+23. Difference between StringBuffer and StringBuilder.
+24. API status codes difference (400, 401, 201, 200, etc.).
+25. Difference between PUT vs PATCH request.
+26. Basic GitHub commands (git add, git commit, git diff)
+
+==============================================
+
+
+

@@ -31,3 +31,67 @@
 28. Have you used load balancing based on route 53?
 
 =============================================
+
+DevOps Interview Experience!
+
+
+✅ What are the different components of Kubernetes?
+✅ What are Persistent Volumes (PV) and Persistent Volume Claims (PVC)?
+✅ What is the difference between StatefulSet and Deployment?
+✅ Tell me about different services in Kubernetes.
+✅ What is the difference between ClusterIP and NodePort?
+✅ How can you achieve auto-scaling in Kubernetes?
+✅ What is a Namespace in Kubernetes?
+✅ What is a DaemonSet?
+✅ What is an Ingress in Kubernetes?
+✅ What is ConfigMap in Kubernetes?
+✅ What is a Secret in Kubernetes?
+✅ How do you securely store credentials in Kubernetes?
+✅ What is a Horizontal Pod Autoscaler (HPA) and what metrics does it use?
+✅ How does Vertical Pod Autoscaler (VPA) work?
+✅ What is the difference between HPA and VPA?
+✅ What is Role-Based Access Control (RBAC) in Kubernetes?
+✅ How do you debug a failing Pod?
+✅ What is a Custom Resource Definition (CRD)?
+✅ What are Helm charts, and how do they simplify Kubernetes deployments?
+✅ What are the main components of Helm?
+✅ What is a Helm Chart, and what does it contain?
+✅ What is a Chart.yaml file, and what is its purpose?
+✅ What is a values.yaml file, and how does it work?
+
+======================================
+
+𝐃𝐞𝐯𝐎𝐩𝐬 𝐢𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰 𝐪𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬 𝐀𝐭 MNC Company📍
+
+1. what are your roles and responsibilities?
+2. How do you integrate ansible to deploy your application.
+3. How where do you store statefile and write script for backend dynamodb and S3 ?
+4. I have created 5 instance with terraform, manually deleted two resources . How many resources will terraform create once we apply terraform?
+5. We have created a terraform resources file to create 50 resources but due to some issues it failed to create all resources. What happens when we reapply ? Will it create additional resources or will it recreate from the start?
+6. What is taint in terraform?
+7. How can you bring existing resources to manage with terraform?
+8. How do you run an application while recreating instance.
+9. How can you check the application status creating along with terraform?
+8. Write a Jenkins pipeline used in your current project.
+9. How do you secure jenkins ?
+10. Write a shell script to find an error pattern in a file and send an email?
+11. Write a script to delete last 7 days old and more than 100 mb files.
+12. Write script to schedule a job to run backup file?
+13. Write a script to get back to save with time stamp?
+12. Write a script to check if the nginx service is working or not.
+13. How do you trouble shoot applications running.
+14. What is image pull back error and how do you trouble shoot in k8s
+15. How is the application high available in eks ?
+16. Where to you deploy the load balancer front end, back end?
+17. On which layer SSL/TLS certificates are attached.
+18. What is the architecture of the current project in eks ?
+19. How do you connect to private subnet instances?
+20. How do you configure an EC2 connect S3 bucket?
+21. What happens when you don't provide variables in terraform files? How will it take variables?
+22. How do you override existing environment variables in terraform?
+23. How do you deploy an application in EC2 Instance without jenkins.
+24. Explain how you configure ansible to deploy an application with jenkins?
+
+==========================================
+
+

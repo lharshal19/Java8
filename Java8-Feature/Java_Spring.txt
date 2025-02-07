@@ -1185,3 +1185,359 @@ person and print only the initials.
 25.Find the Number of Occurrences of a Word in a File.
 
 =================================
+
+𝐌𝐨𝐬𝐭 𝐀𝐬𝐤𝐞𝐝 𝐉𝐚𝐯𝐚 𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬: 𝐏𝐚𝐫𝐭 - 2
+
+𝐄𝐚𝐬𝐲 - 
+ 
+• How is String immutable in Java? 
+• What is a functional interface? 
+• Can a constructor be private? 
+• Which approach is better and why? 
+ • String str = "Hello"; OR 
+ • String str = new String("Hello"); 
+• What is an anonymous class?
+
+𝐌𝐞𝐝𝐢𝐮𝐦 -
+ 
+• Where is a String stored in memory? 
+• Is it necessary for an abstract class to have at least one abstract method? 
+• Does 𝐜𝐨𝐧𝐜𝐚𝐭𝐞𝐧𝐚𝐭𝐢𝐨𝐧 create a new String? If yes: 
+ • What happens to the old String objects? 
+ • Can they cause memory issues? 
+• Why do we use 𝐚𝐛𝐬𝐭𝐫𝐚𝐜𝐭 𝐜𝐥𝐚𝐬𝐬𝐞𝐬? 
+• Can we instantiate a class containing an abstract method? 
+• How to create an object of a class with a 𝐩𝐫𝐢𝐯𝐚𝐭𝐞 𝐜𝐨𝐧𝐬𝐭𝐫𝐮𝐜𝐭𝐨𝐫?
+
+𝐇𝐚𝐫𝐝 - 
+ 
+• How to create an 𝐢𝐦𝐦𝐮𝐭𝐚𝐛𝐥𝐞 𝐜𝐥𝐚𝐬𝐬 in Java? 
+• How to implement a 𝐒𝐢𝐧𝐠𝐥𝐞𝐭𝐨𝐧 𝐜𝐥𝐚𝐬𝐬? What are its real-world applications? 
+• Can we define methods in an interface? If yes, how? 
+• What is a 𝐥𝐚𝐦𝐛𝐝𝐚 𝐞𝐱𝐩𝐫𝐞𝐬𝐬𝐢𝐨𝐧, and why is it used? 
+• What is the difference between 𝐂𝐨𝐦𝐩𝐚𝐫𝐚𝐛𝐥𝐞 and 𝐂𝐨𝐦𝐩𝐚𝐫𝐚𝐭𝐨𝐫? 
+• What are the key features of Java 8? 
+• Which provides complete abstraction and why? 
+ • Abstract class 
+ • Interface 
+• What happens if the 𝐫𝐮𝐧() method is called directly on a running thread? 
+• What is the purpose of a 𝐝𝐚𝐞𝐦𝐨𝐧 𝐭𝐡𝐫𝐞𝐚𝐝?
+
+
+========================================
+
+Java Developer Interview Questions for Experienced
+#realtime #java #scenario #interview #questions
+1. You need to prevent API abuse by implementing a rate limiter in Spring Boot.
+· How would you implement it?
+· Which algorithms would you use? (Token Bucket vs. Leaky Bucket)
+· How can Redis help in rate limiting?
+2. Your system expects 1M+ requests per second during peak load.
+· How do you scale your system?
+· What caching mechanisms would you implement?
+· How do you handle sudden traffic spikes?
+
+3. Users are uploading large files (1GB+), and the service is slowing down.
+
+· What’s the best way to handle file uploads efficiently?
+· Would you use S3, MinIO, or another storage solution?
+· How to implement a resumable upload?
+
+4. Identify and fix the memory leak in the following code:
+class MemoryLeakExample {
+ private static List<String> cache = new ArrayList<>();
+
+ public void addData() {
+ for (int i = 0; i < 1000000; i++) {
+ cache.add("Data-" + i);
+ }
+ }
+}
+· What is wrong with this code?
+· How do you fix the memory leak?
+
+5. The following code is not thread-safe. Why?
+
+class Counter {
+ private int count = 0;
+
+ public void increment() {
+ count++;
+ }
+}
+· What’s wrong with this implementation?
+· How would you make it thread-safe?
+
+6. Your REST API is slow. Fix this code:
+
+@GetMapping("/users")
+public List<User> getAllUsers() {
+ return userRepository.findAll();
+}
+· Why is this method slow for large datasets?
+· How can you optimize it using pagination?
+
+========================================
+
+#InterviewQuestions 
+
+1. Reverse the given string (Given: payal, Expected: layap)
+2. Reverse each word in the string (Given:payal shirish mehta Expected: layap hsisihs athem)
+3. Reverse Number (Given: 45321 Expected: 12354)
+4. occurrence of the word with frequency (Given: payal shirish mehta payal Expected: Payal-2, Shirish-1, mehta-1)
+5. Occurrence of character with frequency (Given: payal mehta Expected: p-1,a-3,y-1,l-1,m-1,e-1,h-1,t-1)
+6. Largest word in the string(Given: payal shirish mehta Expected:shirish)
+7. Smallest word in the string(Given: payal mehta shah Expected: shah)
+8. Second Max number (Given: 10,12,18,11,9,7,20 Expected: 18)
+9. Second Min number (Given: 10,12,18,11,9,7,20 Expected: 9)
+10. Add $ after characters in String(Given: tomorrow Expected: t$m$$rr$$$)
+
+========================================
+
+Java Developer Interview Questions for Experienced
+#java #interview #preparation
+1. You need to handle 1 million requests per second. How would you scale your backend architecture?
+2. If you are building an order management system, how would you design the services? (Database choices, API interactions, scalability)
+3. Design a simple service that asynchronously processes tasks using Spring Boot.
+4. You have a distributed system where one Microservice must call another but should retry on failure. How would you implement this in Spring Boot?
+5. You deployed a Spring Boot service, but it crashes with an "Out of Memory" error. How do you debug this?
+6. Your Spring Boot REST API, which fetches data from a database, suddenly becomes slow. The response time has increased from 100ms to 3 seconds.
+7. Your Spring Boot microservice is running on Kubernetes and after a few hours, it crashes with OutOfMemoryError.
+· What are the possible causes of memory leaks in Java?
+· How to find which objects are causing the memory leak?
+· How to use a profiler (like JVisualVM, YourKit) to detect leaks?
+
+8. One of your microservices has started consuming high CPU (90%), even though the incoming traffic is normal.
+· How to investigate and identify the root cause?
+· What could cause a thread to enter an infinite loop?
+· How can you profile CPU usage in a running application?
+
+9. You start your Spring Boot application, but it fails with a "BeanCurrentlyInCreationException" due to a circular dependency.
+· How to debug and fix this issue?
+· What Spring mechanisms help break circular dependencies?
+
+10. Your Spring Boot app occasionally freezes and stops processing requests.
+· How to detect a deadlock in Java?
+· How can you use jstack to diagnose the issue?
+· How can you avoid deadlocks in database transactions?
+
+============================================
+
+Interview Experience – Java Developer (L1 and L2 Questions)
+
+L1 Interview Questions
+
+* Introduction (as usual)
+* Explain the internal working of HashMap in Java.
+* What are wrapper classes? What are their advantages?
+* How does indexing work in MongoDB?
+* Difference between @RestController and @Controller in Spring.
+* What are REST services?
+* Inner join vs Left join in SQL.
+* Compare ArrayList and LinkedList in Java.
+* What is a Functional Interface? (Default functional interfaces in Java)
+* Explain idempotent vs non-idempotent operations in REST.
+* How to implement a Singleton class in Java?
+* Difference between an interface and an abstract class.
+* Code to get the frequency of each string from a list of strings.
+* Types of Stream operations in Java (Terminal vs Intermediate operations).
+* How to create an Immutable class in Java?
+* Difference between WHERE and HAVING clauses in SQL.
+* Can we use default and static methods inside a functional interface?
+
+L2 Interview Questions
+
+* Introduction (as usual)
+* What is the CAP theorem?
+* Which two principles of the CAP theorem does MongoDB prioritize?
+* How to create a custom HashMap class with get and put method implementations?
+* Detailed explanation of the working of HashMap.
+* Write a signature for an API to handle login functionality for an application.
+* How to decide between using an RDBMS or a NoSQL database?
+* Explain isolation in the context of ACID properties.
+
+===========================================
+
+** EXCEPTIONS in java interview questions **
+1. Difference between error and exception ?
+2. What happens if subclass exception is listed after a superclass exception (Example: Parent class method declares it to throw IOException and Child class method declared it to throw FileNotFoundException) ?
+3. Difference between final, finally and finalize ?
+4. Tell me about Control flow in try-catch OR try-catch-finally
+5. Assume an Exception occurred in try-block is not handled in catch block. What happens here ?
+6. If an exception occurs in the try block but is not handled in the catch block, and then there is a finally block followed by remaining code, what happens in this case ? Is the exception thrown first and then the finally block executed, or does the finally block get executed first and the exception thrown afterward?
+7. Which among there are valid combinations ? (a) try (b) try - catch (c) try - finally (d) try - catch - finally
+8. Can I use throws without using try-catch ?
+9. Difference between throw and throws ?
+10. I have a try block within a try block. But I have catch block for the outer try block. Will the program gets executed ?
+
+==========================================
+
+#SpringBoot Interview, Questions
+
+𝐒𝐩𝐫𝐢𝐧𝐠 𝐁𝐨𝐨𝐭 𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬 𝐟𝐨𝐫 𝐅𝐫𝐞𝐬𝐡𝐞𝐫𝐬:
+1. What are the advantages of using Spring Boot?
+2. What are the Spring Boot key components?
+3. Why Spring Boot over Spring?
+4. What is the starter dependency of the Spring boot module?
+5. How does Spring Boot works?
+6. What does the @SpringBootApplication annotation do internally?
+7. What is the purpose of using @ComponentScan in the class files?
+8. How does a Spring Boot application get started?
+9. What are starter dependencies?
+10. What is Spring Initializer?
+11. What is Spring Boot CLI and what are its benefits?
+12. What are the most common Spring Boot CLI commands?
+
+𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝 𝐒𝐩𝐫𝐢𝐧𝐠 𝐁𝐨𝐨𝐭 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬:
+13. What Are the Basic Annotations that Spring Boot Offers?
+14. What is Spring Boot dependency management?
+15. Can we create a non-web application in Spring Boot?
+16. Is it possible to change the port of the embedded Tomcat server in Spring Boot?
+17. What is the default port of Tomcat in Spring Boot?
+18. Can we override or replace the Embedded Tomcat server in Spring Boot?
+19. Can we disable the default web server in the Spring Boot application?
+20. How to disable a specific auto-configuration class?
+21. Explain @RestController annotation in Spring Boot?
+22. What is the difference between @RestController and @Controller in Spring Boot?
+23. Describe the flow of HTTPS requests through the Spring Boot application?
+24. What is the difference between RequestMapping and GetMapping?
+25. What is the use of Profiles in Spring Boot?
+26. What is Spring Actuator? What are its advantages?
+27. How to enable Actuator in Spring Boot application?
+28. How to get the list of all the beans in your Spring Boot application?
+29. How to enable debugging log in the Spring Boot application?
+30. Where do we define properties in the Spring Boot application?
+31. What is Dependency Injection?
+32. What is an IOC container?
+
+Want to be Java SpringBoot developer?
+Do this topics 👇
+ 1. Dependency Injection (DI) and Inversion of Control (IoC)
+ 2. Bean lifecycle and scopes
+ 3. ApplicationContext and BeanFactory
+ 4. XML vs. Java-based Configuration
+ 5. Annotations: @Component, @Autowired, @Qualifier, @Value
+ 6. Pointcuts, Advice, Joinpoints, Aspects
+ 7. Common AOP annotations: @Aspect, @Before, @After
+ 8. JDBC Template
+ 9. Spring ORM with Hibernate
+ 10. Transactions: Programmatic vs Declarative
+ 11. Spring Boot starters and dependencies
+ 12. Auto-configuration
+ 13. Embedded servers (Tomcat, Jetty)
+ 14. Spring Boot Actuator
+ 15. DispatcherServlet flow
+ 16. RESTful Web Services
+ 17. RequestMapping: @GetMapping, @PostMapping, etc.
+ 18. Exception handling with @ControllerAdvice
+ 19. Authentication and Authorization
+ 20. Security filters and interceptors
+ 
+ ===================================
+ 
+ #java Important questions for #AutomationTester both Fresher and Experience 👇👇
+
+1️⃣ Core Java Basics
+
+1. What are OOP principles? Explain Encapsulation, Inheritance, Polymorphism, and Abstraction.
+2. What is the difference between Class and Object in Java?
+3. What is the difference between Method Overloading and Method Overriding?
+4. What is the difference between Abstract Class and Interface?
+5. What is the use of the final, finally, and finalize keywords?
+Explain the static keyword in Java.
+6. What are constructors in Java? Can a constructor be private?
+7. What is the difference between equals() and == in Java?
+8. What is the difference between String, StringBuilder, and StringBuffer?
+9. How does Java handle memory management (Heap, Stack, Garbage Collection)?
+
+2️⃣ Collections & Data Structures
+
+1. What is Java Collections Framework?
+2. Explain the difference between ArrayList and LinkedList.
+3. What is the difference between HashMap and HashSet?
+4. What is the difference between HashMap, TreeMap, and LinkedHashMap?
+5. What is the difference between List, Set, and Queue?
+6. How does HashMap handle collisions internally?
+7. What is the use of the Iterator in Java?
+8. How do you sort a list of objects using Comparable and Comparator?
+9. What is ConcurrentHashMap and how is it different from HashMap?
+Explain the difference between fail-fast and fail-safe iterators.
+
+3️⃣ Exception Handling & Multithreading
+
+1. What is Exception Handling? Explain try-catch-finally with an example.
+2. What is the difference between Checked and Unchecked Exceptions?
+3. What is the difference between throw and throws?
+4. What are the different types of exceptions in Selenium/WebDriver?
+5. What is multithreading? How is it different from parallel processing?
+6. What are synchronized blocks and methods in Java?
+7. Explain Thread.sleep() vs Wait() vs Notify().
+8. What is Deadlock in Java, and how can it be avoided?
+9. What is Callable and Future in Java?
+10.What are Lambda Expressions, and how are they useful in automation?
+ 
+ ====================================
+ 
+  Core Java Questions
+ 1. What is the difference between HashMap and ConcurrentHashMap, and how does Java handle collisions?
+ 2. Explain the concept of fail-fast and fail-safe iterators in Java.
+ 3. How does Java manage garbage collection, and what are the differences between G1 GC and CMS?
+ 4. How would you implement an immutable class with mutable fields?
+ 5. What are soft references, weak references, and phantom references in Java?
+
+ Multithreading and Concurrency
+ 1. What’s the difference between synchronized blocks and ReentrantLock?
+ 2. How would you prevent deadlocks in a multithreaded application?
+ 3. Explain ThreadLocal and its use cases.
+ 4. What are CountDownLatch and CyclicBarrier, and when would you use each?
+ 5. Implement a producer-consumer problem using Java’s BlockingQueue.
+
+ Spring Boot and Microservices Questions
+ 1. How does Spring Boot’s auto-configuration work internally?
+ 2. What is the role of Spring Boot Actuator?
+ 3. How would you secure a REST API using Spring Security and JWT?
+ 4. Explain circuit breakers and how you’d implement them using Hystrix in a microservices architecture.
+ 5. How do you handle versioning in REST APIs?
+
+ Vert.x Framework Questions
+ 1. How does the Vert.x Event Bus work for inter-component communication?
+ 2. What’s the difference between Vert.x and traditional blocking frameworks like Spring Boot?
+ 3. How would you use Vert.x reactive programming to handle high-concurrency tasks?
+ 4. Explain how Vert.x handles non-blocking I/O and why it’s beneficial.
+ 5. How would you implement a distributed task scheduler using Vert.x and Redis?
+
+ API and System Design Questions
+ 1. How would you design a rate-limiting mechanism for a public API?
+ 2. What’s the difference between synchronous APIs and asynchronous APIs?
+ 3. How would you design a payment gateway to handle high traffic?
+ 4. Explain the role of message queues like Kafka or RabbitMQ in a distributed system.
+ 5. How would you troubleshoot a failing API in production?
+
+Key Topics to Master
+ • Java Fundamentals: Collections, Streams, and Memory Management.
+ • Multithreading: Thread synchronization, locks, and concurrency utilities.
+ • Spring Boot & Vert.x: Microservices, APIs, and non-blocking frameworks.
+ • System Design: Scalability, fault tolerance, and distributed systems.
+ • Coding Proficiency: Algorithms, data structures, and problem-solving.
+ 
+ =================================
+ 
+ #SDET
+
+1. If we have string String STS1 = "Java" and String STS2 ="Java", will it create new object?
+2. What is String Pool memory and Heap memory in Java?
+3. Why is String Immutable?
+4. Write a program to reverse an array. Given {4,52,6} and print it is 6,2,5,4?
+5. Difference between authentication and authorization?
+6. Write SQL to find second highest salary with join?
+7. Difference between API and WebServices?
+8. What is Invocation count in TestNG?
+9. Difference between Exception and error?
+10. Write a Java program with Selenium to count broken link?
+11. Write a Java program to combine 2 array and remove duplicate?
+12. How to convert List into ArrayList and ArrayList into list?
+13. Explain Collection Hierarchy?
+
+====================================
+
+
