@@ -420,5 +420,572 @@ automation testing?
 
 ==============================================
 
+Scenario Based Interview Questions for Automation Tester #QA
+
+1. Your automated tests for a login page are failing intermittently. How would you investigate and address this issue?
+
+2. The website you're testing has elements that constantly change IDs or positions. What techniques would you use to create reliable locators for your tests?
+
+3. A critical API endpoint is returning unexpected errors. How would you use automation to help debug this?
+
+4. Your web application needs to work flawlessly across different browsers (Chrome, Firefox, Safari). How would you approach cross-browser test automation?
+
+5. Users complain about slow loading times on a specific page. How can automation help identify performance issues?
+
+6. You need to test a form with a large number of different input values. How would you efficiently manage and use test data in your automation?
+
+7. The company is prioritizing mobile users. How would you automate testing on different mobile devices and operating systems?
+
+8. You encounter a feature that seems impossible to automate (e.g., audio/video playback). How do you handle this in your test strategy?
+
+9. You're tasked with automating tests for an old application with limited documentation. How would you approach this?
+
+10. How would you integrate your automated tests into a Continuous Integration/Continuous Delivery pipeline?
+
+===================================================
+
+1)Difference between Scenario and Scenario Outline in BDD Cucumber?
+2)How to disable a test in TestNG?
+3)What are the different Hooks in TestNG? 
+4)Tell me 5 interfaces that you used in your framework.
+5)How to switch from one window to another(Code)?
+6)How to handle Synchronisation issues in your project??
+7)How to get the Font & Color of a text?
+8)Write a program to find out the largest & smallest number in an array.
+9)How to get data from an Excel File (Apache POI)?
+10)Difference between Bug & Defect??
+11)Difference between Assert & Verify??
+12) Write code for “Window Scrolling” ??
+
+
+============================================
+
+1. Explain the automation framework.
+ 2. What unit testing framework are you using?
+ 3. Difference between JUnit and TestNG.
+ 4. How can you rerun failed test cases?
+ 5. Which CI/CD tool have you used?
+ 6. Do you know how to create a parameterized pipeline job?
+ 7. Write a program to validate usernames (alphanumeric, no spaces/special characters, no duplicates).
+ 8. Write a program to count character occurrences in a string.
+ 9. Find the highest number in an array without using inbuilt methods.
+ 10. Reverse a string without using inbuilt methods.
+ 11. Difference between String and StringBuffer.
+ 12. Difference between private, public, and protected access modifiers.
+ 13. Explain the collections framework hierarchy.
+ 14. Difference between Hashtable and HashSet.
+ 15. Difference between Comparable and Comparator.
+ 16. Explain the exception hierarchy.
+ 17. Write a program to create a custom exception.
+ 18. What is an interface and an abstract class?
+ 19. Why is an abstract class allowed to have a constructor?
+ 20. Difference between final, finally, and finalize.
+ 21. Explain polymorphism.
+ 22. Write a program to override a function.
+ 23. Do you know about Java 8?
+ 24. What are Java Streams and Lambda Expressions?
+ 25. Difference between git rebase and git merge.
+ 26. When to use git rebase?
+ 27. What is a functional interface?
+ 28. Difference between status codes 401 and 403.
+ 29. Difference between OAuth 1.0 and OAuth 2.0.
+ 30. Write a program using the RestAssured library with assertions for GET/POST calls.
+ 31. What is the content type in OAuth 2.0?
+ 32. Write a SQL query using JOIN (two tables with columns given).
+ 33. Handle multiple windows in Selenium.
+ 34. Capture screenshots in Selenium.
+ 35. How do you handle synchronization in automation scripts?
+ 36. Write the syntax for Fluent Wait.
+ 37. Read/write data from an Excel file.
+ 38. Different stages of an automation test.
+ 39. Types of testing.
+ 40. Difference between priority and severity.
+ 41. Fields required to log a bug/defect.
+ 42. What is a test plan and what does it include?
+ 43. Briefly explain the phases of SDLC.
+ 
+ ==================================================
+ 
+ 1. Please introduce yourself.
+2. Please explain your Automation Framework, all the components.
+3. What is a Page Object Model?
+4. How do you run your test cases in parallel in Cucumber?
+5. Explain the contents of the Runner File in Cucumber?
+6. What is a Singleton Design Pattern?
+7. What are the advantages and disadvantages of the Page Object Model?
+8. What is Selenium Grid?
+9. Explain the WebDriver create statement line?
+11. Explain the Maven Lifecycle?
+12. How do you run the failed test cases?
+13. How do you generate Reports in Selenium?
+14. How do you customise reports after your test execution?
+15. What kind of waits are there in Selenium?
+16. Write the Code Snippet for Explicit Wait?
+17. Write the Code Snippet for Drag and Drop in Selenium?
+18. How do you switch to different Windows in Selenium?
+19. Why do we use SET in Window Handles?
+20. Write the Code for taking screenshot in Selenium?
+21. What is the difference between Scenario and Scenario Outline in Cucumber?
+22. How do you pass data to your Selenium Scripts?
+23. How do you decide the priorities of your Test Cases?
+24. If you want to execute one test case again and again how do you do that?
+25. What are the different annotations used in TestNG?
+26. Write the hierarchy of annotations in TestNG?
+27. What is the defect life cycle?
+28. What is the difference between Agile and Waterfall Model?
+29. What is the difference between 201 and 204 Status Code?
+30. What is the difference between 401 and 403 Status Code?
+31. What are the components of an API Request?
+32. What is the difference between Query Parameters and Path Parameters?
+33. How do you resolve Conflicts in Git?
+34. What is the difference between git pull and git patch?
+35. Explain the use of Jenkins in the Automation Framework?
+ 
+==========================================================
+
+#QA role
+🚀 Java & OOPs Concepts🚀
+🔹 What is the final keyword in Java?
+🔹 What is a constructor? Can we override a constructor?
+🔹 Where is a constructor used in your framework?
+🔹 What is abstraction?
+🔹 How to achieve multiple abstraction in Java?
+🔹 What is an interface?
+🔹 What is encapsulation? Where have you used it in your project?
+🔹 What is polymorphism? Where have you applied it in your framework?
+🔹 What is method overloading and method overriding? Explain both and where you used them in your framework?
+🔹 Have you used collections in your framework?
+🔹 What is the static keyword in Java?
+🔹 What is memory management in Java?
+🔹 What is garbage collection in Java?
+🔹 Difference between constructor overloading and method overloading?
+🔹 What are exceptions in Java?
+🔹 List some exceptions you faced during automation and how you handled them.
+
+🚀 Selenium & Web Automation🚀
+
+🔹 How do you handle dynamic web elements?
+🔹 Write the syntax of the Select class and explain its methods.
+🔹 How do you handle iFrames?
+🔹 How do you determine whether an element is an iFrame or not?
+🔹 How do you handle mouse actions in Selenium?
+🔹 How do you handle keyboard actions in Selenium?
+🔹 How do you press the ENTER key using the Actions class? Write the syntax.
+🔹 How do you use the SHIFT key to type uppercase letters in Selenium? Write the syntax.
+🔹 How to handle dynamic elements?
+🔹 How to print all the links from a webpage? Where do you store those links?
+🔹 How to check for broken links? How would you validate each link if there are 20 links on a page?
+🔹 What is the finally block in Java?
+🔹 Difference between throw and throws?
+🔹 Difference between findElement() and findElements()?
+
+🚀 Cucumber & TestNG🚀
+🔹 Explain your framework structure.
+🔹 How do you perform parallel execution in your framework?
+🔹 What are Cucumber options?
+
+🚀Git & Version Control🚀
+🔹 Which version control system are you using?
+🔹 If you join a new project, what Git commands do you use from start to end? What are the stages you follow? (Write in Notepad)
+
+🚀 SQL & Linux🚀
+🔹 Do you have any idea about SQL? Tell me a few queries you performed.
+🔹 Do you have any idea about Linux commands?
+
+🚀 Scenario-Based Questions🚀
+🔹 You have 3 frames (Frame A, Frame B, Frame C). After clicking Frame C, the application opens another tab containing a login, password, and sign-in button. Write the Selenium automation script for this scenario (in Notepad).
+🔹 If you have 20+ links on a webpage, how would you check if each link is valid?
+
+===========================================
+
+1. Please introduce yourself.
+2. Please explain your Automation Framework, all the components.
+3. What is a Page Object Model?
+4. How do you run your test cases in parallel in Cucumber?
+5. Explain the contents of the Runner File in Cucumber?
+6. What is a Singleton Design Pattern?
+7. What are the advantages and disadvantages of the Page Object Model?
+8. What is Selenium Grid?
+9. Explain the WebDriver create statement line?
+11. Explain the Maven Lifecycle?
+12. How do you run the failed test cases?
+13. How do you generate Reports in Selenium?
+14. How do you customise reports after your test execution?
+15. What kind of waits are there in Selenium?
+16. Write the Code Snippet for Explicit Wait?
+17. Write the Code Snippet for Drag and Drop in Selenium?
+18. How do you switch to different Windows in Selenium?
+19. Why do we use SET in Window Handles?
+20. Write the Code for taking screenshot in Selenium?
+21. What is the difference between Scenario and Scenario Outline in Cucumber?
+22. How do you pass data to your Selenium Scripts?
+23. How do you decide the priorities of your Test Cases?
+24. If you want to execute one test case again and again how do you do that?
+25. What are the different annotations used in TestNG?
+26. Write the hierarchy of annotations in TestNG?
+27. What is the defect life cycle?
+28. What is the difference between Agile and Waterfall Model?
+29. What is the difference between 201 and 204 Status Code?
+30. What is the difference between 401 and 403 Status Code?
+31. What are the components of an API Request?
+32. What is the difference between Query Parameters and Path Parameters?
+33. How do you resolve Conflicts in Git?
+34. What is the difference between git pull and git patch?
+35. Explain the use of Jenkins in the Automation Framework?
+
+===========================================
+
+🔷 Java Questions:
+
+1. What are the main principles of Object-Oriented Programming (OOP)?
+2. Can you explain the difference between == and equals() in Java?
+3. How do you handle exceptions in Java?
+4. What is the purpose of the final keyword in Java?
+5. Explain the concept of inheritance and its types in Java.
+6. What are Java Collections, and can you name some commonly used interfaces?
+7. What is the difference between an List and a Set?
+8. Can you explain the concept of finally?
+9. Why String is Immutable in Java?
+
+🔷 Selenium Questions:
+
+1. What is Selenium, and how does it differ from other testing tools?
+2. How do you locate elements in Selenium? Can you explain the different locator strategies?
+3. What are the advantages of using Selenium WebDriver over Selenium IDE?
+4. How do you handle alerts and pop-ups in Selenium?
+5. Can you explain the Page Object Model (POM) design pattern?
+6. How do you perform cross-browser testing using Selenium?
+7. What is the difference between implicit wait, explicit wait, and fluent wait?
+8. How do you take screenshots in Selenium?
+9. Can you explain how to handle dynamic web elements in Selenium?
+10. What are some common challenges you face while automating tests with Selenium?
+
+🔷 Testing Concepts:
+
+1. What is the difference between functional and non-functional testing?
+2. Can you explain the concept of test automation frameworks?
+3. How do you ensure the reliability and maintainability of your automated tests?
+4. What is regression testing, and why is it important?
+5. Can you explain the difference between smoke testing and sanity testing?
+6. What is a test case, and what are its key components?
+7. How do you prioritize test cases in your testing strategy?
+8. What is the role of Continuous Integration/Continuous Deployment (CI/CD) in testing?
+9. How do you measure the effectiveness of your test automation?
+10. Can you explain the concept of Behavior-Driven Development (BDD)?
+
+🔷 Programming Questions:
+
+1. Write a function to reverse a string in Java.
+2. How would you implement a simple test case using JUnit/TestNG?
+3. Program to print even numbers from 1 to 100
+4. Write a program to find the factorial of a number using recursion.
+5. How do you sort an array in Java? Can you implement a sorting algorithm?
+6. Write a function to check if a string is a palindrome.
+7. How would you implement a simple login functionality using Java?
+8. Can you write a program to find the largest and smallest numbers in an array?
+9. Explain the concept of recursion with an example.
+10. How do you handle null values in Java?
+
+=============================================
+
+𝐖𝐡𝐚𝐭 𝐢𝐬 𝐓𝐞𝐬𝐭𝐍𝐆?
+TestNG (Test Next Generation) is a testing framework inspired by JUnit and NUnit but with more powerful features. 
+
+𝐖𝐡𝐲 𝐃𝐨 𝐖𝐞 𝐍𝐞𝐞𝐝 𝐓𝐞𝐬𝐭𝐍𝐆?
+- Flexible Annotations: Organize test code efficiently with annotations like @Test, @BeforeMethod, and @AfterMethod.
+- Parallel Testing: Run tests in parallel to save time, essential for large projects.
+- Data-Driven Testing: Easily test with multiple data sets using the @DataProvider annotation.
+- Test Configuration: Customize test execution with configurable suites, groups, and dependencies.
+- Reporting: Generate detailed HTML and XML reports for better insights.
+Seamless Integration: Works well with build tools like Maven and Gradle, and supports CI/CD pipelines for continuous testing.
+
+𝐇𝐨𝐰 𝐭𝐨 𝐈𝐧𝐭𝐞𝐠𝐫𝐚𝐭𝐞 𝐓𝐞𝐬𝐭𝐍𝐆 𝐰𝐢𝐭𝐡 𝐒𝐞𝐥𝐞𝐧𝐢𝐮𝐦 𝐉𝐚𝐯𝐚?
+1. Add TestNG Dependency:
+ - If your Maven Project, add the following dependency in your `pom.xml` file:
+ 
+ <dependency>
+ <groupId>org.testng</groupId>
+ <artifactId>testng</artifactId>
+ <version>7.8.0</version>
+ <scope>test</scope>
+ </dependency>
+
+2. Create a Test Class:
+ - Write a Selenium test case inside a class and annotate the test method with `@Test`.
+
+3. Run the Test:
+ - Right-click on the test class in your IDE and choose `Run As > TestNG Test`.
+ - Alternatively, create a TestNG XML file to define your test suite and run it.
+
+𝐖𝐡𝐚𝐭 𝐚𝐫𝐞 𝐭𝐡𝐞 𝐓𝐞𝐬𝐭𝐍𝐆 𝐇𝐨𝐨𝐤𝐬?
+TestNG hooks are special annotations that define the order in which test methods, configuration methods, and suites are executed. 
+These hooks include:
+
+1. @BeforeSuite / @AfterSuite: Executed before/after all tests in the suite.
+2. @BeforeTest / @AfterTest: Executed before/after the test tag in the XML file.
+3. @BeforeClass / @AfterClass: Executed before/after the first method in the class is invoked.
+4. @BeforeMethod / @AfterMethod: Executed before/after each test method in the class.
+5. @BeforeGroups / @AfterGroups: Executed before/after specified groups of tests run.
+6. @BeforeClass / @AfterClass: Executed once before/after the first/last method in the current class.
+
+-============================================
+
+1. What is Spring Boot, and how does it differ from the traditional Spring Framework? 
+2. What is the purpose of @SpringBootApplication annotation? 
+3. Explain the concept of auto-configuration in Spring Boot. 
+4. What is the role of application.properties or application.yml in Spring Boot? 
+5. What are the advantages of using Spring Boot over traditional Spring applications? 
+6. What is the difference between @Component_@Service_ @Repository, and @Controller in Spring Boot? 
+7. How do you create a Spring Boot RESTful web service? 
+8. What is Spring Boot Actuator, and what are its uses? 
+9. What is the significance of @RestController and how is it different from @Controller? 
+10. How do you handle exceptions in Spring Boot applications? 
+11. What is Spring Boot Dev Tools, and what benefits does it provide during development? 
+12. How do you use Spring Boot to connect to a database (e.g., MySQL or PostgreSQL)? 
+13. Explain the difference between @Bean and @Component in Spring Boot. 
+14. How do you configure logging in Spring Boot? 
+15. What are Spring Boot profiles, and how do you manage them for different environments (dev, prod)? 
+16. How do you implement security in a Spring Boot application? 
+17. What is Spring Boot's embedded server, and how does it work? 18. What is the use of @EnableAutoConfiguration in Spring Boot? 19. What is the difference between Spring Boot's application.properties and application.yml files? 
+20. What is Spring Boot's support for creating microservices? 
+21. How does Spring Boot handle dependency injection? 
+22. How do you test a Spring Boot application using @SpringBootTest? 
+23. Explain the difference between @RequestMapping_ @GetMapping_ @PostMapping and other HTTP method annotations. 
+24. What are Spring Boot's default error handling mechanisms, and how can they be customized? 
+25. How do you perform batch processing in Spring Boot? 
+26. What is Spring Data JPA, and how is it used in Spring Boot? 
+27. How do you manage transaction handling in Spring Boot applications? 
+28. What are the different ways to run a Spring Boot application? 29. Explain the Spring Boot logging mechanism with default loggers (e.g., Logback). 
+30. How do you configure Spring Boot to send an email (e.g., using JavaMailSender)?
+
+=================================
+
+1a) Write a code to fetch data from one excel sheet and dump into the other excel sheet ?
+1b) Among all the given locators which locator is the fastest of all?
+2) If the method fails to find the element which of the two methods throws you the expectations?
+3) Why should we use selenium?
+4) How to execute multiple Test cases at a time in TestNG?
+5) Which method allows you to change control from one window to another?
+6) Which annotations executed first?
+7) Which open source tolls allow us to read and write Ms Excel files using Java?
+8) How many types of XPath are there in selenium?
+9) In selenium 4,which of the following method allows us to take screenshots of a specific web element?
+10) Which language is used in gherkins?
+11) When you only want to access a single element on a webpage which method will you use?
+12) Which class is used for the drop-down in selenium?
+13) Which component of selenium is most important?
+14) Which keywords are used in gherkins?
+15) How many locators does selenium have in total?
+16) Which exception is shown in selenium when there is a delay in the loading time of the elements with which we are interacting?
+17) Write correct syntax for absolute path and Relative xpath
+18) What is User interface testing?
+19) Which XPath search dissimilar nodes in XML document from the current node
+20) What do you mean by open source software 
+21) Which of the following browsers support selenium?
+22) Which method is present in POM to locate webelement?
+23) Which type of wait command waits for a certain amount of time before it throws an exception?
+24) Which tool you will use to manage and organised jar and lib in automation?
+25) _ is a type of change related testing performed after fixing a defect to confirm that a failure caused by the defect does not reoccur
+26) Which type of XPath starts with a double forward slash?
+27) Which type of XPath starts with a single forward slash?
+28) How many types of wait commands does the selenium web driver provide?
+29) Which of the following waits takes timeout and polling frequency as its parameter?
+
+========================================
+
+ 𝗤𝗔 𝗔𝘂𝘁𝗼𝗺𝗮𝘁𝗶𝗼𝗻 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗤𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀:👉
+
+1. Can you explain the software testing life cycle (STLC) and its phases?
+2.What is the difference between verification and validation?
+3. How do you perform regression testing, and why is it important?
+4. Explain test case design techniques with examples.
+5. What is the difference between functional and non-functional testing?
+6. What are the key components of a good test case?
+7. Explain Java exception handling and its importance.
+8. What is the difference between final, finally, and finalize keywords in Java?
+9. Difference between arraylist and linkedlist in Java?
+10. What are the key differences between HashSet and Map in Java?
+11. Write a Java program to reverse a string.
+12. What is the difference between findElement and findElements in Selenium?
+13. What is the purpose of BeforeSuite and AfterSuite annotations in TestNG?
+14. Explain the structure and purpose of a TestNG XML file.
+15. What are the different types of waits available in Selenium, and when should each be used?
+16. Explain the inheritance concept with example.
+17. Explain the concept of polymorphism in Java with example.
+18. What is the difference between method overloading and method overriding in Java?
+19. What are the various locators you are using in your day-to-day life?
+20. What are the various selenium components, and which components are you using?
+21. Write a syntax to initialize the WebDriver?
+22. How to handle alerts in selenium?
+23. Explain absolute and relative XPath with an example?
+24. How do you get to know if the developer has fixed the issues or not?
+25. Which java & selenium versions are you using in your project?
+26. How do you handle if XPath is changing dynamically?
+27. What are your roles and responsibilities in the project?
+
+===========================================
+
+1. what is the advantage of selenium Webdriver?
+
+2. What is the difference between findElement and findElements in selenium?
+
+3. How do you locate elements on a web page using Selenium WebDriver?
+
+4. What are the different types of locators supported by Selenium WebDriver?
+
+5. How do you handle dynamic elements on a web page in Selenium?
+
+6. What is the importance of implicit and explicit waits in Selenium WebDriver?
+
+7. How do you handle multiple windows and frames using Selenium WebDriver?
+
+8. Explain the concept of TestNG and how it is used with Selenium for test automation?
+
+9. How do you perform mouse and keyboard actions using SeleniumWebDriver?
+
+10. What are the advantages and limitations of Selenium for test automation?
+
+11. How do you handle SSL certificates and security-related issues in Selenium?
+
+12. Can you automate testing for mobile applications using Selenium? If yes, how?
+
+13. How do you manage test data and test configurations in Selenium tests?
+
+14. What is Page Object Model (POM), and why is it used in Selenium automation?
+
+15. How do you handle exceptions and errors in Selenium WebDriver scripts?
+
+16. How to take screenshot in selenium?
+
+17. Data provider in the TESTNG?
+
+18.How to validate links are valid or not on the webpage?
+
+19. How you manage drag and drop activity in selenium?
+
+20.what is the use of testng.xml file?
+
+======================================
+
+TestNG / JUnit with Selenium
+
+1. Explain how you would use TestNG annotations like @BeforeClass, @AfterClass, @BeforeMethod, and @AfterMethod in the context of Selenium test automation.
+
+2. How would you organize your Selenium WebDriver tests using TestNG or JUnit for a large-scale automation suite?
+
+3. Scenario: You have multiple test cases with dependencies on one another. How would you handle this using TestNG? What is the best approach for managing test dependencies?
+
+4. What is the purpose of @DataProvider in TestNG, and how would you use it to implement data-driven testing in your Selenium tests?
+
+5. How would you use JUnit for parameterized testing in your Selenium WebDriver automation scripts? Explain with examples.
+
+6. How would you integrate TestNG with Maven to ensure your tests are executed as part of your build pipeline?
+
+7. Scenario: A certain test case in your suite requires special configuration (e.g., admin-level permissions). How would you handle this configuration in your TestNG suite using @BeforeClass or @BeforeMethod?
+
+8. How do you handle test retries in TestNG or JUnit, and what strategies would you use to re-run failing tests automatically?
+
+9. How would you generate test reports using TestNG and integrate them with Jenkins?
+
+10. Scenario: You want to parallelize your test execution using TestNG and Selenium. How would you configure TestNG to run tests in parallel on multiple browsers or operating systems?
+
+====================================
+
+1) Provide me a brief overview of the tools and technologies you have worked on?
+2) Describe Smoke, Sanity and Regression Testing? Why do we need to use these 3? 
+3) Find me the first and last occurrence of the letter ‘a’ in amazonaanazzz with index number
+4) How do you specify environment variables for Maven?
+5) How do you specify a property in Maven that can be overridden at build time?
+6) How will you execute methods or test cases in TestNG in a different order/your order?
+7) What is the difference between @Factory and @Dataprovider annotations?
+8) Write the code snipped for passing values 1 and 2 to the parameters val1 and val2 through the XML file.
+9) How to test or handle browser notifications?
+10) Explain different xpath axes?
+ 11) Give an example of method overloading concept that you have used in Selenium?
+12) Give a scenario where an interface is used in your framework?
+13) Can we have static methods in an Interface?
+14) In a class implementing an interface, can we change the value of any variable defined in the interface?
+15) How to search for text in the current working repo/directory? 
+16) How to save local changes made without committing or moving them to a remote repository?
+17) y default which join is implemented in SQL?
+18) What happens when CI/CD jobs stop in between? 
+19) How do you manage CI/CD pipeline when high priority scenarios fail during execution?
+20) What is the difference between HTTPS, SSL and TLS? 
+21) How would you handle authentication in Cucumber scenarios for web applications?
+
+
+===========================================
+
+#Interview Questions for QA Automation Profile:
+
+✅ Technical 1
+1. Common question( Intro+ project + framework architecture)
+2. Data selection in Calendar, Excel iteration then send values to text box.
+3. What are Idempotent methods? How is it relevant in RESTful web
+services domain?
+4. Based on what factors, you can decide which type of web services you
+need to use — SOAP or REST?
+5. What is Payload in terms of RESTful web services?
+6. importance of API documentation in API automation testing?
+7. Have you integrated automation testing into CI/CD pipelines before?
+8. Explain PSVM, SYSOUT?
+9. Jenkins and GIT
+10. Basic selenium question and sql?
+
+✅ Technical 2
+
+1. Common question(Intro)
+2. Java(Collection Questions only)
+3. Java Programming (Sort array in reverse order)
+4. How do you handle maintenance and updates of automated test scripts?
+5. Does finally {} block always run?
+6. Automate one page (Login-Add to cart Assert-logout-Reporting).
+
+✅ Managerial Round
+
+1. In manual testing, it takes 10 minutes, whereas in automation, it takes
+10 minutes to check a functionality, so what would be your preference? and
+Why?
+2. how comfortable are you with programming languages other than Java
+Selenium?
+3. How do we identify what can be automated?
+4. Can you discuss a challenging automation project you’ve worked on and
+how you overcame obstacles?
+5. How do you stay updated with the latest trends and best practices in
+automation testing?
+6. Normal discussion about previous work? What you like the most?
+
+========================================
+
+1. What are all the versions of selenium?
+2. Can you please tell the return type of all the elements?
+3. How will you handle dynamic elements?
+4. What are HTTP Methods?
+5. Explain the use of an object repository in Selenium (.properties file). 
+6. How do you store data in a .properties file? 
+7. What is Page Factory in Selenium? 
+8. What is the difference between @BeforeClass and @BeforeTest in TestNG? 
+9. What are the tasks typically written under the @BeforeTest annotation? 
+10. How can you skip a test case in Cucumber? 
+11. How do you rerun failed test cases in TestNG? 
+12. How do you group and run test cases in TestNG? 
+13. What would you include under the @BeforeSuite annotation? 
+14. Can you explain the different locators used in Selenium? 
+15. What is a collection in Java? 
+16. Explain the hierarchy of exceptions in Java.
+
+========================================
+
+
+
+
+
+
+
+
+
+
+
+
 
 

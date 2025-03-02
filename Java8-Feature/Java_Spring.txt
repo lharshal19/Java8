@@ -1,4 +1,37 @@
 
+
+What are the main features of OOPs in java?
+Answer: Below are Main features of OOPs in java
+1. Abstraction
+2. Encapsulation
+3. Inheritance
+4. Polymorphism
+5. Classes and Objects
+6. Method Overriding
+7. Method Overloading
+
+Encapsulation
+̲Encapsulation means keeping data and the methods that modify that data together within a single unit, and restricting outside access
+
+Abstraction
+Abstraction involves showing only the important features of an object while hiding the complex details
+ex: The internal details of how each specific animal makes a sound (makeSound() method) are hidden within each subclass (ex.Dog)
+
+Inheritance
+Inheritance allows one class to inherit fields and methods from another class
+
+Polymorphism
+Polymorphism allows methods to do different things based on the object it is acting upon
+
+Method Overriding
+Method overriding allows a subclass to provide a specific implementation of a method already defined in its superclass
+
+Method Overloading
+̲Method overloading allows multiple methods with the same name but different parameters within the same class
+
+Classes and Objects
+Classes are blueprints for creating objects, and objects are instances of classes that hold data and methods to manipulate that data
+==============================
 Difference between Spring Framework and Spring Boot
 
 Spring Framework 
@@ -1539,5 +1572,349 @@ Key Topics to Master
 13. Explain Collection Hierarchy?
 
 ====================================
+
+
+Real time Core Java Interview Questions 
+#corejava #java #super #this #interview #preparation
+1. Can a constructor be private? In which scenarios is it useful?
+2. What is the use of the super keyword? How is it utilized in a Spring Boot microservices architecture?
+3. How does an interface differ from an abstract class? Provide an example where you implemented an interface in your project.
+4. Can a Java class implement multiple interfaces? How does Spring handle multiple interface implementations in dependency injection?
+5. How to use this() to call another constructor inside the same class?
+6. Can this be used in a static method? Why or why not?
+7. How did you use this in your Spring Boot project while handling dependency injection or model objects?
+8. How to use super() to call a parent class constructor?
+9. In your project, have you extended any classes where you needed super()? Explain with an example.
+10. What happens if you don’t explicitly call super() in a constructor?
+11. How does constructor chaining work in Java? Explain with an example.
+12. What are the differences between default, parameterized, and copy constructors?
+13. How does Spring Boot use constructors for dependency injection?
+14. Can we call a constructor explicitly from another constructor? How?
+15. What is a private constructor? How is it used in Singleton design patterns?
+16. How did you use constructors in your Microservices project (Spring Beans, Models, or Controllers)?
+=====================================================
+
+𝐌𝐨𝐬𝐭 𝐀𝐬𝐤𝐞𝐝 𝐉𝐚𝐯𝐚 𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰 𝐐𝐮𝐞𝐬𝐭𝐢𝐨𝐧𝐬: 
+
+𝐄𝐚𝐬𝐲 - 
+ 
+• How is String immutable in Java? 
+• What is a functional interface? 
+• Can a constructor be private? 
+• Which approach is better and why? 
+ • String str = "Hello"; OR 
+ • String str = new String("Hello"); 
+• What is an anonymous class?
+
+𝐌𝐞𝐝𝐢𝐮𝐦 -
+ 
+• Where is a String stored in memory? 
+• Is it necessary for an abstract class to have at least one abstract method? 
+• Does 𝐜𝐨𝐧𝐜𝐚𝐭𝐞𝐧𝐚𝐭𝐢𝐨𝐧 create a new String? If yes: 
+ • What happens to the old String objects? 
+ • Can they cause memory issues? 
+• Why do we use 𝐚𝐛𝐬𝐭𝐫𝐚𝐜𝐭 𝐜𝐥𝐚𝐬𝐬𝐞𝐬? 
+• Can we instantiate a class containing an abstract method? 
+• How to create an object of a class with a 𝐩𝐫𝐢𝐯𝐚𝐭𝐞 𝐜𝐨𝐧𝐬𝐭𝐫𝐮𝐜𝐭𝐨𝐫?
+
+𝐇𝐚𝐫𝐝 - 
+ 
+• How to create an 𝐢𝐦𝐦𝐮𝐭𝐚𝐛𝐥𝐞 𝐜𝐥𝐚𝐬𝐬 in Java? 
+• How to implement a 𝐒𝐢𝐧𝐠𝐥𝐞𝐭𝐨𝐧 𝐜𝐥𝐚𝐬𝐬? What are its real-world applications? 
+• Can we define methods in an interface? If yes, how? 
+• What is a 𝐥𝐚𝐦𝐛𝐝𝐚 𝐞𝐱𝐩𝐫𝐞𝐬𝐬𝐢𝐨𝐧, and why is it used? 
+• What is the difference between 𝐂𝐨𝐦𝐩𝐚𝐫𝐚𝐛𝐥𝐞 and 𝐂𝐨𝐦𝐩𝐚𝐫𝐚𝐭𝐨𝐫? 
+• What are the key features of Java 8? 
+• Which provides complete abstraction and why? 
+ • Abstract class 
+ • Interface 
+• What happens if the 𝐫𝐮𝐧() method is called directly on a running thread? 
+• What is the purpose of a 𝐝𝐚𝐞𝐦𝐨𝐧 𝐭𝐡𝐫𝐞𝐚𝐝?
+
+===================================================
+
+#SDET
+Top 15 SDET Java programs asked in SDET Interview
+
+1. Reverse an array?
+2. Remove duplicate from 2 array and merge and make it one?
+3. Move all Zeros to left?
+4. Find in string repeat character and its count?
+5. Find that word is Palindrome?
+6. Find min and max in array?
+7. Reverse String?
+8. How to Concat and Split String?
+9. How to sum an array?
+10. How to check Vowel?
+11. Move Even to left?
+12. Print Fibonacci?
+13. Find missing number in array?
+14. Find max and min with IF, you can use Collection?
+15. How to sort array?
+
+
+-===============================================
+
+Top Array-Related Questions 
+
+1. Sum of Elements Write a program to take an array of integers as input and calculate the sum of all elements in the array.
+
+2. Find Maximum and Minimum Write a program to find the maximum and minimum values in an array of integers.
+
+3. Reverse an Array Write a program to reverse the elements of an array without using an additional array.
+
+4. Count Even and Odd Numbers Write a program to count the number of even and odd numbers in an array of integers.
+
+5.Search an Element Write a program to search for an element in an array and return its, index. If the element is not found, display a message.
+
+6. Frequency of Elements Write a program to count the frequency of each element in an array. Example: Input: [1, 2, 2, 3, 4, 4, 4] Output: 1: 1, 2: 2, 3: 1, 4: 3
+
+7. Second Largest Element Write a program to find the second largest element in an array.
+
+8. Rotate an Array Write a program to rotate an array to the right by a given number of steps. Example: Input: [1, 2, 3, 4, 5], Rotate by 2 Output: [4,5, 1, 2, 3]
+
+9. Check Palindrome Array Write a program to check if an array is a palindrome. Example: Input: [1,2,3, 2, 1] Output: true 🪞 palindrome
+
+10. Merge Two Arrays Write a program to merge two arrays into a single array.
+
+=========================================
+
+* MICROSERVICES interview questions in JAVA Part-II **
+1. How can you verify that the application registers with the proper instance of the Eureka Server?
+2. Is Spring Boot and Spring Cloud the same ?
+3. Tell me how you implemented Spring Security in a microservice architecture ?
+4. What are components of microservice ?
+5. What is the SAGA Pattern ?
+6. How do microservices communicate with each other ?
+7. Where do you configure API gateway for your spring boot ?
+8. What is Service Discovery in Microservices?
+9. Tell me about service registration in microservices ?
+10. How is Service lookup done ?
+
+==========================================
+
+Questions:
+1. Can an interface have a constructor? Why or why not?
+2. What is the significance of the default keyword in Java 8 interfaces?
+3. Can a class implement multiple interfaces in Java? If yes, explain how.
+4. Can an interface extend another interface? If so, what is the use case?
+5. What happens if a class implements two interfaces with conflicting default methods?
+6. Can you explain the difference between public, private, protected, and package-private access modifiers?
+7. What is the purpose of the protected access modifier? Can you access a protected method from another package?
+8. What is the default access level for a class, method, or variable if no access modifier is specified?
+9. Can you access a private variable from a subclass?
+10. What is a functional interface? Can you give an example?
+11. Explain the concept of Lambda Expressions in Java 8. How do they improve code readability?
+12. What is the Stream API in Java 8, and how is it different from a collection?
+13. What is the difference between map() and flatMap() in Java 8 Streams?
+14. How do you use the Optional class in Java 8 to avoid NullPointerException?
+15. What are the major improvements introduced in java.time package in Java 8?
+16. Can you create an instance of a class with only static methods? How would you call the methods?
+17. What is the difference between a static method and a non-static method?
+18. Can you access a non-static variable from a static method? Why or why not?
+19. What is a static block in Java, and when is it executed?
+20. How would you call a static method in another class?
+21. Can a static variable be overridden by a subclass? Why or why not?
+
+===============================================
+
+1️⃣ Service Registry & Discovery
+=> Helps services find and communicate with each other dynamically.
+🔧 Tools: Eureka, Consul
+
+2️⃣ API Gateway
+=> Acts as a single entry point, handling request routing, authentication, and load balancing.
+🔧 Tools: Zuul, Spring Cloud Gateway
+
+3️⃣ Circuit Breaker
+=> Prevents system-wide failures by cutting off requests to struggling services.
+🔧 Tools: Resilience4j, Hystrix
+
+4️⃣ Database Per Service
+=> Each microservice gets its own database to maintain data isolation and prevent tight coupling.
+
+5️⃣ Saga Pattern
+=> Manages distributed transactions across multiple services via orchestration or choreography.
+🔧 Tools: Camunda, Temporal
+
+6️⃣ Strangler Fig Pattern
+=> A safe way to migrate from a monolith to microservices—gradually replacing pieces instead of a risky big bang rewrite.
+
+7️⃣ Event Sourcing
+=> Stores every state change as an event, allowing for historical tracking and easier debugging.
+
+8️⃣ CQRS (Command Query Responsibility Segregation)
+=> Separates read and write operations for better scalability and performance.
+
+9️⃣ Sidecar Pattern
+=> Adds extra capabilities like logging, monitoring, or security without changing the main service.
+🔧 Tools: Istio, Envoy
+
+🔟 Publish-Subscribe (Pub-Sub)
+=> Services communicate asynchronously, ensuring loose coupling and better scalability.
+🔧 Tools: Kafka, RabbitMQ
+
+More System Design Resources:
+- https://lnkd.in/djypj5qx
+- https://lnkd.in/dwe5YK68
+- https://lnkd.in/dZhDXVEk
+- https://lnkd.in/dbySYqss
+- https://lnkd.in/dUEBepwc
+- https://lnkd.in/dRK2HRzJ
+- https://lnkd.in/d3gRmqWC
+- https://lnkd.in/dQ-YZ_V2
+
+===================================
+
+1. Explain how polymorphism was used to calculate ETAs differently for normal and priority deliveries.
+2. If a driver has to pick up vehicles from multiple locations, how would you implement route optimization using OOP?
+3. What is the purpose of super() in your child class? Provide an example from your project.
+4. How would you use the static keyword for utility functions in route optimization?
+5. Write a constructor for the Driver class to initialize the driver object with essential details (name, availability, assigned route). Use this to differentiate between local and instance variables.
+6. Can a static method access non-static variables? Why or why not?
+7. Why is the super keyword used in constructors? Can you provide an example where super was used to extend functionality in your project?
+8. What happens if a constructor doesn’t explicitly call super() in a child class?
+9. In your project, if you wanted to add a new delivery service with additional features, how would inheritance be used?
+Real time:
+10. If two customers schedule pickups for the same time but only one driver is available, how would you prioritize one over the other? Implement this using OOP concepts.
+11. If a driver has started their route but a high-priority pickup request is added, how would you re-optimize the existing route?
+12. If the MySQL database becomes unavailable during scheduling, how would you ensure that requests are temporarily saved and retried later?
+13. If a driver assigned to a route becomes unavailable mid-route, how would you dynamically reassign tasks to another driver?
+
+====================================
+
+1. What is Spring Boot, and how does it differ from the traditional Spring Framework?
+2. What is the purpose of @̲𝚂̲𝚙̲𝚛̲𝚒̲𝚗̲𝚐̲𝙱̲𝚘̲𝚘̲𝚝̲𝙰̲𝚙̲𝚙̲𝚕̲𝚒̲𝚌̲𝚊̲𝚝̲𝚒̲𝚘̲𝚗̲ annotation?
+3. Explain the concept of auto-configuration in Spring Boot.
+4. What is the role of application.properties or application.yml in Spring Boot?
+5. What are the advantages of using Spring Boot over traditional Spring applications?
+6. What is the difference between @̲𝙲̲𝚘̲𝚖̲𝚙̲𝚘̲𝚗̲𝚎̲𝚗̲𝚝̲,̲ ̲@̲𝚂̲𝚎̲𝚛̲𝚟̲𝚒̲𝚌̲𝚎̲,̲ ̲@̲𝚁̲𝚎̲𝚙̲𝚘̲𝚜̲𝚒̲𝚝̲𝚘̲𝚛̲𝚢̲,̲ and @̲𝙲̲𝚘̲𝚗̲𝚝̲𝚛̲𝚘̲𝚕̲𝚕̲𝚎̲𝚛̲ in Spring Boot?
+7. How do you create a Spring Boot RESTful web service?
+8. What is Spring Boot Actuator, and what are its uses?
+9. What is the significance of @̲𝚁̲𝚎̲𝚜̲𝚝̲𝙲̲𝚘̲𝚗̲𝚝̲𝚛̲𝚘̲𝚕̲𝚕̲𝚎̲𝚛̲ and how is it different from @̲𝙲̲𝚘̲𝚗̲𝚝̲𝚛̲𝚘̲𝚕̲𝚕̲𝚎̲𝚛̲?
+10. How do you handle exceptions in Spring Boot applications?
+11. What is Spring Boot DevTools, and what benefits does it provide during development?
+12. How do you use Spring Boot to connect to a database (e.g., MySQL or PostgreSQL)?
+13. Explain the difference between @̲𝙱̲𝚎̲𝚊̲𝚗̲ and @̲𝙲̲𝚘̲𝚖̲𝚙̲𝚘̲𝚗̲𝚎̲𝚗̲𝚝̲ in Spring Boot.
+14. How do you configure logging in Spring Boot?
+15. What are Spring Boot profiles, and how do you manage them for different environments (dev, prod)?
+16. How do you implement security in a Spring Boot application?
+17. What is Spring Boot’s embedded server, and how does it work?
+18. What is the use of @̲𝙴̲𝚗̲𝚊̲𝚋̲𝚕̲𝚎̲𝙰̲𝚞̲𝚝̲𝚘̲𝙲̲𝚘̲𝚗̲𝚏̲𝚒̲𝚐̲𝚞̲𝚛̲𝚊̲𝚝̲𝚒̲𝚘̲𝚗̲ in Spring Boot?
+19. What is the difference between Spring Boot’s application.properties and application.yml files?
+20. What is Spring Boot's support for creating microservices?
+21. How does Spring Boot handle dependency injection?
+22. How do you test a Spring Boot application using @̲𝚂̲𝚙̲𝚛̲𝚒̲𝚗̲𝚐̲𝙱̲𝚘̲𝚘̲𝚝̲𝚃̲𝚎̲𝚜̲𝚝̲?
+23. Explain the difference between @̲𝚁̲𝚎̲𝚚̲𝚞̲𝚎̲𝚜̲𝚝̲𝙼̲𝚊̲𝚙̲𝚙̲𝚒̲𝚗̲𝚐̲,̲ ̲@̲𝙶̲𝚎̲𝚝̲𝙼̲𝚊̲𝚙̲𝚙̲𝚒̲𝚗̲𝚐̲,̲ ̲@̲𝙿̲𝚘̲𝚜̲𝚝̲𝙼̲𝚊̲𝚙̲𝚙̲𝚒̲𝚗̲𝚐̲ and other HTTP method annotations.
+24. What are Spring Boot’s default error handling mechanisms, and how can they be customized?
+25. How do you perform batch processing in Spring Boot?
+26. What is Spring Data JPA, and how is it used in Spring Boot?
+27. How do you manage transaction handling in Spring Boot applications?
+28. What are the different ways to run a Spring Boot application?
+29. Explain the Spring Boot logging mechanism with default loggers (e.g., Logback).
+30. How do you configure Spring Boot to send an email (e.g., using JavaMailSender)?
+
+=============================================
+
+1) Provide me a brief overview of the tools and technologies you have worked on?
+2) Describe Smoke, Sanity and Regression Testing? Why do we need to use these 3? 
+3) Find me the first and last occurrence of the letter ‘a’ in amazonaanazzz with index number
+4) How do you specify environment variables for Maven?
+5) How do you specify a property in Maven that can be overridden at build time?
+6) How will you execute methods or test cases in TestNG in a different order/your order?
+7) What is the difference between @Factory and @Dataprovider annotations?
+8) Write the code snipped for passing values 1 and 2 to the parameters val1 and val2 through the XML file.
+9) How to test or handle browser notifications?
+10) Explain different xpath axes?
+ 11) Give an example of method overloading concept that you have used in Selenium?
+12) Give a scenario where an interface is used in your framework?
+13) Can we have static methods in an Interface?
+14) In a class implementing an interface, can we change the value of any variable defined in the interface?
+15) How to search for text in the current working repo/directory? 
+16) How to save local changes made without committing or moving them to a remote repository?
+17) y default which join is implemented in SQL?
+18) What happens when CI/CD jobs stop in between? 
+19) How do you manage CI/CD pipeline when high priority scenarios fail during execution?
+20) What is the difference between HTTPS, SSL and TLS? 
+21) How would you handle authentication in Cucumber scenarios for web applications?
+
+=============================================
+
+1️⃣ What are the key principles of RESTful API design?
+2️⃣ What is the difference between REST and SOAP?
+3️⃣ How do you handle versioning in REST APIs?
+4️⃣ What are idempotent HTTP methods, and why are they important?
+5️⃣ How do you implement pagination in REST APIs?
+6️⃣ What is HATEOAS, and how does it enhance REST APIs?
+7️⃣ How do you handle authentication and authorization in REST APIs?
+8️⃣ What is rate limiting, and how do you implement it in APIs?
+9️⃣ How do you ensure backward compatibility in API design?
+🔟 What are some best practices for writing efficient and scalable APIs?
+=================================
+
+Core Java
+
+1️⃣ What is the difference between an abstract class and an interface in Java?
+2️⃣ Explain the concept of method overloading and method overriding with examples.
+3️⃣ What are the key differences between a static method and an instance method?
+4️⃣ What is the difference between '==' and '.equals()' when comparing objects?
+5️⃣ Explain the concept of the Java memory model, stack vs. heap.
+
+Exception Handling
+
+6️⃣ What is the purpose of the throw and throws keywords in Java?
+7️⃣ Can you explain how the exception hierarchy works in Java?
+8️⃣ How does the Java finally block work, and when is it executed?
+
+Multithreading & Concurrency
+
+9️⃣ Explain the significance of the volatile keyword in Java.
+🔟 How does a thread pool work in Java? Why should you use it?
+1️⃣1️⃣ What is the difference between wait(), notify(), and notifyAll() in Java?
+
+Collections Framework
+
+1️⃣2️⃣ How do you prevent a ConcurrentModificationException in Java collections?
+1️⃣3️⃣ What is the difference between Iterator and ListIterator?
+1️⃣4️⃣ Explain the difference between LinkedHashMap and HashMap in Java.
+
+JVM Internals
+
+1️⃣5️⃣ What is the Java ClassLoader, and how does it work?
+1️⃣6️⃣ Can you explain the concept of Just-In-Time (JIT) compilation in Java?
+1️⃣7️⃣ How does garbage collection work in Java, and what are the types of GC?
+
+===========================================
+
+CI/CD Jenkins Scenario based Question
+
+1. Your company is developing a microservices-based application. You need to design a Jenkins pipeline that builds, tests, and deploys the service automatically across Dev, QA, and Production environments. How would you structure your Jenkins pipeline to ensure smooth deployments with minimal downtime?
+
+2. You need to use API keys and database passwords in your pipeline, but storing them in plain text inside Jenkinsfiles is a security risk. How would you securely manage and inject secrets into your Jenkins pipeline?
+
+3. A developer pushes new code to GitHub, but your Jenkins pipeline doesn’t trigger automatically. What steps would you take to debug and fix this issue?
+
+4. A pipeline stage intermittently fails due to network issues when pulling dependencies. How can you modify your Jenkins pipeline to automatically retry a failed stage?
+
+5. Your test suite takes over 30 minutes to execute, causing delays in deployments. How would you optimize your Jenkins pipeline to run tests in parallel? Integration with Version Control (Git, GitHub, GitLab, Bitbucket)
+
+6. Your team follows GitFlow, working on feature branches before merging to develop and then main. How would you configure Jenkins to automatically build and test every new branch created in GitHub?
+
+7. Your Jenkins pipeline is set to poll GitHub every 5 minutes for changes. However, there are delays in triggering new builds. How can you optimize Jenkins to trigger builds instantly on code changes?
+
+8. A merge request triggers the Jenkins pipeline, but the build fails due to a merge conflict. How would you handle this scenario programmatically in Jenkins?
+
+9. A deployment fails in production due to a bug. You need to quickly revert to the last successful build. What Jenkins pipeline steps would you implement to enable easy rollbacks? CI/CD Pipeline with Build Tools (Maven, Gradle, npm)
+
+10. Your Maven build is failing due to a missing dependency.
+Question: How would you modify your Jenkins pipeline to resolve this issue and ensure dependency availability?
+
+
+=========================================
+
+
+
+
+
 
 

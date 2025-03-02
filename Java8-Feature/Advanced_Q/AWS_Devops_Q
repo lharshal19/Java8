@@ -94,4 +94,50 @@ DevOps Interview Experience!
 
 ==========================================
 
+1. Can you write a real time python automation code.
+2. Explain Jenkins Master/Slave architecture
+3. What is liveness probe and readiness probe
+4. What are the parameters needed to deploy an application into Kubernetes using pipeline.
+5. What is State file in terraform and explain the lock process.
+6. where you store the sensitive information
+7. What is the issue you are facing at the time of building an image.
+8. How to stop direct commits to GitHub.
+9. Kubernetes YAML files.
+10. What is Tag in Git.
+11. where do you deploy an application in Kubernetes.
+12. How to set the build is scheduled to particular node in Jenkins. 
+13. What is the real time issue you are facing when building a java package using maven.
+14. Where you used python and shell scripting
+15. How many builds are stored in a pipeline project of Jenkins.
+
+
+===============================================
+
+1)What is the difference between NSG and Firewall.
+2)What is the difference between COPY and ADD command in Docker File.
+3)What is Taint/Tolerent.
+4)What is stateful set.
+5)Architecture of Kubernetes.
+6)Use case of Node-Port and Cluster IP service Type in Kubernetes.
+7)Explain GITHUB Action workflow file.
+8)Difference between entry point and CMD in Docker File.
+9)Can we connect two different VM that are in a different Vnet.
+10)Private Endpoints.
+11)Express route in Azure Cloud.
+12)What is PDB in Kubernetes.
+13)Difference between PV/PVC in Kubernetes.
+14)What is state file in Terraform.
+15)What is lock file in Terraform.
+16)Why Kube-let and Kube-proxy is used for in Kubernetes.
+17)How you can build an Image and push it to the ACR.
+18)How you can use the existing Image into the YAML file to deploy a POD.
+19)What is POD in Kubernetes.
+20)Types of Service in Kubernetes.
+21)Namespaces in Kubernetes.
+
+============================================
+
+
+
+
 

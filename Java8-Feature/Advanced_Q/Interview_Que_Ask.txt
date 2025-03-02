@@ -623,7 +623,50 @@ hashtag#java hashtag#interview hashtag#preparation
 ·       How can you use jstack to diagnose the issue?
 ·       How can you avoid deadlocks in database transactions?
 
+======================================================
 
+Here are 25 system design interview questions commonly asked at top tech companies like Google, Meta, Amazon, and Flipkart:
+
+𝗦𝗰𝗮𝗹𝗮𝗯𝗹𝗲 𝗦𝘆𝘀𝘁𝗲𝗺 𝗗𝗲𝘀𝗶𝗴𝗻:
+1. Design a URL shortening service like Bitly.
+2. Design a scalable social media feed system (e.g., Facebook News Feed)?
+3. Design an online book reader system (similar to Kindle).
+4. Design a global ride-sharing service like Uber?
+5. Design a video streaming platform like YouTube or Netflix.
+6. Design a scalable chat application like WhatsApp or Slack?
+7. Design an e-commerce search system for a platform like Flipkart or Amazon.
+8. Design a file storage and sharing service like Google Drive or Dropbox?
+9. Design a real-time collaborative document editor like Google Docs.
+10. Design a scalable notification system (e.g., push notifications for a mobile app)?
+
+𝗥𝗲𝗮𝗹-𝘁𝗶𝗺𝗲 𝗦𝘆𝘀𝘁𝗲𝗺𝘀 & 𝗔𝗻𝗮𝗹𝘆𝘁𝗶𝗰𝘀:
+11. Design a rate limiter for an API.
+12. Design a system to detect fraudulent transactions in real-time?
+13. Design a system for tracking and monitoring the location of delivery packages.
+14. Design a real-time analytics dashboard (e.g., for monitoring website traffic)?
+15. Design a live auction/bidding platform (e.g., eBay auctions).
+16. Design a distributed cache system like Redis or Memcached?
+17. Design a scalable logging and monitoring system (e.g., similar to ELK Stack).
+18. Design a leaderboard system for an online game?
+
+𝗦𝗲𝗮𝗿𝗰𝗵 & 𝗥𝗲𝗰𝗼𝗺𝗺𝗲𝗻𝗱𝗮𝘁𝗶𝗼𝗻 𝗦𝘆𝘀𝘁𝗲𝗺𝘀
+19. Design a search autocomplete feature (e.g., Google Search suggestions).
+20. Design a recommendation system for an e-commerce platform?
+21. Design a system for ranking search results (e.g., Google Search PageRank).
+22. Design a product recommendation system similar to Amazon's "Customers who bought this also bought"?
+
+𝗛𝗶𝗴𝗵 𝗧𝗿𝗮𝗳𝗳𝗶𝗰 & 𝗖𝗼𝗻𝘁𝗲𝗻𝘁 𝗗𝗲𝗹𝗶𝘃𝗲𝗿𝘆
+23. Design a content delivery network (CDN) like Cloudflare or Akamai.
+24. Design a distributed ad-serving system (e.g., Google Ads)?
+25. Design a scalable event ticketing platform (e.g., Ticketmaster).
+
+Keeping this in mind, I’ve prepared System Design Guide.
+
+𝗚𝗲𝘁 𝗶𝗻 𝗗𝗲𝗽𝘁𝗵 𝗦𝘆𝘀𝘁𝗲𝗺 𝗗𝗲𝘀𝗶𝗴𝗻 𝗞𝗜𝗧 𝗵𝗲𝗿𝗲: 
+https://lnkd.in/dte69Z5N
+
+
+==================================
 
 
 
