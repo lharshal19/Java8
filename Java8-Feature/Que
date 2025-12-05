@@ -1,0 +1,79 @@
+
+## Most common exceptions related to Collection in Java
+
+1.IndexOutOfBoundsException
+-> Throws when trying to access an invalid index in a list.
+	List<String> list = new ArrayList<>();
+	list.add("Apple");
+	list.get(5); // Throws IndexOutofBoundsException
+
+2.NoSuchElementException
+-> Throws by Iterator or Enumeration when no more elements are available.
+	List<String> list = new ArrayList<>();
+	Iterator itr = list.iterator();
+	itr.next();		// Throws NoSuchElementException (empty list)
+	
+
+3. ConcurrentModificationException
+-> Thrown when a collection is modified while iterating( except through the iterator's own remove method)
+	List<String> list = new ArrayList<>(Arrays.asList("A","B","C");
+	for(String item : list){
+		list.remove(item);	// Throws ConcurrentModificationException
+	}
+
+4.IlleStateException
+-> Thrown by Iterator when remove() and add() is called.
+	Iterator<String> itr = list.iterator();
+	itr.remove();	// Throws IllegalStateException.
+	
+	# Can we add/modify element in list using iterator?
+	-> No, But its possible with ListIterator which specifically design for list.
+		( Used set() to modify the element in list )
+	
+	
+	ListIterator<String> listIterator = list1.listIterator();
+	listIterator.add("111");			// Iterator is now positioned, Element might not print unless its rewind it.
+	ListIterator<String> listIterator2 = list1.listIterator(); // reset to start
+	
+	for (String str : list1) {
+    	System.out.println(str);
+	}
+	
+5.UnsupportedOperationException
+->Thrown when an operation is not supported by the collection(e.g.adding to an immutable collection).
+	List<String> list = Arrays.asList("A","B");
+	list.add("C");	// Throws UnsupportedOperationException
+	
+6.NullPointerException
+-> Thrown when null is not allowed(e.g. In TreeMap,TreeSet or when using Objects methods).
+	TreeSet<String> set = new TreeSet<>();
+	set.add(null); 	// Throws NullPointerException
+	
+7. ClassCastException
+-> Thrown when trying to add incompatible type to a collection or when comparing Incompatible types.
+	List list1 = new ArrayList();
+	list1.add(String");
+	list1.add(123);
+	List<String> list2 = list1;
+	String s = list2.get(1); 		// Throws ClassCastException at runtime
+	
+8. IllegalArgumentException
+-> Thrown when an illegal or inappropriate argument is passed(e.g. Negative initial capacity)
+	List<String> list = new ArrayList<>(-5);	// Throws IllegalArgumentException
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
