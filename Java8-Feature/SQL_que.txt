@@ -1029,4 +1029,48 @@ GROUP BY product_id, MONTH(order_date);
 
 ====================================
 
+SQL Interview Preparation – Real Questions for 10–20 LPA Roles
+
+
+Writing queries for second-highest salary, top-N records, and self-joins
+
+Deep understanding of JOINs (INNER, LEFT, RIGHT, FULL) with real examples
+
+Usage of GROUP BY, HAVING, CASE statements, and subqueries
+
+Advanced concepts like Window Functions (ROW_NUMBER, RANK, DENSE_RANK)
+
+CTEs (Common Table Expressions) for clean and readable queries
+
+Performance optimization techniques using indexes and query tuning
+
+Handling NULL values, DELETE vs TRUNCATE differences
+
+Real business scenarios such as customer churn, fraud detection, ARPU, YoY growth
+
+Clear comparison of OLTP vs OLAP systems
+
+=========================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

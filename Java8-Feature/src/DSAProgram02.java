@@ -257,6 +257,28 @@ public class DSAProgram02<K, V> {
 	}*/
 
 	//============================================
+	
+	 public static void main(String[] args) {
+
+	        Stream.iterate(new int[]{11, 1},
+	                a -> new int[]{a[0] + a[1], a[1] + 2})
+	              .limit(5)
+	              .map(a -> a[0])
+	              .forEach(n -> System.out.print(n + ", "));
+	    }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
 
 //Create Immutable class
