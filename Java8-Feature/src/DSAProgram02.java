@@ -1,5 +1,6 @@
 import java.util.Map.Entry;
 import java.util.Objects;
+import java.util.stream.Stream;
 
 public class DSAProgram02<K, V> {
 
@@ -92,7 +93,7 @@ public class DSAProgram02<K, V> {
 
 	//==========================
 	//T1 prints 1, T2 prints 2, T1 prints 3, T2 prints 4 and so on till 10
-	private final Object lock = new Object();
+	/*private final Object lock = new Object();
 	private boolean isT1Turn = true; // T1 starts first
 	
 	public void printOdd() {
@@ -138,11 +139,11 @@ public class DSAProgram02<K, V> {
 		t1.start();
 		t2.start();
 	}
-
+	*/
 	//=====================
-	/*	Write an SQL query to print names of all the employees whose salary greater than or equal to the employee with first name “Rita”.
-		Employee table — Column Names : Eid, Fname, Lname, Email . 
-		Salaries table — Column Names : Eid, Salary
+	/*	Write an SQL query to print names of all the employees whose salary greater than or equal to the employee with first name â€œRitaâ€�.
+		Employee table â€” Column Names : Eid, Fname, Lname, Email . 
+		Salaries table â€” Column Names : Eid, Salary
 	
 		=> SELECT e.Fname, e.Lname FROM Employee e
 		JOIN Salaries s ON e.Eid = s.Eid	WHERE s.Salary >= (SELECT s2.Salary FROM Employee e2
@@ -257,38 +258,30 @@ public class DSAProgram02<K, V> {
 	}*/
 
 	//============================================
-	
-	 public static void main(String[] args) {
 
-	        Stream.iterate(new int[]{11, 1},
-	                a -> new int[]{a[0] + a[1], a[1] + 2})
-	              .limit(5)
-	              .map(a -> a[0])
-	              .forEach(n -> System.out.print(n + ", "));
-	    }
+	/*
+	public static void main(String[] args) {
+
+		Stream.iterate(new int[] { 11, 1 }, a -> new int[] { a[0] + a[1], a[1] + 2 }).limit(5).map(a -> a[0])
+				.forEach(n -> System.out.print(n + ", "));
+	}
+	*/
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	//===============================================
+			
+			
 	
 }
 
 //Create Immutable class
 //Deadlock
 //T1 prints 1, T2 prints 2, T1 prints 3, T2 prints 4 and so on till 10
-/*Write an SQL query to print names of all the employees whose salary greater than or equal to the employee with first name “Rita”.
-Employee table — Column Names : Eid, Fname, Lname, Email . 
-Salaries table — Column Names : Eid, Salary*/
+/*Write an SQL query to print names of all the employees whose salary greater than or equal to the employee with first name â€œRitaâ€�.
+Employee table â€” Column Names : Eid, Fname, Lname, Email . 
+Salaries table â€” Column Names : Eid, Salary*/
 //How to create a custom HashMap class with get and put method implementations?
-//
+/*Print the series using Java 8 only
+	11, 12, 15, 20, 27 */
 //
 //
 //

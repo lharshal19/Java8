@@ -68,50 +68,7 @@ public class DSAProgram {
 	}*/
 
 	//======================
-	// Binary Search
-
-	/*public static void main(String[] args) {
-		int[] arr = { 2, 3, 5, 7, 11, 13, 17 };
-		int target = 7;
-		System.out.println("Index of " + target + ": " + binarySearch(arr, target));
 	
-		System.out.println("Index of " + target + ": " + binarySearch(arr, 0, arr.length - 1, target));
-	}
-	
-	//Method 1 Iterative Approach
-	public static int binarySearch(int[] arr, int target) {
-		int left = 0;
-		int right = arr.length - 1;
-	
-		while (left <= right) {
-			int mid = (left + (right - left)) / 2;
-			if (arr[mid] == target) {
-				return mid;
-			} else if (arr[mid] < target) {
-				left = mid + 1;
-			} else {
-				right = mid - 1;
-			}
-		}
-		return -1;
-	}
-	
-	//Method 2 Recursive Approach
-	public static int binarySearch(int[] arr, int left, int right, int target) {
-		if (left > right) {
-			return -1;
-		}
-		int mid = left + (right - left) / 2;
-		if (arr[mid] == target) {
-			return mid;
-		} else if (arr[mid] < target) {
-			return binarySearch(arr, mid + 1, right, target);
-		} else {
-			return binarySearch(arr, left, mid - 1, target);
-		}
-	}*/
-
-	//==========================
 	// print all permutations of string in Java
 	/*public static void main(String[] args) {
 			String s = "cat";
