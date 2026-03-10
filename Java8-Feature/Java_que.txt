@@ -1,0 +1,114 @@
+
+More Interview question for Java Backend Developer.
+
+1. How did you upgrade your Java 11 applications to Java 17?
+2. What improvements or new logic did you implement after migration?
+3. Key new features and differences introduced between Java 11 and Java 17.
+4. What is a record class in Java? How to declare it and use its fields?
+5. Inheritance-based code snippets with tricky outputs related to overriding, overloading, object creation and dynamic reference resolution.
+6. Inheritance vs Abstract classes — when to use which?
+7. Discussion on mutability vs immutability.
+8. How to create an immutable class in Java?
+9. A shared list being modified in one class and reflecting in another — why does it happen, and how to prevent it? (pseudo code)
+10. Hash collisions and how they are handled in Java.
+11. Fail-fast vs Fail-safe iterators.
+12. @RestController vs @Controller.
+13. Bean lifecycle and different bean scopes.
+14. Access modifiers in detail and how they relate to bean visibility.
+15. @Configuration annotation and configuration classes discussion.
+16. Pivot element in an array. (Coding Question)
+17. Move all zeros to the right side of the array. (Coding Question)
+
+========================================
+
+1. Why does a microservice work fine alone but fail when integrated?
+2. How does Spring handle service-to-service communication?
+3. REST vs Messaging (Kafka/RabbitMQ) — when and why?
+4. What problems does Service Discovery actually solve?
+5. How does an API Gateway protect backend services?
+6. What happens when one dependent microservice goes down?
+7. How do you implement retries without causing cascading failures?
+8. Why is Circuit Breaker important and how does Resilience4j help?
+9. How do you manage configuration across multiple services?
+10. Why does a microservice behave differently after scaling pods?
+11. How do you secure microservices using Spring Security?
+12. JWT vs OAuth2 — where do people misuse them?
+13. How do you handle distributed transactions in microservices?
+14. Why does database-per-service matter?
+15. How do you trace a request across multiple microservices?
+16. How does Spring Cloud load balancing work internally?
+17. What causes latency spikes in microservice architectures?
+18. How do you prevent cascading failures?
+19. Why does synchronous communication become a bottleneck?
+20. How do you design idempotent APIs?
+21. What happens when a message is processed twice?
+22. How do you handle schema changes without breaking services?
+23. Why do timeouts matter more than retries?
+24. How does Spring Boot handle graceful shutdown in microservices?
+25. Why do microservices fail silently sometimes?
+26. How do you test microservices without mocking everything?
+27. What causes memory leaks in Spring-based microservices?
+28. How do you manage secrets securely across services?
+29. When should you NOT use microservices?
+30. What microservices decision caused a real production issue?
+
+==========================================
+REAL-WORLD SCENARIO-BASED JAVA INTERVIEW QUESTIONS
+(For Experienced Java Developers)
+
+If you've worked on production systems, these questions will feel familiar.
+
+String & Exception Handling Scenarios
+1. Your application throws OutOfMemoryError due to Strings. Why does this happen?
+2. How would you optimize heavy string
+concatenation inside loops?
+3. When should checked exceptions be
+converted into unchecked exceptions?
+4. How do you handle exceptions in REST APls in real-world applications?
+5. How do you log exceptions without losing the root cause?
+6. Why is catching Exception or Throwable
+considered a bad practice?
+
+Collections & Data Structure Scenarios
+
+7. You used a HashMap as a cache key, and entries disappear. Why?
+8. How would you design a thread-safe in-memory cache?
+9. Why does ConcurrentHashMap not allow null keys or values?
+10. Sorting millions of objects Comparable or Comparator? Why?
+11. How do you avoid
+ConcurrentModificationException?
+12. When would you choose TreeMap over
+HashMap in real systems?
+13. How do poor implementations of equals) and hashCode() affect performance?
+
+
+======================================================
+
+
+Below are REAL interview questions
+used to test production-level Java understanding:
+
+1) Your Java application is slow in production, but CPU and memory look normal. What do you check first?
+2) OutOfMemoryError occurs even though heap size seems sufficient. How is that possible?
+3) Threads are available in the pool but requests are still waiting. Why?
+4) Increasing heap size made the application slower. Explain why.
+5) GC pauses suddenly increased after a small deployment. What could have changed?
+6) JVM does not shut down even after the main() method finishes. What might be holding it?
+7) Parallel streams were added but overall throughput dropped. Why?
+8) Memory usage slowly keeps increasing over time. What would you investigate first?
+9) Logging configuration change caused a production slowdown. How can logging impact performance?
+10) ExecutorService tasks fail silently without visible errors. What might be happening?
+11) Application behaves differently on Java 8 vs Java 17. What could cause this?
+12) Retry logic implemented in the application caused system overload. What mistake might have been made?
+13) Deadlock occurs rarely in production but never locally. Why can that happen?
+14) Thread pool size was increased but throughput didn’t improve. Why?
+15) Application works perfectly in testing but fails under real production traffic. What could be the reason?
+
+
+==============================================================
+
+
+
+
+
+

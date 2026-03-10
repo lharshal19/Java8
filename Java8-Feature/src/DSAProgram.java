@@ -1,23 +1,25 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class DSAProgram {
 
 	//Check two strings Anagram or not
-	/*public static void main(String[] args) {
-	
+	public static void main(String[] args) {
+
 		String str1 = "Bored";
 		String str2 = "Robed";
-	
+
 		str1 = str1.toLowerCase();
 		str2 = str2.toLowerCase();
-	
+
 		char[] str1charArray = str1.toCharArray();
 		char[] str2charArray = str2.toCharArray();
 		if (str1.length() == str2.length()) {
@@ -35,19 +37,19 @@ public class DSAProgram {
 		} else {
 			System.out.println(str1 + " and " + str2 + " are not anagrams of each other.");
 		}
-	
+
 		//Method 2
-	
-				for (char ch : str1.toCharArray()) {
-					int index = str2.indexOf(ch);
-					if (index != -1) {
-						str2 = str2.substring(0, index) + str2.substring(index + 1);
-					}
-				}
-				System.out.println("str1 : "+str1+ "  str2 : "+str2);
-				if (str2.isEmpty())
-					System.out.println("Anagram");
-		
+
+		for (char ch : str1.toCharArray()) {
+			int index = str2.indexOf(ch);
+			if (index != -1) {
+				str2 = str2.substring(0, index) + str2.substring(index + 1);
+			}
+		}
+		System.out.println("str1 : " + str1 + "  str2 : " + str2);
+		if (str2.isEmpty())
+			System.out.println("Anagram");
+
 		//Method 3
 		Map<Character, Integer> map = new HashMap();
 		for (char ch : str1.toCharArray()) {
@@ -64,11 +66,13 @@ public class DSAProgram {
 		System.out.println(map);
 		System.out.print(" map : ");
 		System.out.print(map.isEmpty() ? "Anagram" : "Not Anagram");
+
+	}
+
 	
-	}*/
 
 	//======================
-	
+
 	// print all permutations of string in Java
 	/*public static void main(String[] args) {
 			String s = "cat";
@@ -97,16 +101,35 @@ public class DSAProgram {
 		} else {
 			System.out.println("The string" + str1 + " is not a Palindrome String.");
 		}
+	
+		System.out.println(checkPalindrom("abc"));
+	
 	}
 	
 	// a method for reversing a string
+	// Time complexity = O(n)
 	public static String reverseString(String str2) {
 		String revstr = "";
 		for (int i = str2.length() - 1; i >= 0; i--) {
 			revstr += str2.charAt(i);
 		}
 		return revstr;
-	}*/
+	}
+	
+	public static boolean checkPalindrom(String str) {
+		int left = 0;
+		int right = str.length() - 1;
+	
+		while (left < right) {
+			if (str.charAt(left) != str.charAt(right)) {
+				return false;
+			}
+			left++;
+			right--;
+		}
+		return true;
+	}
+	*/
 
 	//======================
 	//check String object condition
@@ -146,6 +169,7 @@ public class DSAProgram {
 
 	//===================
 	//Fibonacci series
+	// Time Complexity is O(n)
 	/*public static void main(String[] args) {
 		int a = 0, b = 1;
 		int n = 10;
@@ -156,8 +180,15 @@ public class DSAProgram {
 			a = b;
 			b = next;
 		}
+		System.out.println();
+		System.out.print("Fibonacci Series: ");
+		for (int i = 0; i < n; i++) {
+			System.out.print(fibonacci(i)+" "); 
+		}		
+		
 	}
 	
+	// Time Complexity is O(2^n)
 	public static int fibonacci(int n) {
 		if (n <= 1) {
 			return n; // Base cases
@@ -167,68 +198,81 @@ public class DSAProgram {
 
 	//========================
 	//Find second largest number in an array?
-	/*public static void main(String[] args) {
+	/*	public static void main(String[] args) {
 	
-		int[] array = { 3, 5, 1, 4, 2 };
-		int largest = 0;
-		int secondLargest = 0;
-		for (int num : array) {
-			if (num > largest) {
-				secondLargest = largest;
-				largest = num;
-			} else if (num > secondLargest && num != largest) {
-				secondLargest = num;
+			int[] array = { 3, 5, 1, 4, 2 };
+			int largest = 0;
+			int secondLargest = 0;
+			for (int num : array) {
+				if (num > largest) {
+					secondLargest = largest;
+					largest = num;
+				} else if (num > secondLargest && num != largest) {
+					secondLargest = num;
+				}
 			}
-		}
-		System.out.println(largest);
-		System.out.println(secondLargest);
+			System.out.println(largest);
+			System.out.println(secondLargest);
 	
-		//Method 2
-		int secodMax = Arrays.stream(array).boxed().distinct().sorted(Comparator.reverseOrder()).skip(1).findFirst()
-				.orElseThrow(() -> new IllegalArgumentException("No second largest element found."));
-		System.out.println("maximum : " + secodMax);
-		
-		//-------------------------
-		
-		//  select salary from employees order by salary desc limit 1 offset 1;
-		 
-		
-	}*/
+			//Method 2
+			int secodMax = Arrays.stream(array).boxed().distinct().sorted(Comparator.reverseOrder()).skip(1).findFirst()
+					.orElseThrow(() -> new IllegalArgumentException("No second largest element found."));
+			System.out.println("Second maximum : " + secodMax);
+	
+		}*/
+
+	//================================
+
+	//  select salary from employees order by salary desc limit 1 offset 1;
 
 	//=========================
 	//Rotates the array to the right by n positions.
-	/*	public static void main(String[] args) {
-			int[] array = { 1, 2, 3, 4, 5, 6, 7 };
-			System.out.println("Original Array: " + Arrays.toString(array));
-			int n = 2;
-			if (array == null || array.length == 0 || n < 0) {
-				throw new IllegalArgumentException("Invalid input.");
-			}
-	
-			int length = array.length;
-			int k = n % length; // Handle cases where n > length
-	
-			// Reverse the entire array
-			reverse(array, 0, length - 1);
-			// Reverse the first part
-			reverse(array, 0, k - 1);
-			// Reverse the  last part
-			reverse(array, k, length - 1);
-			System.out.println("Array after Left Rotation by 2: " + Arrays.toString(array));
+	/* Time Complexity is O(n)  */
+
+	/*public static void main(String[] args) {
+		int[] array = { 1, 2, 3, 4, 5, 6, 7 };
+		System.out.println("Original Array: " + Arrays.toString(array));
+		int n = 2;
+		if (array == null || array.length == 0 || n < 0) {
+			throw new IllegalArgumentException("Invalid input.");
 		}
 	
-		private static void reverse(int[] array, int start, int end) {
-			while (start < end) {
-				int temp = array[start];
-				array[start] = array[end];
-				array[end] = temp;
-				start++;
-				end--;
-			}
-		}*/
+		int length = array.length;
+		int k = n % length; // Handle cases where n > length
+	
+		// Reverse the entire array
+		reverse(array, 0, length - 1);
+		// Reverse the first part
+		reverse(array, 0, k - 1);
+		// Reverse the  last part
+		reverse(array, k, length - 1);
+		System.out.println("Array after right Rotation by 2: " + Arrays.toString(array));
+	
+		// Java 8 stream 
+		int[] arr = { 1, 2, 3, 4, 5, 6, 7 };
+		int length2 = arr.length;
+	
+		int[] array2 = IntStream.range(0, 5).toArray();
+		System.out.println(Arrays.toString(array2));
+	
+		int[] rotateArray3 = IntStream.range(0, length2).map(i -> arr[(length2 - k + i) % length2]).toArray();
+		System.out.println(Arrays.toString(rotateArray3));
+	
+	}
+	
+	private static void reverse(int[] array, int start, int end) {
+		while (start < end) {
+			int temp = array[start];
+			array[start] = array[end];
+			array[end] = temp;
+			start++;
+			end--;
+		}
+	}
+	*/
 
 	//========================
-	//Move all 1s in an array to the right
+	//Move all 1's in an array to the right
 	/*public static void main(String[] args) {
 		int[] array = { 1, 2, 3, 1, 4, 1, 5 };
 		System.out.println("Original Array: " + Arrays.toString(array));
@@ -416,8 +460,6 @@ public class DSAProgram {
 		}
 		return n * factorial(n - 1); // Recursive case
 	}*/
-
-	//===========================
 
 	//==============================
 	//Find the median of One sorted arrays

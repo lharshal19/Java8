@@ -1,0 +1,50 @@
+How HashMap works internally
+====================
+In Java, HashMap stores data in the form of key–value pairs. Internally, it uses an array of buckets, and each bucket holds a linked list or a tree of nodes.
+
+Each entry is stored as a Node containing : key, value, hash, and next pointer.
+
+Step 1 – When we put a value
+--------------------------------
+🗹 When we call map.put("A", 100),
+🗹 Java first calculates the hash code of the key "A" using hashCode().
+
+Then it converts this hash into an array index using this formula:
+ 
+ index = hash & (n - 1)
+
+where n is the size of the internal array. So now HashMap knows which bucket to use.
+
+Step 2 – What happens inside the bucket
+---------------------------------------------
+If the bucket is empty, the key–value pair is stored directly.
+
+What is Collision?
+------------------
+A collision happens when two different keys produce the same bucket index
+
+ "A" → index 3 
+ "B" → index 3
+
+Both want to go into the same bucket → collision.
+
+Step 3 – How collision is resolved
+--------------------------------------
+HashMap uses two techniques:
+
+1. Linked List (Java 7 and earlier) : All entries that map to the same bucket are stored in a linked list.
+
+ Bucket 3 → [A=100] → [B=200] → [C=300]
+
+When you do get("B"), HashMap:
+🗹 Goes to bucket 3
+🗹 Traverses the list
+🗹 Uses equals() to find the exact key
+
+2.  Tree (Java 8+ Optimization) : If too many elements go into one bucket (more than 8), Java converts the linked list into a Red-Black Tree
+
+Step 4 – How get() works
+---------------------------
+When we call get("A"), HashMap again calculates the hash, finds the bucket index, then searches inside the bucket using equals() to find the exact key and return its value
+
+HashMap uses hashing to find a bucket, and in case of collision, it stores entries using a linked list or a tree to maintain performance
