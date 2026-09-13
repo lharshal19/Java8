@@ -403,7 +403,7 @@ public class EmployeeService {
     }
 }
 Which Method to Choose?
-Use @Procedure in Spring Data JPA if you’re already using JPA and want simplicity.
+Use @Procedure in Spring Data JPA if youâ€™re already using JPA and want simplicity.
 Use EntityManager for flexibility in managing native queries and complex stored procedures.
 Use JdbcTemplate or SimpleJdbcCall for lightweight database interaction or when JPA is not required.
 
@@ -496,7 +496,7 @@ View :
 
 //===============================
 
- Tricky SQL Interview Questions to Test Your Skills 🔍
+ Tricky SQL Interview Questions to Test Your Skills ðŸ”�
 
 If you are preparing for an SQL interview or just want to sharpen your query-writing abilities, these tricky and common questions can help you take your skills to the next level:
  1. Find the second-highest salary in a table without using LIMIT or TOP.
@@ -510,7 +510,7 @@ If you are preparing for an SQL interview or just want to sharpen your query-wri
  9. Find the maximum value of a column for each group without using GROUP BY.
  10. Write a SQL query to find all employees who have taken more than 3 leaves in a month.
 
-💡 These questions are designed to assess your SQL proficiency, including your ability to write efficient queries, think critically, and solve complex problems.
+ðŸ’¡ These questions are designed to assess your SQL proficiency, including your ability to write efficient queries, think critically, and solve complex problems.
 
 Here are the answers:
  1. SELECT MAX(salary) FROM table WHERE salary NOT IN (SELECT MAX(salary) FROM table)
@@ -524,9 +524,9 @@ Here are the answers:
  9. SELECT MAX(column) FROM table WHERE column NOT IN (SELECT MAX(column) FROM table GROUP BY group_column)
  10. SELECT * FROM employees WHERE id IN (SELECT employee_id FROM leaves GROUP BY employee_id HAVING COUNT(*) > 3)
 
-🧠 Key Takeaways:
- • SQL is more than just querying; it’s about problem-solving and optimizing for efficiency.
- • These questions challenge you to think beyond the basics and employ advanced SQL concepts like window functions, subqueries, and percentiles.
+ðŸ§  Key Takeaways:
+ â€¢ SQL is more than just querying; itâ€™s about problem-solving and optimizing for efficiency.
+ â€¢ These questions challenge you to think beyond the basics and employ advanced SQL concepts like window functions, subqueries, and percentiles.
 
 =================================
 
@@ -646,7 +646,7 @@ GROUP BY product_id, MONTH(order_date);
 ====================================
 
 
-🤯 SQL interview questions:
+ðŸ¤¯ SQL interview questions:
 
 1. Write a query to calculate the median salary of employees in a table.
 => SELECT AVG(salary) AS median_salary 
@@ -671,7 +671,7 @@ GROUP BY manager_id
 ORDER BY num_employees DESC 
 LIMIT 1; 
 
-4. Write a query to group employees by age ranges (e.g., 20–30, 31–40) and count the number of employees in each group.
+4. Write a query to group employees by age ranges (e.g., 20â€“30, 31â€“40) and count the number of employees in each group.
 5. Display the cumulative percentage of total sales for each product.
 6. Write a query to retrieve the first order placed by each customer.
 7. Identify employees who have never received a performance review.
@@ -783,150 +783,150 @@ Assign a rank to each student based on their total marks.
 
 ===========================================
 
-Don't overwhelm to learn SQL,🙄
+Don't overwhelm to learn SQL,ðŸ™„
 
-SQL is only this much👇😄
+SQL is only this muchðŸ‘‡ðŸ˜„
 
 1. Intro to SQL
- • Definition
- • Purpose
- • Relational DBs
- • DBMS
+ â€¢ Definition
+ â€¢ Purpose
+ â€¢ Relational DBs
+ â€¢ DBMS
 
 2. Basic SQL Syntax
- • SELECT
- • FROM
- • WHERE
- • ORDER BY
- • GROUP BY
+ â€¢ SELECT
+ â€¢ FROM
+ â€¢ WHERE
+ â€¢ ORDER BY
+ â€¢ GROUP BY
 
 3. Data Types
- • Integer
- • Floating-Point
- • Character
- • Date
- • VARCHAR
- • TEXT
- • BLOB
- • BOOLEAN
+ â€¢ Integer
+ â€¢ Floating-Point
+ â€¢ Character
+ â€¢ Date
+ â€¢ VARCHAR
+ â€¢ TEXT
+ â€¢ BLOB
+ â€¢ BOOLEAN
 
 4. Sub languages
- • DML
- • DDL
- • DQL
- • DCL
- • TCL
+ â€¢ DML
+ â€¢ DDL
+ â€¢ DQL
+ â€¢ DCL
+ â€¢ TCL
 
 5. Data Manipulation
- • INSERT
- • UPDATE
- • DELETE
+ â€¢ INSERT
+ â€¢ UPDATE
+ â€¢ DELETE
 
 6. Data Definition
- • CREATE
- • ALTER
- • DROP
- • Indexes
+ â€¢ CREATE
+ â€¢ ALTER
+ â€¢ DROP
+ â€¢ Indexes
 
 7. Query Filtering and Sorting
- • WHERE
- • AND
- • OR Conditions
- • Ascending
- • Descending
+ â€¢ WHERE
+ â€¢ AND
+ â€¢ OR Conditions
+ â€¢ Ascending
+ â€¢ Descending
 
 8. Data Aggregation
- • SUM
- • AVG
- • COUNT
- • MIN
- • MAX
+ â€¢ SUM
+ â€¢ AVG
+ â€¢ COUNT
+ â€¢ MIN
+ â€¢ MAX
 
 9. Joins and Relationships
- • INNER JOIN
- • LEFT JOIN
- • RIGHT JOIN
- • Self-Joins
- • Cross Joins
- • FULL OUTER JOIN
+ â€¢ INNER JOIN
+ â€¢ LEFT JOIN
+ â€¢ RIGHT JOIN
+ â€¢ Self-Joins
+ â€¢ Cross Joins
+ â€¢ FULL OUTER JOIN
 
 10. Subqueries
- • Subqueries used in
- • Filtering data
- • Aggregating data
- • Joining tables
- • Correlated Subqueries
+ â€¢ Subqueries used in
+ â€¢ Filtering data
+ â€¢ Aggregating data
+ â€¢ Joining tables
+ â€¢ Correlated Subqueries
 
 11. Views
- • Creating
- • Modifying
- • Dropping Views
+ â€¢ Creating
+ â€¢ Modifying
+ â€¢ Dropping Views
 
 12. Transactions
- • ACID Properties
- • COMMIT
- • ROLLBACK
- • SAVEPOINT
- • ROLLBACK TO SAVEPOINT
+ â€¢ ACID Properties
+ â€¢ COMMIT
+ â€¢ ROLLBACK
+ â€¢ SAVEPOINT
+ â€¢ ROLLBACK TO SAVEPOINT
 
 13. Stored Procedures
- • CREATE PROCEDURE
- • ALTER PROCEDURE
- • DROP PROCEDURE
- • EXECUTE PROCEDURE
- • User-Defined Functions (UDFs)
+ â€¢ CREATE PROCEDURE
+ â€¢ ALTER PROCEDURE
+ â€¢ DROP PROCEDURE
+ â€¢ EXECUTE PROCEDURE
+ â€¢ User-Defined Functions (UDFs)
 
 14. Triggers
- • Trigger Events
- • Trigger Execution and Syntax
+ â€¢ Trigger Events
+ â€¢ Trigger Execution and Syntax
 
 15. Security and Permissions
- • CREATE USER
- • GRANT
- • REVOKE
- • ALTER USER
- • DROP USER
+ â€¢ CREATE USER
+ â€¢ GRANT
+ â€¢ REVOKE
+ â€¢ ALTER USER
+ â€¢ DROP USER
 
 16. Optimizations
- • Indexing Strategies
- • Query Optimization
+ â€¢ Indexing Strategies
+ â€¢ Query Optimization
 
 17. Normalization
- • 1NF(Normal Form)
- • 2NF
- • 3NF
- • BCNF
+ â€¢ 1NF(Normal Form)
+ â€¢ 2NF
+ â€¢ 3NF
+ â€¢ BCNF
 
 18. Backup and Recovery
- • Database Backups
- • Point-in-Time Recovery
+ â€¢ Database Backups
+ â€¢ Point-in-Time Recovery
 
 19. NoSQL Databases
- • MongoDB
- • Cassandra etc.
- • Key differences
+ â€¢ MongoDB
+ â€¢ Cassandra etc.
+ â€¢ Key differences
 
 20. Data Integrity
- • Primary Key
- • Foreign Key
+ â€¢ Primary Key
+ â€¢ Foreign Key
 
 21. Advanced SQL Queries
- • Window Functions
- • Common Table Expressions (CTEs)
+ â€¢ Window Functions
+ â€¢ Common Table Expressions (CTEs)
 
 22. Full-Text Search
- • Full-Text Indexes
- • Search Optimization
+ â€¢ Full-Text Indexes
+ â€¢ Search Optimization
 
 23. Data Import and Export
- • Importing and Exporting Data (CSV, JSON)
- • Using SQL Dump Files
+ â€¢ Importing and Exporting Data (CSV, JSON)
+ â€¢ Using SQL Dump Files
 
 24. Database Design
- • Entity-Relationship Diagrams (ERDs)
- • Normalization Techniques
+ â€¢ Entity-Relationship Diagrams (ERDs)
+ â€¢ Normalization Techniques
 
-𝗕𝗲𝘀𝘁 𝗽𝗹𝗮𝘁𝗳𝗼𝗿𝗺𝘀 𝘁𝗼 𝗽𝗿𝗮𝗰𝘁𝗶𝗰𝗲 𝗦𝗤𝗟 𝗽𝗿𝗼𝗯𝗹𝗲𝗺𝘀 𝗱𝗮𝗶𝗹𝘆
+ð�—•ð�—²ð�˜€ð�˜� ð�—½ð�—¹ð�—®ð�˜�ð�—³ð�—¼ð�—¿ð�—ºð�˜€ ð�˜�ð�—¼ ð�—½ð�—¿ð�—®ð�—°ð�˜�ð�—¶ð�—°ð�—² ð�—¦ð�—¤ð�—Ÿ ð�—½ð�—¿ð�—¼ð�—¯ð�—¹ð�—²ð�—ºð�˜€ ð�—±ð�—®ð�—¶ð�—¹ð�˜†
 
 - Dataford - https://lnkd.in/dtHJHxXf
 - LeetCode - https://lnkd.in/gkCpv7NA
@@ -970,23 +970,23 @@ SQL is only this much👇😄
 
 SQL queries that are commonly asked during interviews:
 
-1. Retrieve the second-highest salary of employees✅:
+1. Retrieve the second-highest salary of employeesâœ…:
 SELECT MAX(salary) AS second_highest_salary
  FROM Employee 
 WHERE salary < (SELECT MAX(salary) FROM Employee);
 
-2. Get the total number of employees in each department✅:
+2. Get the total number of employees in each departmentâœ…:
 SELECT department, COUNT(employee_id) AS total_employees 
 FROM Employee 
 GROUP BY department;
 
-3. List customers who have not placed any orders✅:
+3. List customers who have not placed any ordersâœ…:
 SELECT c.customer_id, c.customer_name 
 FROM Customers c 
 LEFT JOIN Orders o ON c.customer_id = o.customer_id 
 WHERE o.order_id IS NULL;
 
-4. Find the product with the highest revenue✅:
+4. Find the product with the highest revenueâœ…:
 SELECT product_id, SUM(quantity * price) AS total_revenue 
 FROM Sales 
 GROUP BY product_id 
@@ -994,12 +994,12 @@ ORDER BY total_revenue DESC
 LIMIT 1;
 
 
-5. Retrieve employees who earn more than the average salary✅:
+5. Retrieve employees who earn more than the average salaryâœ…:
 SELECT * 
 FROM Employee 
 WHERE salary > (SELECT AVG(salary) FROM Employee);
 
-6. Get the list of products sold in the last 7 days✅:
+6. Get the list of products sold in the last 7 daysâœ…:
 SELECT DISTINCT product_id 
 FROM Sales 
 WHERE order_date >= DATEADD(DAY, -7, GETDATE());
@@ -1009,27 +1009,27 @@ SELECT order_date, COUNT(order_id) AS total_orders
 FROM Orders 
 GROUP BY order_date;
 
-8. Retrieve employees with the same salary✅:
+8. Retrieve employees with the same salaryâœ…:
 SELECT employee_id, salary 
 FROM Employee 
 GROUP BY salary 
 HAVING COUNT(employee_id) > 1;
 
-9. List the customers who have placed the most orders✅:
+9. List the customers who have placed the most ordersâœ…:
 SELECT customer_id, COUNT(order_id) AS total_orders 
 FROM Orders 
 GROUP BY customer_id 
 ORDER BY total_orders DESC 
 LIMIT 1;
 
-10. Get the total quantity of each product sold per month✅:
+10. Get the total quantity of each product sold per monthâœ…:
 SELECT product_id, MONTH(order_date) AS month, SUM(quantity) AS total_quantity 
 FROM Sales 
 GROUP BY product_id, MONTH(order_date);
 
 ====================================
 
-SQL Interview Preparation – Real Questions for 10–20 LPA Roles
+SQL Interview Preparation â€“ Real Questions for 10â€“20 LPA Roles
 
 
 Writing queries for second-highest salary, top-N records, and self-joins
@@ -1052,7 +1052,53 @@ Clear comparison of OLTP vs OLAP systems
 
 =========================================================
 
+SQL Coding Questions in Interviews (2025)
 
+Basic SQL Coding Questions
+1. Write an SQL query to fetch the second-highest salary from an `Employee` table.
+2. Write an SQL query to get the duplicate records from a table.
+3. Write a query to find the employees who earn more than their managers.
+4. Write an SQL query to retrieve the top `N` records from a table.
+5. Write an SQL query to count the number of employees in each department.
+6. Write a query to find the department with the highest number of employees.
+7. Write a query to retrieve employees who have the same salary.
+8. Write an SQL query to list all employees whose name starts with 'A'.
+9. Write an SQL query to get the last record from a table.
+10. Write a query to get employees who joined in the last 6 months.
+
+Intermediate SQL Coding Questions
+11. Write an SQL query to find the `Nth` highest salary from a table.
+12. Write a query to remove duplicate rows from a table without using `DISTINCT`.
+13. Write a query to find missing numbers in a sequence of IDs.
+14. Write an SQL query to display the first and last name in a single column.
+15. Write an SQL query to get the cumulative sum of salaries for each employee.
+16. Write an SQL query to swap the values of two columns without using a third variable.
+17. Write a query to fetch employees whose names contain only vowels.
+18. Write an SQL query to transpose rows into columns.
+19. Write an SQL query to find the employees with the highest salary in each department.
+20. Write a query to find customers who made multiple purchases on the same day.
+
+Advanced SQL Coding Questions
+21. Write a query to get the moving average of sales for the last 3 months.
+22. Write an SQL query to rank employees by salary in each department.
+23. Write an SQL query to find employees who have more than one manager.
+24. Write a query to retrieve the most frequent order date from an `Orders` table.
+25. Write an SQL query to compare two tables and find mismatched records.
+26. Write an SQL query to calculate the difference between consecutive rows.
+27. Write a query to pivot table data dynamically.
+28. Write a query to delete every alternate row from a table.
+29. Write an SQL query to get the first purchase date for each customer.
+30. Write an SQL query to get the running total of sales per month.
+
+Window Functions & Analytical Queries
+31. Write an SQL query to assign a rank to employees based on their salaries.
+32. Write an SQL query to find the percentage contribution of each employee’s salary to the total salary.
+33. Write a query to find the cumulative sum of sales using a window function.
+34. Write an SQL query to get the difference between two consecutive transactions.
+35. Write an SQL query to find the `LEAD()` and `LAG()` salary for each employee.
+
+
+====================================
 
 
 

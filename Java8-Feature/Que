@@ -1,4 +1,61 @@
+**Memory Leaks in Production: how to detect and prevent them(Spring Boot)**
 
+- In Java, we often say "Garbage Collector handles memory so we don’t worry about leaks."
+But that’s only half true. Java doesn’t leak memory like C/C++, but it can leak references and that’s enough to crash our production system.
+
+* What Is a Memory Leak?
+--A memory leak is a scenario that happens when objects are no longer needed but are still referenced, so the Garbage Collector cannot reclaim them. The JVM is working correctly but our code is holding references longer than it should.
+
+* Common Causes in Spring Boot Applications *
+ -Unbounded caches
+ -Static collections that keep growing
+ -ThreadLocal not cleared in thread pools
+ -Large objects stored in HTTP session
+ -Event listeners not deregistered
+ -Reactive streams that never terminate
+These issues don’t fail the system immediately, they grow silently.
+
+*How to Detect a Memory Leak *
+
+1️. Monitor JVM Memory
+Use:
+ -Spring Boot Actuator (jvm.memory.used)
+ -Prometheus + Grafana
+ -JMC / VisualVM
+ Red flag: Memory keeps increasing even after Full GC.
+
+2️. Check GC Behavior
+If you see:
+ -Frequent Full GC
+ -Increasing GC pause time
+ -Old Gen not shrinking
+It indicates memory pressure or possible leak.
+
+3️. Take a Heap Dump 
+> jmap -dump:live,format=b,file=heap.hprof <PID>
+
+Then analyze using:
+ -Eclipse MAT
+ -Java Mission Control
+ -VisualVM
+Focus on:
+ -Dominator Tree
+ -Retained Size
+ -Reference chains from GC roots
+This shows what is preventing memory from being reclaimed.
+
+* How to Prevent Memory Leaks *
+ Prevention is architectural, not accidental.
+ -Use bounded caches (set max size & TTL)
+ -Always remove ThreadLocal values
+ - Avoid large objects in HTTP session
+ -Close resources using try-with-resources
+ -Avoid unnecessary static collections
+ -Monitor memory in production (don’t wait for OOM)
+ 
+ ========================
+ 
+ 
 ## Most common exceptions related to Collection in Java
 
 1.IndexOutOfBoundsException
@@ -62,17 +119,427 @@
 	List<String> list = new ArrayList<>(-5);	// Throws IllegalArgumentException
 	
 
+===============================
+
+TCS Walk-In Interview – Java + Spring Boot Questions Asked
+Recently attended a TCS Walk-In interview for a Java/Spring Boot role. Sharing the questions I was asked to help others preparing for similar interviews.
+☕ Core Java
+1️⃣ String s1 = "abc";
+String s2 = new String("abc");
+👉 What will s1 == s2 return? What about s1.equals(s2)?
+👉 Where will s1 and s2 be stored?
+2️⃣ Using Java Streams, count the occurrence of each character and print only characters whose count is greater than 1.
+🧩 DSA
+3️⃣ Check whether two strings are anagrams.
+4️⃣ Given an Employee list, group employees by department and find the employee with the highest salary in each department.
+5️⃣ Find the second-highest salary in each department using Java Streams.
+🌱 Spring Boot
+6️⃣ How would you secure a REST API?
+7️⃣ What annotations would you use for REST API security?
+8️⃣ Difference between @Controller and @RestController.
+9️⃣ How do you return JSON from a @Controller?
+🔟 How would you implement global exception handling in Spring Boot?
+1️⃣1️⃣ What is @Transactional and why is it used?
+☁️ Microservices
+1️⃣2️⃣ What is throttling in microservices?
+1️⃣3️⃣ Why is throttling required in a microservices architecture?
+1️⃣4️⃣ How would you implement rate limiting/throttling for an API?
+🚀 DevOps / Release
+1️⃣5️⃣ What is a release cycle?
+1️⃣6️⃣ Have you been involved in application deployment?
+📚 API Documentation
+1️⃣7️⃣ What API documentation tools have you used?
+💡 The interview focused on a mix of Core Java, DSA, Java Streams, Spring Boot, Microservices and real-world development experience.
+For Java/Spring Boot interviews, don't just memorize definitions. Be prepared to write code and explain why your approach works.
 
 
+=======================================
+
+Top 50 Java Backend Debugging & Production Scenario Questions (3–10 YOE)
+
+1. API is slow in production — where do you start debugging?
+2. High CPU usage after deployment — what will you check?
+3. Memory usage keeps increasing — possible causes?
+4. How do you identify memory leaks in Java?
+5. How do you analyze heap dump?
+6. How do you analyze thread dump?
+7. What if DB queries suddenly become slow?
+8. How do you identify missing indexes?
+9. How to debug connection pool exhaustion?
+10. What happens if thread pool is exhausted?
+11. How do you handle high latency in APIs?
+12. What if one microservice is slowing entire system?
+13. How to debug timeout issues?
+14. How do you handle cascading failures?
+15. What is circuit breaker real use case?
+16. How do you debug Kafka consumer lag?
+17. What if messages are duplicated?
+18. How to handle idempotency in retries?
+19. What if logs are not sufficient?
+20. How to improve observability?
+21. How do you implement distributed tracing?
+22. What metrics do you monitor in production?
+23. How to detect slow endpoints?
+24. What is p95 vs p99 latency?
+25. How to debug GC pauses?
+26. What causes OutOfMemoryError?
+27. How to fix memory fragmentation?
+28. How to handle traffic spikes?
+29. How to scale application quickly?
+30. What is autoscaling strategy?
+31. What if deployment breaks production?
+32. How do you rollback safely?
+33. What is blue-green deployment?
+34. How to validate canary release?
+35. How to handle config issues in prod?
+36. What if cache is not working?
+37. Cache miss vs cache stampede?
+38. How to debug Redis issues?
+39. How to prevent stale cache?
+40. How to debug authentication failures?
+41. What if JWT expires frequently?
+42. How to debug CORS issues?
+43. How to debug network latency?
+44. What if third-party API fails?
+45. How to design fallback mechanism?
+46. How to implement retry with backoff?
+47. What if disk space is full?
+48. How to monitor logs efficiently?
+49. What tools do you use for debugging?
+50. Biggest production issue you handled?
 
 
+=============================
+
+Recently, I went through an interview with Kotak Mahindra Bank for a Backend Developer role( Java + Spring Boot).
+The interview covered DSA, Java, Spring Boot, SQL, Microservices, and System Design. Sharing a few questions that stood out:
+1. DSA – Sliding Window
+Started with a variation of a sliding-window problem:
+Given a string, find the length of the longest substring containing at most K distinct characters.
+Follow-ups:
+• How would you optimize it to O(n)?
+• What changes if K = 2?
+• How would you manage character frequencies efficiently?
+
+2. Java & Spring Boot
+• How does HashMap handle collisions internally?
+• Two requests update the same DB record simultaneously — how would you handle the race condition?
+• An API's latency suddenly increases from 200ms to 5 seconds. How would you debug it?
+
+3. SQL & Database
+• Find the second-highest salary from an Employee table.
+• How would you optimize a slow query running on millions of records?
+This led to a discussion around indexing, composite indexes, and query execution plans.
+
+4. Microservices
+A downstream service becomes slow or unavailable.
+• How would you prevent it from affecting the entire application?
+• Retry vs Timeout vs Circuit Breaker — when would you use each?
+• How would you handle duplicate requests?
+
+5. System Design
+Finally, we discussed designing a scalable payment/transaction backend.
+The discussion covered APIs, database design, Kafka, Redis, idempotency, retries, and failure handling.
+One interesting follow-up:
+“What happens if the payment succeeds, but your service crashes before sending the response?”
+This led to a discussion around duplicate payments, idempotency, consistency, retries, and event-driven processing.
+
+==============================
+
+Top 25 Java Backend Production Scenario Interview Questions
+
+𝗣𝗘𝗥𝗙𝗢𝗥𝗠𝗔𝗡𝗖𝗘 𝗔𝗡𝗗 𝗟𝗔𝗧𝗘𝗡𝗖𝗬:
+1. API latency jumps from 200 ms to 5 seconds. Where do you investigate first?
+2. Works at 100 users but fails at 10,000. What is the bottleneck?
+3. CPU is normal, but latency is high. What could be happening?
+4. How do you identify whether the issue is in code, DB, network, or downstream service?
+5. A query is fast in dev but takes 10 seconds in production. Why?
+6. Memory usage grows for days, then the app crashes. How do you find the leak?
+
+𝗥𝗘𝗦𝗜𝗟𝗜𝗘𝗡𝗖𝗘 𝗔𝗡𝗗 𝗙𝗔𝗜𝗟𝗨𝗥𝗘:
+7. A downstream service becomes slow. How do you prevent cascading failure?
+8. When should you use Circuit Breaker, Retry, Timeout, and Bulkhead?
+9. Your DB connection pool is exhausted in production. What are the likely causes?
+10. Redis goes down. Should your application fail too? Design the fallback.
+11. How do you handle cache invalidation across multiple application instances?
+
+𝗜𝗗𝗘𝗠𝗣𝗢𝗧𝗘𝗡𝗖𝗬 𝗔𝗡𝗗 𝗖𝗢𝗡𝗦𝗜𝗦𝗧𝗘𝗡𝗖𝗬:
+12. A user double-clicks Pay and retries occur. How do you prevent duplicate charges?
+13. Where do you store the idempotency key, and how do you handle concurrent requests with the same key?
+14. A network retry sends the same request twice. How do you ensure the same result?
+15. A transaction spans multiple microservices. How do you maintain consistency?
+16. When do you use Saga, and how do you handle a failed compensation step?
+
+𝗞𝗔𝗙𝗞𝗔 𝗔𝗡𝗗 𝗠𝗘𝗦𝗦𝗔𝗚𝗜𝗡𝗚:
+17. When should you choose synchronous calls over asynchronous messaging?
+18. A consumer crashes after processing a message but before committing the offset. What happens?
+19. How do you prevent duplicate processing of the same Kafka event?
+
+𝗞𝗨𝗕𝗘𝗥𝗡𝗘𝗧𝗘𝗦 𝗔𝗡𝗗 𝗗𝗘𝗣𝗟𝗢𝗬𝗠𝗘𝗡𝗧:
+20. A pod keeps restarting, but application logs show nothing. How do you debug it?
+21. How do you deploy a new Spring Boot version with zero downtime?
+22. A pod is terminating. What happens to in-flight requests, and how do you ensure graceful shutdown?
+
+𝗦𝗖𝗔𝗟𝗘 𝗔𝗡𝗗 𝗗𝗔𝗧𝗔:
+23. Design rate limiting for an API serving millions of users.
+24. How do you process a 5 GB CSV without causing OutOfMemoryError?
+25. A bug appears only under heavy traffic, never locally. How do you reproduce and diagnose it?
 
 
+============================
+
+Top 50 Java Backend Debugging & Production Scenario Questions (3–10 YOE)
+
+1. API is slow in production — where do you start debugging?
+2. High CPU usage after deployment — what will you check?
+3. Memory usage keeps increasing — possible causes?
+4. How do you identify memory leaks in Java?
+5. How do you analyze heap dumps?
+6. How do you analyze a thread dump?
+7. What if DB queries suddenly become slow?
+8. How do you identify missing indexes?
+9. How do you debug connection pool exhaustion?
+10. What happens if the thread pool is exhausted?
+11. How do you handle high latency in APIs?
+12. What if one microservice is slowing the entire system?
+13. How to debug timeout issues?
+14. How do you handle cascading failures?
+15. What is circuit breaker real use case?
+16. How do you debug Kafka consumer lag?
+17. What if messages are duplicated?
+18. How to handle idempotency in retries?
+19. What if logs are not sufficient?
+20. How to improve observability?
+21. How do you implement distributed tracing?
+22. What metrics do you monitor in production?
+23. How to detect slow endpoints?
+24. What is p95 vs p99 latency?
+25. How to debug GC pauses?
+26. What causes OutOfMemoryError?
+27. How to fix memory fragmentation?
+28. How to handle traffic spikes?
+29. How to scale application quickly?
+30. What is autoscaling strategy?
+31. What if deployment breaks production?
+32. How do you rollback safely?
+33. What is blue-green deployment?
+34. How to validate canary release?
+35. How to handle config issues in prod?
+36. What if cache is not working?
+37. Cache miss vs cache stampede?
+38. How to debug Redis issues?
+39. How to prevent stale cache?
+40. How to debug authentication failures?
+41. What if JWT expires frequently?
+42. How to debug CORS issues?
+43. How to debug network latency?
+44. What if third-party API fails?
+45. How to design fallback mechanism?
+46. How to implement retry with backoff?
+47. What if disk space is full?
+48. How to monitor logs efficiently?
+49. What tools do you use for debugging?
+50. Biggest production issue you handled?
 
 
+===========================
+
+ Mastercard SDE-2 (Java Backend) Questions
+🧩 DSA
+1️⃣ Longest Subarray with Sum = K – Prefix Sum + HashMap (O(n))
+ 2️⃣ Merge Overlapping Intervals – Sorting + Merging (O(n log n))
+ 3️⃣ Design LRU Cache – HashMap + Doubly Linked List (O(1) per op)
+☕ Core Java & Object-Oriented Concepts
+4️⃣ Difference between interface and abstract class (with Java 8 default/static methods).
+ 5️⃣ Explain Java Memory Model, Heap vs Stack, and Garbage Collection process.
+ 6️⃣ Difference between String, StringBuilder, and StringBuffer.
+ 7️⃣ Explain equals() and hashCode() contract with a real-world example.
+ 8️⃣ What are functional interfaces and lambdas in Java 8?
+ 9️⃣ Difference between Runnable, Callable, and Future in multithreading.
+ 🔟 Explain how synchronization and locks work in Java.
+🌱 Spring Boot / Microservices
+1️⃣1️⃣ What is the Spring Boot autoconfiguration mechanism?
+ 1️⃣2️⃣ Difference between @Component, @Service, @Repository, and @Controller.
+ 1️⃣3️⃣ How do you secure REST APIs in Spring (JWT/OAuth2)?
+ 1️⃣4️⃣ Explain Spring Boot Actuator and its use in monitoring.
+ 1️⃣5️⃣ How do you implement Exception Handling in REST APIs (using @ControllerAdvice)?
+ 1️⃣6️⃣ Explain the Bean lifecycle in Spring and the role of @PostConstruct/@PreDestroy.
+ 1️⃣7️⃣ How does Spring Dependency Injection work under the hood?
+ 1️⃣8️⃣ How do you handle circular dependencies in Spring Boot?
+🧱 System Design & Architecture
+1️⃣9️⃣ Design a Payment Processing System handling millions of transactions per second.
+ 2️⃣0️⃣ How do you ensure idempotency in APIs (important for payments)?
+ 2️⃣1️⃣ What’s the difference between monolithic and microservices architectures?
+ 2️⃣2️⃣ Explain API Gateway and its responsibilities.
+ 2️⃣3️⃣ How do you achieve fault tolerance, retry mechanisms, and circuit breakers?
+ 2️⃣4️⃣ Explain event-driven architecture with Kafka or similar.
+ 2️⃣5️⃣ What is horizontal vs vertical scaling, and when to use each?
+🗃️ Database & Transactions
+2️⃣6️⃣ Explain ACID properties in relational databases.
+ 2️⃣7️⃣ What are indexes and how do they improve query performance?
+ 2️⃣8️⃣ How do you handle concurrent updates (e.g., using optimistic/pessimistic locking)?
+ 2️⃣9️⃣ Difference between SQL and NoSQL databases; when to choose each.
+ 3️⃣0️⃣ How do you detect and resolve deadlocks or performance bottlenecks?
+ 
+
+===================================
+
+Spring AI - Top 40 Interview Questions
+
+As AI becomes a core part of enterprise applications, Spring AI is quickly becoming a popular interview topic for Java backend developers.
+
+1. What is Spring AI?
+2. Why was Spring AI introduced?
+3. Spring AI vs LangChain4j?
+4. How do you integrate OpenAI with Spring AI?
+5. What AI providers are supported by Spring AI?
+6. What is ChatClient?
+7. How does PromptTemplate work?
+8. What are System and User prompts?
+9. What is Conversation Memory?
+10. How does Spring AI manage chat history?
+11. What is Retrieval-Augmented Generation (RAG)?
+12. How do embeddings work?
+13. What is a Vector Database?
+14. PGVector vs Chroma vs Milvus?
+15. How does semantic search work?
+16. How do you ingest documents into a vector store?
+17. What is Model Context Protocol (MCP)?
+18. How does Spring AI support MCP?
+19. What are AI Tools?
+20. How does Tool Calling work?
+21. What is an AI Agent?
+22. How do AI agents invoke external APIs?
+23. How do you build a multi-step AI workflow?
+24. How do you stream AI responses?
+25. How do you implement structured JSON output?
+26. How do you reduce token usage?
+27. How do you cache AI responses?
+28. How do you secure AI applications?
+29. What is prompt injection?
+30. How do you prevent hallucinations?
+31. How do you monitor AI applications?
+32. How do you implement observability for LLM calls?
+33. How do you handle rate limiting from AI providers?
+34. Spring AI vs direct OpenAI SDK?
+35. When should you use RAG instead of fine-tuning?
+36. How would you design an enterprise AI chatbot?
+37. How would you integrate Spring AI into an existing microservice?
+38. How would you build an AI-powered document search system?
+39. What production challenges have you faced while integrating LLMs?
+40. Design a scalable AI application using Spring AI and explain your architecture.
 
 
+=====================================
 
+Java Microservices is one of the hottest skills in the current job market ..
+
+Make sure you prepare answers to the below 20 questions before going for an interview 👇
+
+1. Monolith vs Microservices differences and when to choose which.
+
+2. How to design a microservice from scratch.
+
+3. API Gateway pattern and its advantages.
+
+4. Inter-service communication: REST vs Messaging.
+
+5. Circuit Breaker pattern and its implementation using Resilience4j.
+
+6. Load balancing in microservices using Spring Cloud Load Balancer.
+
+7. How Spring Cloud Config helps in centralized configuration management.
+
+8. Service discovery using Eureka or Consul.
+
+9. Feign Client vs WebClient: Which one to use and why.
+
+10. Event-driven architecture and Kafka integration.
+
+11. Database per service vs Shared Database: Pros and cons.
+
+12. Saga Pattern for distributed transactions in microservices.
+
+13. JWT-based authentication and OAuth2 in microservices.
+
+14. How to handle security in an API Gateway.
+
+15. Observability: Logging, tracing, and monitoring best practices.
+
+16. Role of Prometheus and Grafana in microservices monitoring.
+
+17. Kubernetes deployment strategies for microservices.
+
+18. Blue-Green and Canary deployments in microservices.
+
+19. When to use WebFlux for reactive microservices.
+
+20. CQRS and Event Sourcing: When and why to use them.
+
+==================================
+
+I recently interviewed at GlobalLogic for a Senior Software Engineer (Backend) role.
+
+Refreshingly, the technical round was more focused on Java Concurrency and Multithreading than any other interview I've given in recent times. No Spring, no Hibernate, no framework trivia. Raw Java fundamentals and concurrency, with a good mixture of coding and Q&A.
+
+Here's exactly what they asked:
+
+✅ Find the second largest element in an array and analyze time complexity between heap and sorting.
+✅ Implement a program to print "Thread1" and "Thread2" from two parallel threads in sequential order.
+✅ Performance difference between Streams.sorted() vs Collections.sort()
+✅ volatile keyword. Why does it exist, when do you actually need it.
+✅ ConcurrentHashMap vs synchronized HashMap. Not just what, but when and why.
+✅ Synchronized block vs synchronized method vs Locks
+✅ How do you propagate an exception from a worker thread back to the main thread.
+✅ Difference between CachedThreadPool and FixedThreadPool, and what are the tunable parameters for an Executor.
+✅ Why would you prefer a SingleThreadExecutor over a manually created Thread.
+✅ Kafka consumer semantics. At least once, at most once, exactly once. What guarantees does each give you, what do you trade off, and how does Kafka track consumer offsets.
+
+
+========================
+
+Here are 15 real Spring Boot + Database production-based questions:
+
+1. Your Spring Boot application works fine locally but becomes slow in production with large database data. How will you identify and fix the issue?
+2. A database query suddenly starts taking 5x more time after deployment. How will you debug and optimize it?
+3. Your application runs out of database connections under high traffic. How will you resolve this?
+4. You notice duplicate entries in your database during concurrent requests. How will you prevent this?
+5. A transaction fails midway and leaves inconsistent data. How will you ensure proper rollback and consistency?
+6. Your service frequently faces deadlocks in the database. How will you detect and resolve them?
+7. After adding caching, users start seeing outdated data. How will you maintain cache consistency?
+8. Your database CPU usage is very high even with low API traffic. What could be the issue?
+9. A batch job processing large data fails in between. How will you make it fault-tolerant?
+10. Your API response time increases due to slow database calls. What optimizations will you apply?
+11. You need to handle millions of records efficiently. How will you design indexing and queries?
+12. A new schema change breaks existing queries in production. How will you handle backward compatibility?
+13. Your application shows random data inconsistencies across multiple tables. How will you debug this?
+14. Your database storage is growing rapidly and affecting performance. How will you manage it?
+15. A critical production issue occurs due to database failure. What is your recovery strategy?
+
+================================
+
+1) What problem does Spring Boot actually solve?
+2) What does @SpringBootApplication include internally?
+3) What is auto-configuration and how does it work?
+4) @RestController vs @Controller — real difference?
+5) Field injection vs constructor injection — which and why?
+6) What are Spring profiles and when do you use them?
+7) application.properties vs application.yml — difference?
+8) What is a Spring Boot Starter?
+9) What is the default embedded server?
+10) What is @Configuration vs @Component?
+11) What is @Bean and when would you use it?
+12) @RequestParam vs @PathVariable — difference?
+13) What is @Valid used for?
+14) How does Spring Boot manage dependencies?
+15) What is HikariCP and why is it used?
+16) What is @ControllerAdvice used for?
+17) What is component scanning?
+18) What happens during application startup?
+19) What is Actuator and why use it?
+20) How do you externalize configuration in Spring Boot?
+
+==============================
 
 
 
